@@ -14,8 +14,8 @@
     "turbo": "Turbo"
   },
   "common": {
-    "name": "Vacuum Card",
-    "description": "Vacuum card lader dig kontrollere din robotstøvsuger.",
+    "name": "Lawn mower Card",
+    "description": "Lawn mower card lader dig kontrollere din robotstøvsuger.",
     "start": "Start",
     "continue": "Fortsæt",
     "pause": "Pause",

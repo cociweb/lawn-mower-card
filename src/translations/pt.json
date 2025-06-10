@@ -42,8 +42,8 @@
     "off": "Desligado"
   },
   "common": {
-    "name": "Vacuum Card",
-    "description": "Vacuum card permite controlar o seu robô aspirador.",
+    "name": "Lawn mower Card",
+    "description": "Lawn mower card permite controlar o seu robô aspirador.",
     "start": "Limpar",
     "continue": "Continuar",
     "pause": "Pausar",

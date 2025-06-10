@@ -25,8 +25,8 @@
     "high": "Intense"
   },
   "common": {
-    "name": "Vacuum Carte",
-    "description": "Vacuum carte vous permet de contrôler votre robot aspirateur.",
+    "name": "Lawn mower Carte",
+    "description": "Lawn mower carte vous permet de contrôler votre robot aspirateur.",
     "start": "Nettoyer",
     "continue": "Continuer",
     "pause": "Pause",
