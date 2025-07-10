@@ -229,6 +229,7 @@ If this card works with your lawn mower, please open a PR and your model to the 
 
 - **EcoVacs** GOAT G1, GOAT G1-800, GOAT G1-2000, GOAT GX-600
 - **Tuya based** lawn-mowers (with tuya-local or localtuya)
+- **Mammotion Yuka 500 mini
 
 - [_Your lawn mower?_][edit-readme]
 
