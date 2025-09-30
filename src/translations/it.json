@@ -15,15 +15,15 @@
     "turbo": "Turbo"
   },
   "common": {
-    "name": "Vacuum Card",
-    "description": "Vacuum card consente di controllare il tuo aspirapolvere.",
+    "name": "Lawn mower Card",
+    "description": "Lawn mower card consente di controllare il tuo aspirapolvere.",
     "start": "Pulisci",
     "continue": "Continua",
     "pause": "Pausa",
     "stop": "Stop",
     "return_to_base": "Base",
     "locate": "Trova aspirapolvere",
-    "not_available": "Vacuum non disponibile"
+    "not_available": "Lawn mower non disponibile"
   },
   "error": {
     "missing_entity": "È necessario specificare l'entità!"

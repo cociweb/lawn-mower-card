@@ -16,8 +16,8 @@
     "Turbo": "MAX"
   },
   "common": {
-    "name": "Vacuum Card",
-    "description": "Vacuum Card 可以讓您控制掃地機器人",
+    "name": "Lawn mower Card",
+    "description": "Lawn mower Card 可以讓您控制掃地機器人",
     "start": "開始清掃",
     "continue": "繼續清掃",
     "pause": "暫停清掃",

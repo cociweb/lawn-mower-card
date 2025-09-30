@@ -30,8 +30,8 @@
     "max+": "Max+"
   },
   "common": {
-    "name": "Vacuum Card",
-    "description": "Vacuum Card 允许您控制您的扫地机器人。",
+    "name": "Lawn mower Card",
+    "description": "Lawn mower Card 允许您控制您的扫地机器人。",
     "start": "清扫",
     "continue": "继续",
     "pause": "暂停",

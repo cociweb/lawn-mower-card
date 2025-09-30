@@ -44,8 +44,8 @@
     "low": "Niskie"
   },
   "common": {
-    "name": "Vacuum Card",
-    "description": "Vacuum Card pozwala zdalnie kontrolować odkurzacz.",
+    "name": "Lawn mower Card",
+    "description": "Lawn mower Card pozwala zdalnie kontrolować odkurzacz.",
     "start": "Sprzątaj",
     "continue": "Kontynuuj",
     "pause": "Wstrzymaj",
