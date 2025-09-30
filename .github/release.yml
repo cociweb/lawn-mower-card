@@ -1,0 +1,51 @@
+---
+name-template: "$RESOLVED_VERSION"
+tag-template: "$RESOLVED_VERSION"
+version-template: "v$MAJOR.$MINOR.$PATCH"
+categories:
+  - title: "⚠ Breaking Changes"
+    labels:
+      - "breaking-change"
+  - title: "🎉 Features"
+    labels:
+      - "feature"
+      - "enhancement"
+      - "new-feature"
+  - title: "🪲 Bugfixes"
+    labels:
+      - "bugfix"
+      - "bug"
+  - title: "🛠 Maintenance"
+    labels:
+      - "ci"
+      - "documentation"
+      - "maintenance"
+  - title: "⬆️ Dependencies"
+    collapse-after: 1
+    labels:
+      - "dependencies"
+version-resolver:
+  major:
+    labels:
+      - "breaking-change"
+  minor:
+    labels:
+      - "feature"
+      - "enhancement"
+      - "new-feature"
+  patch:
+    labels:
+      - "bugfix"
+      - "bug"
+      - "ci"
+      - "documentation"
+      - "maintenance"
+  default: patch
+category-template: "### $TITLE"
+change-template: "- #$NUMBER - $TITLE (by @$AUTHOR)"
+template: |
+  ## What’s Changed:
+  $CHANGES
+replacers:
+  - search: ":warning:"
+    replace: ":warning: _Breaking change:_ :warning:"
