@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       bump-type:
-        description: 'Type of version bump (major, minor, patch)'
+        description: 'Type of version bump (major, minor, patch, build)'
         required: false
-        default: 'patch'
+        default: 'build'
   pull_request:
     branches:
       - 'main'
@@ -57,6 +57,9 @@ jobs:
 
   validate:
     name: Validate
+    concurrency:
+      group: validate-group
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout Repo
