@@ -1,0 +1,33 @@
+---
+name: Release
+
+on:
+## Trigger on pushes to main and tags with vX.X.X, and allow manual dispatch, we will publish images, otherwise just build.
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*.*.*'
+      - 'V*.*.*'
+      - '*.*.*'
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  changelog:
+    permissions:
+      contents: write
+      pull-requests: write
+    name: Changelog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Changelog
+        uses: release-drafter/release-drafter@v6
+        with:
+          config-name: release.yml
+          disable-autolabeler: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
