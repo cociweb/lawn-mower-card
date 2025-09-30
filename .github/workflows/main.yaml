@@ -1,4 +1,4 @@
-name: main
+name: Main
 
 on:
   push:
@@ -42,7 +42,7 @@ jobs:
           # Default: do not push
           push_image=false
           if [[ "${GITHUB_EVENT_NAME}" == "push" && ( "${GITHUB_REF}" == "refs/heads/main" || "${GITHUB_REF_TYPE}" ==  "tag" ) ]] || \
-             [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" && "${GITHUB_REF}" == "refs/heads/main" ]] || \
+             [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" && "${GITHUB_REF}" == "refs/heads/main" && "${BUMP_TYPE}" != "build"]] || \
              [[ "${GITHUB_EVENT_NAME}" == "pull_request" && "${GITHUB_REF}" == "refs/heads/main" ]]; then
             push_image=true
           fi
@@ -106,32 +106,24 @@ jobs:
       - name: 🚀 Release
         run: npm publish --access public
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
       - name: Create Release
         run: |
-          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
-          echo "GITHUB_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
           gh release create v${{ env.PACKAGE_VERSION }} \
             --repo="${GITHUB_REPOSITORY}" \
             --title="${{ env.PACKAGE_VERSION }}" \
             --notes="Release notes for v${{ env.PACKAGE_VERSION }}" \
             --draft
         env:
-          #GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Upload Release Asset
         run: |
-          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
-          echo "GITHUB_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
           gh release upload v${{ env.PACKAGE_VERSION }} ./dist/lawn-mower-card.js
         env:
-          #GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
   dependabot:
@@ -146,11 +138,11 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@v2
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: ↔️ Enable Auto-merge for minor and patch Dependabot PRs
         run: gh pr merge --auto --squash "$PR_URL"
         if: steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
