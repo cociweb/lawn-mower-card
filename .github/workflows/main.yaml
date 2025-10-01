@@ -18,14 +18,13 @@ on:
   pull_request:
     branches:
       - 'main'
+      
 
 permissions:
   contents: write
   pull-requests: write
   packages: write
   id-token: write
-
-
 
 jobs:
   decision:
@@ -51,7 +50,6 @@ jobs:
           echo "GITHUB_REF_TYPE=${GITHUB_REF_TYPE}"
           echo "push_image (output)=${{ steps.decide.outputs.push_image }}"
 
-
   validate:
     name: Validate
     concurrency:
@@ -67,6 +65,9 @@ jobs:
         with:
           node-version: '*'
           cache: npm
+          
+      - name: 📦 Install Packages
+        run: npm install
 
       - name: 📦 Install Packages
         run: npm install
