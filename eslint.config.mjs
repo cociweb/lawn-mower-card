@@ -7,8 +7,10 @@ import { fileURLToPath } from "url";
 
 // Resolve the directory for FlatCompat
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const compat = new FlatCompat({ baseDirectory: __dirname });
-
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: {}
+});
 export default [
   // 1) bring in your old "extends" shareable configs
   ...compat.extends(
