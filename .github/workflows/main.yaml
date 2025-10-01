@@ -37,9 +37,11 @@ jobs:
         run: |
           # Default: do not push
           push_image=false
-          if [[ "${GITHUB_EVENT_NAME}" == "push" && ( "${GITHUB_REF}" == "refs/heads/main" || "${GITHUB_REF_TYPE}" ==  "tag" ) ]] || \
-             [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" && "${GITHUB_REF}" == "refs/heads/main" && "${BUMP_TYPE}" != "build"]] || \
-             [[ "${GITHUB_EVENT_NAME}" == "pull_request" && "${GITHUB_REF}" == "refs/heads/main" ]]; then
+          if [[ "${GITHUB_EVENT_NAME}" == "push" ]] && { [[ "${GITHUB_REF}" == "refs/heads/main" ]] || [[ "${GITHUB_REF_TYPE}" ==  "tag" ]]; }; then
+            push_image=true
+          elif [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] && [[ "${GITHUB_REF}" == "refs/heads/main" ]] && [[ "${BUMP_TYPE}" != "build" ]]; then
+            push_image=true
+          elif [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]] && [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
             push_image=true
           fi
           echo "push_image=${push_image}" >> "$GITHUB_OUTPUT"
