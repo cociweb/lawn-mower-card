@@ -18,6 +18,10 @@ export default [
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ),
+  ...compat.env({
+    browser: true,
+    es6: true
+  }),
 
   // 2) re-declare parser, parserOptions, env, plugins, and any custom rules
   {
@@ -26,10 +30,6 @@ export default [
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module"
-      },
-      env: {
-        browser: true,
-        es6: true
       }
     },
     plugins: {
