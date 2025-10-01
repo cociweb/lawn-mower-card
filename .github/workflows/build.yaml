@@ -31,14 +31,12 @@ jobs:
       - name: 🗑️ Remove package-lock.json
         run: rm -f package-lock.json
  
-      - name: ⬢ Setup Node.js
-        with:
-          node-version: '*'
-          registry-url: 'https://registry.npmjs.org'
-
       - name: 📦 Install Packages
         run: npm install
-
+ 
+      - name: 📦 Install Packages
+        run: npm ci
+        
       - name: 🧪 Test
         run: npm test
         
