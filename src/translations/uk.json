@@ -1,5 +1,6 @@
 {
   "status": {
+    "mowing": "Косіння",
     "cleaning": "Прибирає",
     "auto": "Автоматичне прибирання",
     "spot": "Прибирання зони",
@@ -23,7 +24,13 @@
     "updating": "Оновлення",
     "going_to_target": "Рух до цілі",
     "zoned_cleaning": "Зональне прибирання",
-    "segment_cleaning": "Прибирання сегменту"
+    "segment_cleaning": "Прибирання сегменту",
+    "unavailable": "Недоступно",
+    "standby": "Очікування",
+    "emergency": "Аварія",
+    "park": "Повертається",
+    "charging_with_task_suspend": "Заряджається із призупиненим завданням",
+    "locked": "Заблокований"
   },
   "source": {
     "low": "Низький",
@@ -50,7 +57,7 @@
     "continue": "Продовжити",
     "pause": "Пауза",
     "stop": "Стоп",
-    "return_to_base": "На базу",
+    "return_to_base": "На док-станцію",
     "locate": "Знайти",
     "not_available": "Пилосос недоступний"
   },

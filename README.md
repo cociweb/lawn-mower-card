@@ -5,19 +5,17 @@ Based on https://github.com/denysdovhan/vacuum-card and https://github.com/bhueb
 [![npm version][npm-image]][npm-url]
 [![hacs][hacs-image]][hacs-url]
 
-
 > Lawn Mower card for [Home Assistant][home-assistant] Lovelace UI
 
 By default, Home Assistant does not provide any card for controlling lawn mowers. This card displays the state and allows to control your robot.
 
 ![Preview of lawn-mower-card][preview-image]
 
-
 ## Installing
 
 ### HACS
 
-This card is available in [HACS][hacs] (Home Assistant Community Store) as a custom repository. 
+This card is available in [HACS][hacs] (Home Assistant Community Store) as a custom repository.
 
 Just add the [https://github.com/cociweb/lawn-mower-card](https://github.com/cociweb/lawn-mower-card) repository.
 
@@ -91,22 +89,22 @@ shortcuts:
 
 Here is what every option means:
 
-| Name           |   Type    | Default      | Description                                                                                           |
-| -------------- | :-------: | ------------ | ----------------------------------------------------------------------------------------------------- |
-| `type`         | `string`  | **Required** | `custom:lawn-mower-card`                                                                              |
-| `entity`       | `string`  | **Required** | An entity_id within the `lawn-mover` domain.                                                          |
-| `map`          | `string`  | Optional     | An entity_id within the `camera` domain, for streaming live lawn mower map.                           |
-| `map_refresh`  | `integer` | `5`          | Update interval for map camera in seconds                                                             |
-| `image`        | `string`  | `default`    | Path to image of your lawn mower. Better to have `png` or `svg`.                                      |
-| `battery`      | `string`  | `default`    | An entity_id within the `battery` of your lawn mower                                                  |
-| `show_name`    | `boolean` | `true`       | Show friendly name of the lawn mower.                                                                 |
-| `show_status`  | `boolean` | `true`       | Show status of the lawn mower.                                                                        |
-| `show_toolbar` | `boolean` | `true`       | Show toolbar with actions.                                                                            |
-|`show_shortcuts`| `boolean` | `true`       | Show Shortcuts bar.                                                                                   |
-| `compact_view` | `boolean` | `false`      | Compact view without image.                                                                           |
-| `stats`        | `object`  | Optional     | Custom per state stats for your lawn mower                                                            |
-| `actions`      | `object`  | Optional     | Override default actions behavior with service invocations.                                           |
-| `shortcuts`    |  `array`  | Optional     | List of shortcuts shown at the right bottom part of the card with custom actions for your lawn mower. |
+| Name             |   Type    | Default      | Description                                                                                           |
+| ---------------- | :-------: | ------------ | ----------------------------------------------------------------------------------------------------- |
+| `type`           | `string`  | **Required** | `custom:lawn-mower-card`                                                                              |
+| `entity`         | `string`  | **Required** | An entity_id within the `lawn-mover` domain.                                                          |
+| `map`            | `string`  | Optional     | An entity_id within the `camera` domain, for streaming live lawn mower map.                           |
+| `map_refresh`    | `integer` | `5`          | Update interval for map camera in seconds                                                             |
+| `image`          | `string`  | `default`    | Path to image of your lawn mower. Better to have `png` or `svg`.                                      |
+| `battery`        | `string`  | `default`    | An entity_id within the `battery` of your lawn mower                                                  |
+| `show_name`      | `boolean` | `true`       | Show friendly name of the lawn mower.                                                                 |
+| `show_status`    | `boolean` | `true`       | Show status of the lawn mower.                                                                        |
+| `show_toolbar`   | `boolean` | `true`       | Show toolbar with actions.                                                                            |
+| `show_shortcuts` | `boolean` | `true`       | Show Shortcuts bar.                                                                                   |
+| `compact_view`   | `boolean` | `false`      | Compact view without image.                                                                           |
+| `stats`          | `object`  | Optional     | Custom per state stats for your lawn mower                                                            |
+| `actions`        | `object`  | Optional     | Override default actions behavior with service invocations.                                           |
+| `shortcuts`      |  `array`  | Optional     | List of shortcuts shown at the right bottom part of the card with custom actions for your lawn mower. |
 
 ### `stats` object
 
@@ -250,7 +248,7 @@ Huge thanks for their ideas and efforts 👍
 
 ## License
 
-MIT © 
+MIT ©
 [cociweb]
 [denysdovhan]
 [bhuebschen]
@@ -268,7 +266,7 @@ MIT ©
 [hacs]: https://hacs.xyz
 [returning]: https://github.com/bhuebschen/lawn-mower-card/assets/1864448/51fbd7b7-3811-4b66-9873-852250a32efc
 [mowing]: https://github.com/bhuebschen/lawn-mower-card/assets/1864448/a5b0a42d-ff87-46db-9b50-54a4f71d9107
-[preview-image]:https://github.com/cociweb/lawn-mower-card/assets/1935413/eeaf9425-e11d-49e1-8730-cf4d9fab2020
+[preview-image]: https://github.com/cociweb/lawn-mower-card/assets/1935413/eeaf9425-e11d-49e1-8730-cf4d9fab2020
 [latest-release]: https://github.com/cociweb/lawn-mower-card/releases/latest
 [ha-scripts]: https://www.home-assistant.io/docs/scripts/
 [edit-readme]: https://github.com/cociweb/lawn-mower-card/edit/master/README.md
