@@ -56,6 +56,8 @@ Typical example of using this card in YAML config would look like this:
 type: custom:lawn-mower-card
 entity: lawn_mower.lawn_mower
 battery: sensor.lawn_mower_battery
+temperature: sensor.temperature
+humidity: sensor.humidity
 show_toolbar: true
 show_shortcuts: false
 actions:
@@ -97,6 +99,8 @@ Here is what every option means:
 | `map_refresh`    | `integer` | `5`          | Update interval for map camera in seconds                                                             |
 | `image`          | `string`  | `default`    | Path to image of your lawn mower. Better to have `png` or `svg`.                                      |
 | `battery`        | `string`  | `default`    | An entity_id within the `battery` of your lawn mower                                                  |
+| `temperature`    | `string`  | `default`    | An entity_id within the `temperature` of your lawn mower                                              |
+| `humidity`       | `string`  | `default`    | An entity_id within the `humidity` of your lawn mower                                                  |
 | `show_name`      | `boolean` | `true`       | Show friendly name of the lawn mower.                                                                 |
 | `show_status`    | `boolean` | `true`       | Show status of the lawn mower.                                                                        |
 | `show_toolbar`   | `boolean` | `true`       | Show toolbar with actions.                                                                            |

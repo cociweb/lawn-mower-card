@@ -189,48 +189,18 @@ export class LawnMowerCard extends LitElement {
     };
   }
 
-  private renderSource(): Template {
-    const { fan_speed: source, fan_speed_list: sources } = this.getAttributes(
-      this.entity,
-    );
 
-    if (!sources || !source) {
-      return nothing;
-    }
-
-    const selected = sources.indexOf(source);
-
-    return html`
-      <div class="tip">
-        <ha-button-menu @click="${(e: Event) => e.stopPropagation()}">
-          <div slot="trigger">
-            <ha-icon icon="mdi:fan"></ha-icon>
-            <span class="icon-title">
-              ${localize(`source.${source.toLowerCase()}`) || source}
-            </span>
-          </div>
-          ${sources.map(
-            (item, index) => html`
-              <mwc-list-item
-                ?activated=${selected === index}
-                value=${item}
-                @click=${this.handleSpeed}
-              >
-                ${localize(`source.${item.toLowerCase()}`) || item}
-              </mwc-list-item>
-            `,
-          )}
-        </ha-button-menu>
-      </div>
-    `;
-  }
 
   private renderBattery(): Template {
     let battery_level;
     let battery_icon;
+    const entityId = this.config.battery;
 
-    if (this.config.battery) {
-      battery_level = Number(this.hass.states[this.config.battery].state);
+    if (entityId) {
+      battery_level = Number(this.hass.states[entityId].state);
+      if (isNaN(battery_level)) {
+        return nothing;
+      }
 
       const level = Number(battery_level);
 
@@ -247,19 +217,61 @@ export class LawnMowerCard extends LitElement {
     }
 
     return html`
-      <div class="tip" @click="${() => this.handleMore()}">
+      <div class="tip" @click="${() => this.handleMore(entityId)}">
         <ha-icon icon="${battery_icon}"></ha-icon>
         <span class="icon-title">${battery_level}%</span>
       </div>
     `;
   }
 
-  private renderMapOrImage(state: LawnMowerEntityState): Template {
-    if (this.config.compact_view) {
+  private renderTemperature(): Template {
+    let value;
+    let icon;
+    const entityId = this.config.temperature;
+
+    if (entityId) {
+      value = Number(this.hass.states[entityId].state);
+      if (isNaN(value)) {
+        return nothing;
+      }
+      icon = 'mdi:thermometer';
+    } else {
       return nothing;
     }
 
-    if (this.map) {
+    return html`
+      <div class="tip" @click="${() => this.handleMore(entityId)}">
+        <ha-icon icon="${icon}"></ha-icon>
+        <span class="icon-title">${value}°C</span>
+      </div>
+    `;
+  }
+
+  private renderHumidity(): Template {
+    let value;
+    let icon;
+    const entityId = this.config.humidity;
+
+    if (entityId) {
+      value = Number(this.hass.states[entityId].state);
+      if (isNaN(value)) {
+        return nothing;
+      }
+      icon = 'mdi:water-percent';
+    } else {
+      return nothing;
+    }
+
+    return html`
+      <div class="tip" @click="${() => this.handleMore(entityId)}">
+        <ha-icon icon="${icon}"></ha-icon>
+        <span class="icon-title">${value}%</span>
+      </div>
+    `;
+  }
+
+  private renderMapOrImage(state: LawnMowerEntityState): Template {
+    if (!this.config.compact_view && this.map) {
       return this.map && this.map.attributes.entity_picture
         ? html`
             <img
@@ -341,24 +353,38 @@ export class LawnMowerCard extends LitElement {
     return html` <div class="lawn-mower-name">${friendly_name}</div> `;
   }
 
-  private renderStatus(): Template {
-    const { status } = this.getAttributes(this.entity);
-    const localizedStatus =
-      localize(`status.${status.toLowerCase()}`) || status;
 
+  private renderStatus(): Template {
     if (!this.config.show_status) {
       return nothing;
     }
+    const { status, raw_activity } = this.getAttributes(this.entity);
+
+    let actualStatus = status;
+    if (raw_activity) {
+      //use raw_activity instead of status because it is more detailed
+      actualStatus = raw_activity;
+    }
+    const localizedStatus =
+      localize(`status.${actualStatus.toLowerCase()}`) || actualStatus;
+
+    const progressBar = html`
+      <ha-circular-progress
+        .indeterminate="true"
+        size="small"
+      ></ha-circular-progress>
+    `;
 
     return html`
       <div class="status">
-        <span class="status-text" alt=${localizedStatus}>
+        <span
+          class="status-text"
+          alt=${localizedStatus}
+          title="${actualStatus}"
+        >
           ${localizedStatus}
         </span>
-        <ha-circular-progress
-          .indeterminate=${this.requestInProgress}
-          size="small"
-          ></ha-circular-progress>
+        ${this.requestInProgress ? progressBar : ''}
       </div>
     `;
   }
@@ -384,14 +410,12 @@ export class LawnMowerCard extends LitElement {
     );
 
 
-    return html`
-      <div class="shortcuts">
-        ${buttons}
-      </div>
-    `;
+    return html` <div class="shortcuts">${buttons}</div> `;
   }
-  
+
   private renderToolbar(state: LawnMowerEntityState): Template {
+    const { raw_activity } = this.getAttributes(this.entity);
+
     if (!this.config.show_toolbar) {
       return nothing;
     }
@@ -449,18 +473,9 @@ export class LawnMowerCard extends LitElement {
       case 'returning': {
         return html`
           <div class="toolbar">
-            <paper-button
-              @click="${this.handleLawnMowerAction('resume', {
-                defaultService: 'start',
-                request: true,
-              })}"
-            >
-              <ha-icon icon="hass:play"></ha-icon>
-              ${localize('common.continue')}
-            </paper-button>
-            <paper-button @click="${this.handleLawnMowerAction('pause')}">
-              <ha-icon icon="hass:pause"></ha-icon>
-              ${localize('common.pause')}
+            <paper-button @click="${this.handleLawnMowerAction('stop')}">
+              <ha-icon icon="hass:stop"></ha-icon>
+              ${localize('common.stop')}
             </paper-button>
           </div>
         `;
@@ -468,32 +483,42 @@ export class LawnMowerCard extends LitElement {
       case 'docked':
       case 'idle':
       default: {
-
         const dockButton = html`
-          <ha-icon-button
-            label="${localize('common.return_to_base')}"
+          <paper-button
             @click="${this.handleLawnMowerAction('return_to_base')}"
-            ><ha-icon icon="hass:home-map-marker"></ha-icon>
-          </ha-icon-button>
+          >
+            <ha-icon icon="hass:home-map-marker"></ha-icon>
+            ${localize('common.return_to_base')}
+          </paper-button>
+        `;
+
+        const stopButton = html`
+          <paper-button @click="${this.handleLawnMowerAction('stop')}">
+            <ha-icon icon="hass:stop"></ha-icon>
+            ${localize('common.stop')}
+          </paper-button>
+        `;
+
+        const locateButton = html`
+          <paper-button @click="${this.handleLawnMowerAction('locate')}">
+            <ha-icon icon="hass:map-marker"></ha-icon>
+            ${localize('common.locate')}
+          </paper-button>
         `;
 
         return html`
           <div class="toolbar">
-            <ha-icon-button
-              label="${localize('common.start')}"
-              @click="${this.handleLawnMowerAction('start')}"
-              ><ha-icon icon="hass:play"></ha-icon>
-            </ha-icon-button>
-
-            <ha-icon-button
-              label="${localize('common.locate')}"
-              @click="${this.handleLawnMowerAction('locate', {
-                request: false,
-              })}"
-              ><ha-icon icon="mdi:map-marker"></ha-icon>
-            </ha-icon-button>
-
-            ${state === 'idle' ? dockButton : ''}
+            <paper-button @click="${this.handleLawnMowerAction('start')}">
+              <ha-icon icon="hass:play"></ha-icon>
+              ${localize('common.start')}
+            </paper-button>
+            ${this.config.actions['locate'] ? locateButton : ''}
+            ${raw_activity?.toLowerCase() === 'charging_with_task_suspend'
+              ? stopButton
+              : ''}
+            ${state === 'idle' || raw_activity?.toLowerCase() === 'standby'
+              ? dockButton
+              : ''}
           </div>
         `;
       }
@@ -519,12 +544,37 @@ export class LawnMowerCard extends LitElement {
       return this.renderUnavailable();
     }
 
+    if (this.config.compact_view) {
+      return html`
+        <ha-card class="preview-compact">
+          <div class="preview">
+            <div class="header">
+              <div class="tips">
+                ${this.renderMapOrImage(this.entity.state)}
+                ${this.renderStatus()} ${this.renderTemperature()}
+                ${this.renderHumidity()} ${this.renderBattery()}
+              </div>
+              <ha-icon-button
+                class="more-info"
+                icon="mdi:dots-vertical"
+                ?more-info="true"
+                @click="${() => this.handleMore()}"
+                ><ha-icon icon="mdi:dots-vertical"></ha-icon
+              ></ha-icon-button>
+            </div>
+          </div>
+          ${this.renderToolbar(this.entity.state)} ${this.renderShortcuts()}
+        </ha-card>
+      `;
+    }
+
     return html`
       <ha-card>
         <div class="preview">
           <div class="header">
             <div class="tips">
-              ${this.renderSource()} ${this.renderBattery()}
+              ${this.renderTemperature()} ${this.renderHumidity()}
+              ${this.renderBattery()}
             </div>
             <ha-icon-button
               class="more-info"
@@ -544,8 +594,7 @@ export class LawnMowerCard extends LitElement {
           ${this.renderStats(this.entity.state)}
         </div>
 
-        ${this.renderToolbar(this.entity.state)}
-        ${this.renderShortcuts()}
+        ${this.renderToolbar(this.entity.state)} ${this.renderShortcuts()}
       </ha-card>
     `;
   }
