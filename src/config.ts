@@ -23,6 +23,8 @@ export default function buildConfig(
     map_refresh: config.map_refresh ?? 5,
     image: config.image ?? 'default',
     battery: config.battery ?? '',
+    temperature: config.temperature ?? '',
+    humidity: config.humidity ?? '',
     show_name: config.show_name ?? true,
     show_status: config.show_status ?? true,
     show_toolbar: config.show_toolbar ?? true,
