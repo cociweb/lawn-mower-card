@@ -51,6 +51,26 @@ jobs:
           echo "GITHUB_REF_TYPE=${GITHUB_REF_TYPE}"
           echo "push_image (output)=${{ steps.decide.outputs.push_image }}"
 
+  build:
+    name: build
+    concurrency:
+      group: validate-group
+      cancel-in-progress: true
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.bump-type == 'build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout Repo
+        uses: actions/checkout@v4
+ 
+      - name: 📦 Install Packages
+        run: npm install
+
+      - name: 📦 Install Packages
+        run: npm ci
+
+      - name: 🧪 Test
+        run: npm test
+
 
   validate:
     name: Validate
