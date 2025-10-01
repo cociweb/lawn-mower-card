@@ -2,6 +2,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import importPlugin from "eslint-plugin-import";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
 import { fileURLToPath } from "url";
 
 // Resolve the directory for FlatCompat
@@ -19,7 +20,7 @@ export default [
   // 2) re-declare parser, parserOptions, env, plugins, and any custom rules
   {
     languageOptions: {
-      parser: "@typescript-eslint/parser",
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module"
