@@ -67,6 +67,9 @@ jobs:
         with:
           node-version: '*'
           cache: npm
+          
+      - name: 📦 Install Packages
+        run: npm install
 
       - name: 📦 Install Packages
         run: npm ci
