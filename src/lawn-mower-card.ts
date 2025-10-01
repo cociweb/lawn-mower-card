@@ -382,7 +382,7 @@ export class LawnMowerCard extends LitElement {
           alt=${localizedStatus}
           title="${actualStatus}"
         >
-          ${localizedStatus}${debug ? ' (debug)' : ''}
+          ${localizedStatus}
         </span>
         ${this.requestInProgress ? progressBar : ''}
       </div>
