@@ -27,12 +27,27 @@ jobs:
     steps:
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v4
+
+      - name: 🗑️ Remove package-lock.json
+        run: rm -f package-lock.json
  
+      - name: ⬢ Setup Node.js
+        with:
+          node-version: '*'
+          registry-url: 'https://registry.npmjs.org'
+
       - name: 📦 Install Packages
         run: npm install
 
-      - name: 📦 Install Packages
-        run: npm ci
-
       - name: 🧪 Test
         run: npm test
+        
+      - name: Commit and push new package-lock.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "ci: update package-lock.json [skip ci]" || echo "No changes to commit"
+          git push || echo "No changes to push"
+
+          
