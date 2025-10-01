@@ -31,7 +31,7 @@ export default function buildConfig(
     show_shortcuts: config.show_shortcuts ?? true,
     compact_view: config.compact_view ?? false,
     stats: config.stats ?? {},
-    actions: typeof config.actions === 'object' && !Array.isArray(config.actions) ? config.actions : {},
-    shortcuts: Array.isArray(config.shortcuts) ? config.shortcuts : [],
+    actions: config.actions ?? {},
+    shortcuts: config.shortcuts ?? [],
   };
 }
