@@ -19,6 +19,15 @@ export type LawnMowerEntityState =
   | 'unknown'
   | string; // for other states
 
+export type LawnMowerEntityActivity =
+  | 'standby'
+  | 'emergency'
+  | 'charging'
+  | 'charging_with_task_suspend'
+  | 'park'
+  | LawnMowerEntityState
+  | string; // for other states
+
 export interface LawnMowerEntityAttributes extends HassEntityAttributeBase {
   status?: LawnMowerEntityState;
   state?: LawnMowerEntityState;
@@ -26,6 +35,7 @@ export interface LawnMowerEntityAttributes extends HassEntityAttributeBase {
   fan_speed_list?: string[];
   battery_level?: number;
   battery_icon?: string;
+  raw_activity?: LawnMowerEntityActivity;
 }
 
 export interface LawnMowerEntity extends HassEntityBase {
@@ -59,6 +69,8 @@ export interface LawnMowerCardConfig {
   map_refresh: number;
   image: string;
   battery: string;
+  temperature: string;
+  humidity: string;
   show_name: boolean;
   show_status: boolean;
   show_toolbar: boolean;
