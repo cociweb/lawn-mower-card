@@ -29,7 +29,7 @@ export default function buildConfig(
     show_shortcuts: config.show_shortcuts ?? true,
     compact_view: config.compact_view ?? false,
     stats: config.stats ?? {},
-    actions: config.actions ?? {},
+    actions: config.actions ?? [],
     shortcuts: config.shortcuts ?? [],
   };
 }
