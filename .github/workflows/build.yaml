@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump-type:
+        description: 'Type of version bump (major, minor, patch, build)'
+        required: false
+        default: 'build'
+      
+
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+  id-token: write
+
+  
+jobs:
+  build:
+    name: build
+    concurrency:
+      group: validate-group
+      cancel-in-progress: true
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.bump-type == 'build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout Repo
+        uses: actions/checkout@v4
+ 
+      - name: 📦 Install Packages
+        run: npm install
+
+      - name: 📦 Install Packages
+        run: npm ci
+
+      - name: 🧪 Test
+        run: npm test
