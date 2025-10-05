@@ -1,16 +1,20 @@
 {
   "status": {
-    "cleaning": "清扫中",
-    "auto": "自动清扫",
-    "spot": "区域清扫",
-    "edge": "边缘清扫",
-    "single_room": "单房间清扫",
+    "mowing": "割草中",
+    "auto": "自动割草",
+    "spot": "局部割草",
+    "fixed_mowing": "局部割草",
+    "fixed mowing": "局部割草",
+    "edge": "边缘割草",
+    "single_room": "单区域割草",
     "paused": "暂停中",
     "idle": "闲置中",
+    "standby": "闲置中",
     "stop": "已停止",
     "charging": "充电中",
     "returning home": "回充",
     "returning": "回充",
+    "park": "回充",
     "docked": "充电中",
     "unknown": "未知",
     "offline": "离线",
@@ -43,15 +47,15 @@
     "max+": "Max+"
   },
   "common": {
-    "name": "Lawn mower Card",
-    "description": "Lawn mower Card 允许您控制您的扫地机器人。",
-    "start": "清扫",
+    "name": "割草机卡片",
+    "description": "割草机卡片允许您控制您的机器人割草机。",
+    "start": "开始割草",
     "continue": "继续",
     "pause": "暂停",
     "stop": "停止",
     "return_to_base": "回充",
-    "locate": "定位扫地机器人",
-    "not_available": "扫地机器人不可用"
+    "locate": "定位割草机",
+    "not_available": "割草机不可用"
   },
   "error": {
     "invalid_config": "错误的设置",

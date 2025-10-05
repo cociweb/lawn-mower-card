@@ -1,11 +1,16 @@
 {
   "status": {
-    "cleaning": "Valo",
+    "mowing": "Valo",
     "paused": "Pristabdytas",
     "idle": "Neturi darbo",
-    "charging": "Kraunasi",
+    "standby": "Neturi darbo",
+    "charge": "Kraunasi",
     "returning home": "Grįžtą namo",
-    "docked": "Doke"
+    "park": "Grįžtą namo",
+    "docked": "Doke",
+    "spot": "Kohdeleikkaus",
+    "fixed_mowing": "Kohdeleikkaus",
+    "fixed mowing": "Kohdeleikkaus"
   },
   "source": {
     "gentle": "Švelnus",

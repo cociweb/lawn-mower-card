@@ -1,10 +1,15 @@
 {
   "status": {
-    "cleaning": "Rengjøring",
+    "mowing": "Rengjøring",
+    "spot": "Rengjøring",
+    "fixed_mowing": "Fast rengjøring",
+    "fixed mowing": "Fast rengjøring",
     "paused": "Pauset",
-    "idle": "Tomgang",
-    "charging": "Lader",
-    "returning home": "Returnerer hjem"
+    "idle": "Inaktiv",
+    "standby": "Inaktiv",
+    "charge": "Lader",
+    "returning home": "Returnerer hjem",
+    "park": "Returnerer hjem"
   },
   "source": {
     "gentle": "Skånsom",

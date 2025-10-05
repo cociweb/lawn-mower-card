@@ -1,10 +1,15 @@
 {
   "status": {
-    "cleaning": "Städar",
+    "mowing": "Städar",
     "paused": "Pausad",
     "idle": "Inaktiv",
+    "standby": "Inaktiv",
     "charging": "Laddar",
-    "returning home": "Återvänder hem"
+    "returning home": "Återvänder hem",
+    "park": "Återvänder hem",
+    "fixed_mowing": "Återvänder hem",
+    "fixed mowing": "Återvänder hem",
+    "spot": "Spot"
   },
   "source": {
     "gentle": "Extra försiktig",

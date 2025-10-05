@@ -1,10 +1,16 @@
 {
   "status": {
-    "cleaning": "Rengjer",
+    "mowing": "Rengjer",
     "paused": "Pausa",
     "idle": "Tomgang",
+    "standby": "Tomgang",
     "charging": "Ladar",
-    "returning home": "Returnerer heim"
+    "returning home": "Returnerer heim",
+    "park": "Returnerer heim",
+    "docked": "Docked",
+    "spot": "Spot",
+    "fixed_mowing": "Spot",
+    "fixed mowing": "Spot"
   },
   "source": {
     "gentle": "Skånsam",

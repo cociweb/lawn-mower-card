@@ -1,10 +1,18 @@
 {
   "status": {
-    "cleaning": "Đang dọn dẹp",
+    "mowing": "Đang dọn dẹp",
+    "auto": "Đang dọn dẹp",
+    "spot": "Đang dọn dẹp",
+    "fixed_mowing": "Đang dọn dẹp",
+    "fixed mowing": "Đang dọn dẹp",
+    "edge": "Đang dọn dẹp",
+    "single_room": "Đang dọn dẹp",
     "paused": "Dừng",
     "idle": "Nghỉ",
+    "standby": "Nghỉ",
     "charging": "Đang sạc",
     "returning home": "Đang về Dock",
+    "park": "Đang về Dock",
     "docked": "Đang ở Dock"
   },
   "source": {

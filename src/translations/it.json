@@ -1,11 +1,16 @@
 {
   "status": {
-    "cleaning": "In pulizia",
+    "mowing": "Taglio erba",
     "paused": "In pausa",
     "idle": "Inattivo",
+    "standby": "Inattivo",
     "charging": "In carica",
     "returning_home": "In rientro alla base",
-    "docked": "Alla Base"
+    "park": "In rientro alla base",
+    "docked": "Alla Base",
+    "spot": "Spot",
+    "fixed_mowing": "Spot",
+    "fixed mowing": "Spot"
   },
   "source": {
     "gentle": "Gentile",
@@ -15,15 +20,15 @@
     "turbo": "Turbo"
   },
   "common": {
-    "name": "Lawn mower Card",
-    "description": "Lawn mower card consente di controllare il tuo aspirapolvere.",
-    "start": "Pulisci",
+    "name": "Scheda tagliaerba",
+    "description": "La scheda tagliaerba consente di controllare il tuo robot tagliaerba.",
+    "start": "Taglia l'erba",
     "continue": "Continua",
     "pause": "Pausa",
     "stop": "Stop",
     "return_to_base": "Base",
-    "locate": "Trova aspirapolvere",
-    "not_available": "Lawn mower non disponibile"
+    "locate": "Trova tagliaerba",
+    "not_available": "Tagliaerba non disponibile"
   },
   "error": {
     "missing_entity": "È necessario specificare l'entità!"

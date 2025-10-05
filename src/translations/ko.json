@@ -1,16 +1,20 @@
 {
   "status": {
-    "cleaning": "청소 중",
+    "mowing": "잔디 깎는 중",
     "auto": "자동 청소",
     "spot": "부분 청소",
+    "fixed_mowing": "부분 청소",
+    "fixed mowing": "부분 청소",
     "edge": "가장자리 청소",
     "single_room": "방 청소",
     "paused": "일시 정지",
-    "idle": "유휴 중",
+    "idle": "대기",
+    "standby": "대기",
     "stop": "중지됨",
-    "charging": "충전 중",
+    "charge": "충전 중",
     "returning home": "충전대로 복귀 중",
     "returning": "충전대로 복귀 중",
+    "park": "충전대로 복귀 중",
     "docked": "도킹됨",
     "unknown": "알수 없음",
     "offline": "오프라인",
@@ -30,15 +34,15 @@
     "max+": "맥스+"
   },
   "common": {
-    "name": "청소기 카드",
-    "description": "청소기 카드를 사용하면 로봇 청소기를 제어할 수 있습니다.",
+    "name": "잔디깎이 카드",
+    "description": "잔디깎이 카드를 사용하면 로봇 잔디깎이를 제어할 수 있습니다.",
     "start": "청소 시작",
     "continue": "청소 재개",
     "pause": "일시 정지",
     "stop": "중지",
     "return_to_base": "충전대로 복귀",
-    "locate": "청소기 위치",
-    "not_available": "청소기 사용 불가"
+    "locate": "잔디깎이 위치",
+    "not_available": "잔디깎이 사용 불가"
   },
   "error": {
     "missing_entity": "구성요소 지정이 필요합니다!"

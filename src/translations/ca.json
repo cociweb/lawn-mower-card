@@ -1,11 +1,16 @@
 {
   "status": {
-    "cleaning": "Netejant",
+    "mowing": "Tallant gespa",
     "paused": "En pausa",
     "idle": "Inactiu",
+    "standby": "Inactiu",
     "charging": "Carregant",
     "returning home": "Tornant a la base",
-    "docked": "A la base"
+    "park": "Tornant a la base",
+    "docked": "A la base",
+    "spot": "Cèl·la fixa",
+    "fixed_mowing": "Cèl·la fixa",
+    "fixed mowing": "Cèl·la fixa"
   },
   "source": {
     "gentle": "Delicat",
@@ -15,9 +20,9 @@
     "turbo": "Turbo"
   },
   "common": {
-    "name": "Lawn mower Card",
-    "description": "Lawn mower card us permet controlar el robot aspirador.",
-    "start": "Neteja",
+    "name": "Targeta tallagespa",
+    "description": "La targeta tallagespa us permet controlar el vostre robot tallagespa.",
+    "start": "Començar a tallar",
     "continue": "Continua",
     "pause": "Pausa",
     "stop": "Atura",

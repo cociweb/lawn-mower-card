@@ -1,15 +1,19 @@
 {
   "status": {
-    "cleaning": "掃除中",
+    "mowing": "芝刈り中",
     "auto": "自動",
     "spot": "スポット",
+    "fixed_mowing": "スポット",
+    "fixed mowing": "スポット",
     "edge": "エッジ清掃",
     "single_room": "シングルルームモード",
     "paused": "一時停止",
     "idle": "アイドル",
+    "standby": "アイドル",
     "stop": "停止",
     "charging": "充電中",
     "returning": "ホームに戻っています",
+    "park": "ホームに戻っています",
     "returning_home": "ホームに戻る",
     "docked": "ドックに接続中",
     "unknown": "不明",
@@ -36,21 +40,18 @@
     "high": "高",
     "strong": "最強",
     "quiet": "静音",
-    "auto": "自動",
-    "balanced": "バランス",
-    "custom": "カスタム",
-    "off": "オフ"
+    "auto": "自動"
   },
   "common": {
-    "name": "掃除機カード",
-    "description": "掃除機かーどはロボット掃除機の操作に使用します。",
+    "name": "芝刈り機カード",
+    "description": "芝刈り機カードはロボット芝刈り機の操作に使います。",
     "start": "開始",
     "continue": "続ける",
     "pause": "一時停止",
     "stop": "中止",
     "return_to_base": "ドック",
-    "locate": "掃除機の場所",
-    "not_available": "掃除機は利用できません"
+    "locate": "芝刈り機を探す",
+    "not_available": "芝刈り機は利用できません"
   },
   "error": {
     "invalid_config": "設定が無効です",

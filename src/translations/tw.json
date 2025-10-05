@@ -1,10 +1,17 @@
 {
   "status": {
-    "Cleaning": "清掃中",
-    "Paused": "暫停中",
-    "Idle": "閒置中",
-    "Charging": "充電中",
-    "Returning home": "正在返回充電座",
+    "mowing": "清掃中",
+    "auto": "自動清掃",
+    "spot": "局部清掃",
+    "fixed_mowing": "局部清掃",
+    "fixed mowing": "局部清掃",
+    "edge": "邊緣清掃",
+    "single_room": "單一房間清掃",
+    "paused": "暫停中",
+    "idle": "閒置中",
+    "standby": "閒置中",
+    "charging": "充電中",
+    "returning home": "正在返回充電座",
     "docked": "返回充電座",
     "segment cleaning": "區域清掃"
   },

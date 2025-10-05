@@ -1,15 +1,19 @@
 {
   "status": {
-    "cleaning": "Støvsuger",
-    "auto": "Automatisk rengøring",
-    "spot": "Spot rengøring",
-    "edge": "Kant rengøring cleaning",
-    "single_room": "Rengører udvalgt rum",
+    "mowing": "Slår græs",
+    "auto": "Automatisk græsslåning",
+    "spot": "Plet græsslåning",
+    "fixed_mowing": "Plet græsslåning",
+    "fixed mowing": "Plet græsslåning",
+    "edge": "Kant græsslåning",
+    "single_room": "Slår udvalgt område",
     "paused": "Pauset",
     "idle": "Inaktiv",
+    "standby": "Inaktiv",
     "stop": "Stoppet",
     "charging": "Lader",
     "returning": "Returnerer til dock",
+    "park": "Returnerer til dock",
     "returning_home": "Returnerer til dock",
     "docked": "I dock",
     "unknown": "Ukendt",
@@ -43,14 +47,14 @@
   },
   "common": {
     "name": "Lawn mower Card",
-    "description": "Lawn mower card lader dig kontrollere din robotstøvsuger.",
+    "description": "Lawn mower card lader dig kontrollere din robotplæneklipper.",
     "start": "Start",
     "continue": "Fortsæt",
     "pause": "Pause",
     "stop": "Stop",
     "return_to_base": "Gå til dock",
-    "locate": "Find støvsuger",
-    "not_available": "Støvsuger er ikke tilgængelig"
+    "locate": "Find plæneklipper",
+    "not_available": "Plæneklipper er ikke tilgængelig"
   },
   "error": {
     "invalid_config": "Ugyldig konfiguration",

@@ -1,16 +1,20 @@
 {
   "status": {
-    "cleaning": "Vysává se",
-    "auto": "Automatické vysávání",
-    "spot": "Vysávání na místě",
-    "edge": "Vysávání při okraji",
-    "single_room": "Vysávání jedné místnosti",
+    "mowing": "Seká se tráva",
+    "auto": "Automatické sekání",
+    "spot": "Lokální sekání",
+    "fixed_mowing": "Lokální sekání",
+    "fixed mowing": "Lokální sekání",
+    "edge": "Sekání okrajů",
+    "single_room": "Sekání jedné zóny",
     "paused": "Pozastaveno",
     "idle": "Nečinný",
+    "standby": "Nečinný",
     "stop": "Zastavený",
-    "charging": "Nabíjí se",
+    "charge": "Nabíjí se",
     "returning home": "Vrací se do stanice",
     "returning": "Vrací se",
+    "park": "Vrací se",
     "docked": "Ve stanici",
     "unknown": "Neznámý",
     "offline": "Vypnuto",
@@ -30,15 +34,15 @@
     "max+": "Max+"
   },
   "common": {
-    "name": "Karta vysavače",
-    "description": "Karta vysavače vám dovolí ovládat svůj vysavač.",
-    "start": "Začni vysávat",
+    "name": "Karta sekačky",
+    "description": "Karta sekačky vám umožní ovládat vaši robotickou sekačku.",
+    "start": "Začni sekat",
     "continue": "Pokračuj",
     "pause": "Pozastav",
     "stop": "Zastav",
     "return_to_base": "Vrať se domů",
     "locate": "Lokalizuj",
-    "not_available": "Vysavač není dostupný"
+    "not_available": "Sekačka není dostupná"
   },
   "error": {
     "missing_entity": "Je vyžadováno specifikování entity!"

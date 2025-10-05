@@ -1,15 +1,19 @@
 {
   "status": {
-    "cleaning": "Siivoaa",
-    "auto": "Automaattisiivous",
-    "spot": "Kohdesiivous",
-    "edge": "Reunasiivous",
-    "single_room": "Huonesiivous",
+    "mowing": "Leikkaa nurmikkoa",
+    "auto": "Automaattinen leikkaus",
+    "spot": "Kohdeleikkaus",
+    "fixed_mowing": "Kohdeleikkaus",
+    "fixed mowing": "Kohdeleikkaus",
+    "edge": "Reunaleikkaus",
+    "single_room": "Alueen leikkaus",
     "paused": "Tauotettu",
     "idle": "Toimeton",
+    "standby": "Toimeton",
     "stop": "Pysäytetty",
     "charging": "Lataa",
     "returning": "Palaamassa",
+    "park": "Palaamassa",
     "returning_home": "Palaamassa latausasemaan",
     "docked": "Telakoitu",
     "unknown": "Tuntematon",
@@ -42,15 +46,15 @@
     "off": "Pois päältä"
   },
   "common": {
-    "name": "Imurikortti",
-    "description": "Imurikortti mahdollistaa robotti-imurin ohjauksen.",
+    "name": "Ruohonleikkurikortti",
+    "description": "Ruohonleikkurikortti mahdollistaa robottiruohonleikkurin ohjauksen.",
     "start": "Käynnistä",
     "continue": "Jatka",
     "pause": "Tauko",
     "stop": "Pysähdy",
     "return_to_base": "Latausasemaan",
-    "locate": "Paikanna imuri",
-    "not_available": "Ei saatavilla"
+    "locate": "Paikanna ruohonleikkuri",
+    "not_available": "Ruohonleikkuri ei ole saatavilla"
   },
   "error": {
     "invalid_config": "Virheellinen konfiguraatio",
