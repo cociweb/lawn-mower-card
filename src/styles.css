@@ -223,12 +223,13 @@ ha-card {
   color: var(--vc-secondary-text-color);
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
-  margin-left: calc(28px + var(--vc-spacing)); /* size + margin of spinner */
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
 
 .preview-compact .status-text {
-  margin-left: 0;
+  margin: 0 auto;
 }
 
 .status ha-circular-progress {
