@@ -396,17 +396,26 @@ export class LawnMowerCard extends LitElement {
     }
 
     const buttons = this.config.shortcuts.map(
-      ({ name, service, icon, service_data }) => {
-        const execute = () => {
-          if (service) {
-            return this.callService({ service, service_data });
-          }
-        };
-        return html`
-          <ha-icon-button label="${name}" @click="${execute}">
-            <ha-icon icon="${icon}"></ha-icon>
-          </ha-icon-button>
-        `;
+      ({ name, service, icon, service_data, link }) => {
+        if (link) {
+          return html`
+            <ha-icon-button label="${name}">
+              <a rel="noreferrer" href="${link}" target="_blank" style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);">
+                <ha-icon icon="${icon}" style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"></ha-icon>
+              </a>
+            </ha-icon-button>`;
+        } else {
+          const execute = () => {
+            if (service) {
+              return this.callService({ service, service_data });
+            }
+          };
+          return html`
+            <ha-icon-button label="${name}" @click="${execute}">
+              <ha-icon icon="${icon}"></ha-icon>
+            </ha-icon-button>
+          `;
+        }
       },
     );
 
