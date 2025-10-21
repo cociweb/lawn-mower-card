@@ -141,6 +141,7 @@ You can defined [custom scripts][ha-scripts] for custom actions i.e mowing speci
 | `name`         | `string` | Optional                          | Friendly name of the action, i.e. `mow backyard`. |
 | `service`      | `string` | Optional                          | A service to call, i.e. `script.mow_backyard`.    |
 | `icon`         | `string` | Optional                          | Any icon for action button.                       |
+| `link`         | `string` | Optional                          | A link to navigate to instead of an action.       |
 | `service_data` | `object` | `service_data` for `service` call |
 
 ## Theming
