@@ -285,10 +285,11 @@ export class LawnMowerCard extends LitElement {
 
     const src =
       this.config.image === 'default' ? DEFAULT_IMAGE : this.config.image;
+    const animated = this.config.animated ? ' animated' : '';
 
     return html`
       <img
-        class="lawn-mower ${state}"
+        class="lawn-mower ${state}${animated}"
         src="${src}"
         @click="${() => this.handleMore()}"
       />
