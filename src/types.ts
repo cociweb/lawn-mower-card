@@ -61,6 +61,7 @@ export interface LawnMowerCardShortcut {
   icon?: string;
   service?: string;
   service_data?: Record<string, unknown>;
+  link?: string;
 }
 
 export interface LawnMowerCardConfig {
@@ -68,6 +69,7 @@ export interface LawnMowerCardConfig {
   map: string;
   map_refresh: number;
   image: string;
+  animated: boolean;
   battery: string;
   temperature: string;
   humidity: string;

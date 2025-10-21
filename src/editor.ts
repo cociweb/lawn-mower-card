@@ -29,6 +29,7 @@ export class LawnMowerCardEditor
   @state() private show_status = true;
   @state() private show_toolbar = true;
   @state() private show_shortcuts = true;
+  @state() private animated = true;
 
   setConfig(config: LovelaceCardConfig & LawnMowerCardConfig): void {
     this.config = config;
@@ -102,7 +103,7 @@ export class LawnMowerCardEditor
         <div class="option">
           <paper-input
             label="${localize('editor.image')}"
-            .value=${this.image}
+            .value=${this.config.image ?? this.image}
             .configValue=${'image'}
             @value-changed=${this.valueChanged}
           ></paper-input>
@@ -115,7 +116,7 @@ export class LawnMowerCardEditor
                 ? 'editor.compact_view_aria_label_off'
                 : 'editor.compact_view_aria_label_on',
             )}
-            .checked=${Boolean(this.compact_view)}
+            .checked=${Boolean(this.config.compact_view ?? this.compact_view)}
             .configValue=${'compact_view'}
             @change=${this.valueChanged}
           >
@@ -130,7 +131,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_name_aria_label_off'
                 : 'editor.show_name_aria_label_on',
             )}
-            .checked=${Boolean(this.show_name)}
+            .checked=${Boolean(this.config.show_name ?? this.show_name)}
             .configValue=${'show_name'}
             @change=${this.valueChanged}
           >
@@ -145,7 +146,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_status_aria_label_off'
                 : 'editor.show_status_aria_label_on',
             )}
-            .checked=${Boolean(this.show_status)}
+            .checked=${Boolean(this.config.show_status ?? this.show_status)}
             .configValue=${'show_status'}
             @change=${this.valueChanged}
           >
@@ -160,7 +161,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_toolbar_aria_label_off'
                 : 'editor.show_toolbar_aria_label_on',
             )}
-            .checked=${Boolean(this.show_toolbar)}
+            .checked=${Boolean(this.config.show_toolbar ?? this.show_toolbar)}
             .configValue=${'show_toolbar'}
             @change=${this.valueChanged}
           >
@@ -175,12 +176,27 @@ export class LawnMowerCardEditor
                 ? 'editor.show_shortcuts_aria_label_off'
                 : 'editor.show_shortcuts_aria_label_on',
             )}
-            .checked=${Boolean(this.show_shortcuts)}
+            .checked=${Boolean(this.config.show_shortcuts ?? this.show_shortcuts)}
             .configValue=${'show_shortcuts'}
             @change=${this.valueChanged}
           >
           </ha-switch>
           ${localize('editor.show_shortcuts')}
+        </div>
+
+        <div class="option">
+          <ha-switch
+            aria-label=${localize(
+              this.animated
+                ? 'editor.animated_aria_label_off'
+                : 'editor.animated_aria_label_on',
+            )}
+            .checked=${Boolean(this.config.animated ?? this.animated)}
+            .configValue=${'animated'}
+            @change=${this.valueChanged}
+          >
+          </ha-switch>
+          ${localize('editor.animated')}
         </div>
 
         <strong>${localize('editor.code_only_note')}</strong>
@@ -195,7 +211,7 @@ export class LawnMowerCardEditor
     const target = event.target as ConfigElement;
     if (
       !target.configValue ||
-      this.config[target.configValue] === target?.value
+      (this.config[target.configValue] && this.config[target.configValue] === target?.value)
     ) {
       return;
     }
