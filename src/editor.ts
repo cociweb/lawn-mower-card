@@ -102,7 +102,7 @@ export class LawnMowerCardEditor
         <div class="option">
           <paper-input
             label="${localize('editor.image')}"
-            .value=${this.image}
+            .value=${this.config.image}
             .configValue=${'image'}
             @value-changed=${this.valueChanged}
           ></paper-input>
