@@ -98,9 +98,10 @@ Here is what every option means:
 | `map`            | `string`  | Optional     | An entity_id within the `camera` domain, for streaming live lawn mower map.                           |
 | `map_refresh`    | `integer` | `5`          | Update interval for map camera in seconds                                                             |
 | `image`          | `string`  | `default`    | Path to image of your lawn mower. Better to have `png` or `svg`.                                      |
+| `animated`       | `boolean` | `true `      | Animate the image when cleaning or returning to base.                                                 |
 | `battery`        | `string`  | `default`    | An entity_id within the `battery` of your lawn mower                                                  |
 | `temperature`    | `string`  | `default`    | An entity_id within the `temperature` of your lawn mower                                              |
-| `humidity`       | `string`  | `default`    | An entity_id within the `humidity` of your lawn mower                                                  |
+| `humidity`       | `string`  | `default`    | An entity_id within the `humidity` of your lawn mower                                                 |
 | `show_name`      | `boolean` | `true`       | Show friendly name of the lawn mower.                                                                 |
 | `show_status`    | `boolean` | `true`       | Show status of the lawn mower.                                                                        |
 | `show_toolbar`   | `boolean` | `true`       | Show toolbar with actions.                                                                            |
@@ -140,6 +141,7 @@ You can defined [custom scripts][ha-scripts] for custom actions i.e mowing speci
 | `name`         | `string` | Optional                          | Friendly name of the action, i.e. `mow backyard`. |
 | `service`      | `string` | Optional                          | A service to call, i.e. `script.mow_backyard`.    |
 | `icon`         | `string` | Optional                          | Any icon for action button.                       |
+| `link`         | `string` | Optional                          | A link to navigate to instead of an action.       |
 | `service_data` | `object` | `service_data` for `service` call |
 
 ## Theming
