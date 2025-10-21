@@ -64,6 +64,9 @@
     "show_toolbar": "הצג סרגל כלים",
     "show_toolbar_aria_label_on": "הפעל את סרגל הכלים לתצוגה",
     "show_toolbar_aria_label_off": "כבה את סרגל הכלים לתצוגה",
+    "animated": "מונפש",
+    "animated_aria_label_on": "הפעל הנפשה",
+    "animated_aria_label_off": "כבה הנפשה",
     "code_only_note": "הערה: הגדרת פעולות ואפשרויות סטטיסטיקה זמינות אך ורק באמצעות עורך הקוד."
   }
 }

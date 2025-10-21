@@ -79,6 +79,9 @@
     "show_toolbar": "Afficher la barre d'outils",
     "show_toolbar_aria_label_on": "Activer l'affichage de la barre d'outils",
     "show_toolbar_aria_label_off": "Désactiver l'affichage de la barre d'outils",
+    "animated": "Animé",
+    "animated_aria_label_on": "Activer l'animation",
+    "animated_aria_label_off": "Désactiver l'animation",
     "code_only_note": "Remarque: Les options de réglage des actions et statistiques sont disponibles exclusivement en utilisant l'éditeur de code."
   }
 }

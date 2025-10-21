@@ -80,6 +80,9 @@
     "show_toolbar": "显示工具栏",
     "show_toolbar_aria_label_on": "开启工具栏显示",
     "show_toolbar_aria_label_off": "关闭工具栏显示",
+    "animated": "动画",
+    "animated_aria_label_on": "开启动画",
+    "animated_aria_label_off": "关闭动画",
     "code_only_note": "注意: 设置动作和统计选项只能使用代码编辑器。"
   }
 }

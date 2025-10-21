@@ -79,6 +79,9 @@
     "show_toolbar": "Zeige Toolbar",
     "show_toolbar_aria_label_on": "Schalte 'Zeige Toolbar' ein",
     "show_toolbar_aria_label_off": "Schalte 'Zeige Toolbar' aus",
+    "animated": "Animiert",
+    "animated_aria_label_on": "Animation einschalten",
+    "animated_aria_label_off": "Animation ausschalten",
     "code_only_note": "Hinweis: Das Festlegen von Aktionen und Statistikoptionen ist ausschließlich mit dem Code-Editor möglich."
   }
 }

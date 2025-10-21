@@ -84,6 +84,9 @@
     "show_toolbar": "Показувати панель дій?",
     "show_toolbar_aria_label_on": "Показати панель дій",
     "show_toolbar_aria_label_off": "Приховати панель дій",
+    "animated": "Анімація",
+    "animated_aria_label_on": "Увімкнути анімацію",
+    "animated_aria_label_off": "Вимкнути анімацію",
     "code_only_note": "Увага: Опції actions та stats доступні виключно через редактор коду."
   }
 }

@@ -51,6 +51,9 @@
     "show_toolbar": "Visa verktygsvält",
     "show_toolbar_aria_label_on": "Aktivera verktygsfält",
     "show_toolbar_aria_label_off": "Inaktivera verktygsfält",
+    "animated": "Animerad",
+    "animated_aria_label_on": "Aktivera animation",
+    "animated_aria_label_off": "Inaktivera animation",
     "code_only_note": "Obs! Inställningar för händelser och statistikalternativ är enbart tillgängliga med kodredigeraren."
   }
 }

@@ -76,6 +76,9 @@
     "show_toolbar": "ツールバーを表示",
     "show_toolbar_aria_label_on": "ツールバーの表示をオンにする",
     "show_toolbar_aria_label_off": "ツールバーの表示をオフにする",
+    "animated": "アニメーション",
+    "animated_aria_label_on": "アニメーションをオン",
+    "animated_aria_label_off": "アニメーションをオフ",
     "code_only_note": "注：actionとstatsのオプション設定は、コードエディターで行ってください。"
   }
 }

@@ -83,6 +83,9 @@
     "show_shortcuts": "További ikonok megjelenítése",
     "show_shortcuts_aria_label_on": "További ikonok megjelenítésének bekapcsolása",
     "show_shortcuts_aria_label_off": "További ikonok megjelenítésének kikapcsolása",
+    "animated": "Animált",
+    "animated_aria_label_on": "Animáció bekapcsolása",
+    "animated_aria_label_off": "Animáció kikapcsolása",
     "code_only_note": "Megjegyzés: A műveletek és statisztika beállítások kizárólag a kód szerkesztő használatával érhetők el."
   }
 }
