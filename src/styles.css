@@ -168,27 +168,27 @@ ha-card {
   margin: 0 var(--vc-spacing);
 }
 
-.lawn-mower.on,
-.lawn-mower.mowing,
-.lawn-mower.edgecut,
-.lawn-mower.auto,
-.lawn-mower.spot,
-.lawn-mower.edge,
-.lawn-mower.single_room {
+.lawn-mower.animated.on,
+.lawn-mower.animated.mowing,
+.lawn-mower.animated.edgecut,
+.lawn-mower.animated.auto,
+.lawn-mower.animated.spot,
+.lawn-mower.animated.edge,
+.lawn-mower.animated.single_room {
   animation: mowing 5s linear infinite;
 }
 
-.preview-compact .lawn-mower.on,
-.preview-compact .lawn-mower.mowing,
-.preview-compact .lawn-mower.edgecut,
-.preview-compact .lawn-mower.auto,
-.preview-compact .lawn-mower.spot,
-.preview-compact .lawn-mower.edge,
-.preview-compact .lawn-mower.single_room {
+.preview-compact .lawn-mower.animated.on,
+.preview-compact .lawn-mower.animated.mowing,
+.preview-compact .lawn-mower.animated.edgecut,
+.preview-compact .lawn-mower.animated.auto,
+.preview-compact .lawn-mower.animated.spot,
+.preview-compact .lawn-mower.animated.edge,
+.preview-compact .lawn-mower.animated.single_room {
   animation: mowing_compact 5s linear infinite;
 }
 
-.lawn-mower.returning {
+.lawn-mower.animated.returning {
   animation: returning 2s linear infinite;
 }
 
