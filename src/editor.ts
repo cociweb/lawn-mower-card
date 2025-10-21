@@ -115,7 +115,7 @@ export class LawnMowerCardEditor
                 ? 'editor.compact_view_aria_label_off'
                 : 'editor.compact_view_aria_label_on',
             )}
-            .checked=${Boolean(this.compact_view)}
+            .checked=${Boolean(this.config.compact_view)}
             .configValue=${'compact_view'}
             @change=${this.valueChanged}
           >
@@ -130,7 +130,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_name_aria_label_off'
                 : 'editor.show_name_aria_label_on',
             )}
-            .checked=${Boolean(this.show_name)}
+            .checked=${Boolean(this.config.show_name)}
             .configValue=${'show_name'}
             @change=${this.valueChanged}
           >
@@ -145,7 +145,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_status_aria_label_off'
                 : 'editor.show_status_aria_label_on',
             )}
-            .checked=${Boolean(this.show_status)}
+            .checked=${Boolean(this.config.show_status)}
             .configValue=${'show_status'}
             @change=${this.valueChanged}
           >
@@ -160,7 +160,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_toolbar_aria_label_off'
                 : 'editor.show_toolbar_aria_label_on',
             )}
-            .checked=${Boolean(this.show_toolbar)}
+            .checked=${Boolean(this.config.show_toolbar)}
             .configValue=${'show_toolbar'}
             @change=${this.valueChanged}
           >
@@ -175,7 +175,7 @@ export class LawnMowerCardEditor
                 ? 'editor.show_shortcuts_aria_label_off'
                 : 'editor.show_shortcuts_aria_label_on',
             )}
-            .checked=${Boolean(this.show_shortcuts)}
+            .checked=${Boolean(this.config.show_shortcuts)}
             .configValue=${'show_shortcuts'}
             @change=${this.valueChanged}
           >
@@ -195,7 +195,7 @@ export class LawnMowerCardEditor
     const target = event.target as ConfigElement;
     if (
       !target.configValue ||
-      this.config[target.configValue] === target?.value
+      (this.config[target.configValue] && this.config[target.configValue] === target?.value)
     ) {
       return;
     }
