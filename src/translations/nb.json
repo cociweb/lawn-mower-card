@@ -51,6 +51,9 @@
     "show_toolbar": "Vis verktøylinjen",
     "show_toolbar_aria_label_on": "Slå skjermverktøylinjen på",
     "show_toolbar_aria_label_off": "Slå skjermverktøylinjen av",
+    "animated": "Animasjon",
+    "animated_aria_label_on": "Slå på animasjon",
+    "animated_aria_label_off": "Slå av animasjon",
     "code_only_note": "Merk: Innstillingshandlinger og statistikkalternativer er eksklusivt tilgjengelige ved hjelp av Code Editor."
   }
 }

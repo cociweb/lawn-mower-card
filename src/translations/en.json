@@ -83,6 +83,9 @@
     "show_shortcuts": "Show Shortcuts",
     "show_shortcuts_aria_label_on": "Toggle display shortcuts bar on",
     "show_shortcuts_aria_label_off": "Toggle display shortcuts bar off",
+    "animated": "Animated",
+    "animated_aria_label_on": "Turn animation on",
+    "animated_aria_label_off": "Turn animation off",
     "code_only_note": "Note: Setting actions and stats options are available exclusively using Code Editor."
   }
 }

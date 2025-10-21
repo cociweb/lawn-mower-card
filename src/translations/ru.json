@@ -80,6 +80,9 @@
     "show_toolbar": "Показать панель действий?",
     "show_toolbar_aria_label_on": "Показать панель действий",
     "show_toolbar_aria_label_off": "Скрыть панель действий",
+    "animated": "Анимация",
+    "animated_aria_label_on": "Включить анимацию",
+    "animated_aria_label_off": "Отключить анимацию",
     "code_only_note": "Внимание: Опции actions и stats доступны исключительно через редактор кода."
   }
 }

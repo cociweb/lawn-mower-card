@@ -52,6 +52,9 @@
     "show_toolbar": "Hiện thanh công cụ",
     "show_toolbar_aria_label_on": "Hiện thanh công cụ",
     "show_toolbar_aria_label_off": "Ẩn thanh công cụ",
+    "animated": "Hoạt ảnh",
+    "animated_aria_label_on": "Bật hoạt ảnh",
+    "animated_aria_label_off": "Tắt hoạt ảnh",
     "code_only_note": "Lưu ý: Cài đặt thao tác và tùy chọn thống kê chỉ có sẵn bằng trình chỉnh sửa mã"
   }
 }

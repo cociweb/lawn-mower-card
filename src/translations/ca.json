@@ -49,6 +49,9 @@
     "show_toolbar": "Mostrar barra d'eines",
     "show_toolbar_aria_label_on": "Mostra barra d'eines",
     "show_toolbar_aria_label_off": "Amaga barra d'eines",
+    "animated": "Animació",
+    "animated_aria_label_on": "Activar animació",
+    "animated_aria_label_off": "Desactivar animació",
     "code_only_note": "Nota: Configuració de les accions i estadístiques només disponible des de l'Editor de Codi."
   }
 }

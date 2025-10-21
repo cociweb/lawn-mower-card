@@ -66,6 +66,9 @@
     "show_toolbar": "Zobraz lištu",
     "show_toolbar_aria_label_on": "Zapni zobrazení lišty",
     "show_toolbar_aria_label_off": "Vypni zobrazení lišty",
+    "animated": "Animace",
+    "animated_aria_label_on": "Zapnout animaci",
+    "animated_aria_label_off": "Vypnout animaci",
     "code_only_note": "Poznámka: Nastavení akcí a infa je dostupné pouze v editoru kódu."
   }
 }

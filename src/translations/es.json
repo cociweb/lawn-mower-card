@@ -55,6 +55,9 @@
     "show_toolbar": "Mostrar barra de herramientas",
     "show_toolbar_aria_label_on": "Activar la barra de herramientas",
     "show_toolbar_aria_label_off": "Desactivar la barra de herramientas",
+    "animated": "Animado",
+    "animated_aria_label_on": "Activar animación",
+    "animated_aria_label_off": "Desactivar animación",
     "code_only_note": "Nota: La configuración de las acciones y estadísticas está únicamente disponible a través del Editor de Código."
   }
 }

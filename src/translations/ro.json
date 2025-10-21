@@ -59,6 +59,9 @@
     "show_toolbar": "Arată bara de instrumente",
     "show_toolbar_aria_label_on": "Pornește arată bara de instrumente",
     "show_toolbar_aria_label_off": "Oprește arată bara de instrumente",
+    "animated": "Animat",
+    "animated_aria_label_on": "Activează animația",
+    "animated_aria_label_off": "Dezactivează animația",
     "code_only_note": "Notă: Acțiunile de setare și opțiunile de statistici sunt disponibile exclusiv folosind Editorul de cod."
   }
 }

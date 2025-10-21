@@ -49,6 +49,9 @@
     "show_toolbar": "Rodyti įrankių juostą",
     "show_toolbar_aria_label_on": "Įjungti įrankių juostos rodymą",
     "show_toolbar_aria_label_off": "Išjungti įrankių juostos rodymą",
+    "animated": "Animacija",
+    "animated_aria_label_on": "Įjungti animaciją",
+    "animated_aria_label_off": "Išjungti animaciją",
     "code_only_note": "Pastaba: Veiksmų ir statistikos nustatymai gali būti redaguojami tik naudojantis kodo redaguotoju."
   }
 }

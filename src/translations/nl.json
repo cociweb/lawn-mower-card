@@ -41,6 +41,9 @@
     "show_toolbar": "Werkbalk laten zien?",
     "show_toolbar_aria_label_on": "Zet werkbalk aan",
     "show_toolbar_aria_label_off": "Zet werkbalk uit",
+    "animated": "Geanimeerd",
+    "animated_aria_label_on": "Zet animatie aan",
+    "animated_aria_label_off": "Zet animatie uit",
     "code_only_note": "Notitie: Instel acties en status opties zijn alleen beschikbaar in de Code Editor"
   }
 }

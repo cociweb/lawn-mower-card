@@ -32,11 +32,24 @@ export class LawnMowerCardEditor
   @state() private animated = true;
 
   setConfig(config: LovelaceCardConfig & LawnMowerCardConfig): void {
-    this.config = config;
+    // Initialize config with default values
+    this.config = {
+      entity: '',
+      show_name: true,
+      show_status: true,
+      show_toolbar: true,
+      show_shortcuts: true,
+      animated: true,
+      ...config
+    };
 
+    // Set default entity if not provided
     if (!this.config.entity) {
-      this.config.entity = this.getEntitiesByType('lawn-mower')[0] || '';
-      fireEvent(this, 'config-changed', { config: this.config });
+      const entities = this.getEntitiesByType('lawn_mower');
+      if (entities.length > 0) {
+        this.config.entity = entities[0];
+        fireEvent(this, 'config-changed', { config: this.config });
+      }
     }
   }
 
@@ -101,12 +114,14 @@ export class LawnMowerCardEditor
         </div>
 
         <div class="option">
-          <paper-input
-            label="${localize('editor.image')}"
+          <ha-textfield
+            .label="${localize('editor.image')}"
             .value=${this.config.image ?? this.image}
             .configValue=${'image'}
-            @value-changed=${this.valueChanged}
-          ></paper-input>
+            @change=${this.valueChanged}
+            fixedMenuPosition
+            naturalMenuWidth
+          ></ha-textfield>
         </div>
 
         <div class="option">

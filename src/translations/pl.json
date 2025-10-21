@@ -81,6 +81,9 @@
     "show_toolbar": "Pasek narzędzi",
     "show_toolbar_aria_label_on": "Włącz pasek narzędzi",
     "show_toolbar_aria_label_off": "Wyłącz pasek narzędzi",
+    "animated": "Animacja",
+    "animated_aria_label_on": "Włącz animację",
+    "animated_aria_label_off": "Wyłącz animację",
     "code_only_note": "Uwaga: Ustawianie opcji i informacji statystyk jest dostępne tylko poprzez edytor kodu YAML."
   }
 }

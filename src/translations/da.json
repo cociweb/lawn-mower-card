@@ -79,6 +79,9 @@
     "show_toolbar": "Vis værktøjslinje",
     "show_toolbar_aria_label_on": "Slå visning af værktøjslinje til",
     "show_toolbar_aria_label_off": "Slå visning af værktøjslinje fra",
+    "animated": "Animeret",
+    "animated_aria_label_on": "Slå animation til",
+    "animated_aria_label_off": "Slå animation fra",
     "code_only_note": "Bemærk: Indstilling af actions og statistik er udelukkende muligt via Code Editor."
   }
 }

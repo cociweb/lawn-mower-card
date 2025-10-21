@@ -79,6 +79,9 @@
     "show_toolbar": "Näytä työkalurivi",
     "show_toolbar_aria_label_on": "Työkalurivi päälle",
     "show_toolbar_aria_label_off": "Työkalurivi pois",
+    "animated": "Animoitu",
+    "animated_aria_label_on": "Käytä animaatiota",
+    "animated_aria_label_off": "Poista animaatio käytöstä",
     "code_only_note": "Huomaa: toimintojen ja tilastojen asetukset saatavilla ainoastaan koodieditorissa."
   }
 }
