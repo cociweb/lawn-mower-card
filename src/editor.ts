@@ -33,23 +33,12 @@ export class LawnMowerCardEditor
 
   setConfig(config: LovelaceCardConfig & LawnMowerCardConfig): void {
     // Initialize config with default values
-    this.config = {
-      entity: '',
-      show_name: true,
-      show_status: true,
-      show_toolbar: true,
-      show_shortcuts: true,
-      animated: true,
-      ...config
-    };
+    this.config = config;
 
     // Set default entity if not provided
     if (!this.config.entity) {
-      const entities = this.getEntitiesByType('lawn_mower');
-      if (entities.length > 0) {
-        this.config.entity = entities[0];
+      this.config.entity = this.getEntitiesByType('lawn-mower')[0] || '';
         fireEvent(this, 'config-changed', { config: this.config });
-      }
     }
   }
 
