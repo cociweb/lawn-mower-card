@@ -61,6 +61,7 @@ export interface LawnMowerCardShortcut {
   icon?: string;
   service?: string;
   service_data?: Record<string, unknown>;
+  link?: string;
 }
 
 export interface LawnMowerCardConfig {
