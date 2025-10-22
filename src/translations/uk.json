@@ -4,7 +4,6 @@
     "auto": "Автоматичне прибирання",
     "spot": "Прибирання зони",
     "fixed_mowing": "Прибирання зони",
-    "fixed mowing": "Прибирання зони",
     "edge": "Прибирання по периметру",
     "single_room": "Прибирання кімнати",
     "paused": "Пауза",
@@ -18,6 +17,7 @@
     "docked": "На док-станції",
     "unknown": "Невідомо",
     "offline": "Офлайн",
+    "unavailable": "Недоступно",
     "error": "Помилка",
     "charger_disconnected": "Зарядку не під'єднано",
     "remote_control_active": "Ручний режим активовано",
@@ -28,7 +28,6 @@
     "going_to_target": "Рух до цілі",
     "zoned_cleaning": "Зональне прибирання",
     "segment_cleaning": "Прибирання сегменту",
-    "unavailable": "Недоступно",
     "emergency": "Аварія",
     "charging_with_task_suspend": "Заряджається із призупиненим завданням",
     "locked": "Заблокований"

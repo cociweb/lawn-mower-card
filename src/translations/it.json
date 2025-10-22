@@ -8,6 +8,9 @@
     "returning_home": "In rientro alla base",
     "park": "In rientro alla base",
     "docked": "Alla Base",
+    "unavailable": "Non disponibile",
+    "unknown": "Sconosciuto",
+    "offline": "Disconnesso",
     "spot": "Spot",
     "fixed_mowing": "Spot",
     "fixed mowing": "Spot"

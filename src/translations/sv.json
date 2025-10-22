@@ -9,7 +9,10 @@
     "park": "Återvänder hem",
     "fixed_mowing": "Återvänder hem",
     "fixed mowing": "Återvänder hem",
-    "spot": "Spot"
+    "spot": "Spot",
+    "unavailable": "Ej tillgänglig",
+    "unknown": "Okänd",
+    "offline": "Offline"
   },
   "source": {
     "gentle": "Extra försiktig",

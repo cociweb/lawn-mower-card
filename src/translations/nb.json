@@ -9,7 +9,11 @@
     "standby": "Inaktiv",
     "charge": "Lader",
     "returning home": "Returnerer hjem",
-    "park": "Returnerer hjem"
+    "park": "Returnerer hjem",
+    "docked": "Angedockt",
+    "unavailable": "Utilgjengelig",
+    "unknown": "Ukjent",
+    "offline": "Frakoblet"
   },
   "source": {
     "gentle": "Skånsom",

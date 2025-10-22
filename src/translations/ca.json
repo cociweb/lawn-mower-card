@@ -8,9 +8,11 @@
     "returning home": "Tornant a la base",
     "park": "Tornant a la base",
     "docked": "A la base",
+    "unavailable": "No disponible",
+    "unknown": "Desconegut",
+    "offline": "Fora de línia",
     "spot": "Cèl·la fixa",
-    "fixed_mowing": "Cèl·la fixa",
-    "fixed mowing": "Cèl·la fixa"
+    "fixed_mowing": "Cèl·la fixa"
   },
   "source": {
     "gentle": "Delicat",

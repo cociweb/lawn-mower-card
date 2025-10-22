@@ -13,7 +13,10 @@
     "charging": "Đang sạc",
     "returning home": "Đang về Dock",
     "park": "Đang về Dock",
-    "docked": "Đang ở Dock"
+    "docked": "Đang ở Dock",
+    "unavailable": "Không khả dụng",
+    "unknown": "Không xác định",
+    "offline": "Ngoại tuyến"
   },
   "source": {
     "gentle": "Nhẹ",

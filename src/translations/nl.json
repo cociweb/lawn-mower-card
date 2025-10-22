@@ -8,6 +8,9 @@
     "returning home": "Keert terug naar dock",
     "park": "Keert terug naar dock",
     "docked": "Docked",
+    "unavailable": "Niet beschikbaar",
+    "unknown": "Onbekend",
+    "offline": "Offline",
     "spot": "Spot",
     "fixed_mowing": "Spot",
     "fixed mowing": "Spot"

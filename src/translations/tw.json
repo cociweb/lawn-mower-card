@@ -13,6 +13,9 @@
     "charging": "充電中",
     "returning home": "正在返回充電座",
     "docked": "返回充電座",
+    "unavailable": "不可用",
+    "unknown": "未知",
+    "offline": "離線",
     "segment cleaning": "區域清掃"
   },
   "source": {

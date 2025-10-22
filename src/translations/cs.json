@@ -16,8 +16,9 @@
     "returning": "Vrací se",
     "park": "Vrací se",
     "docked": "Ve stanici",
+    "unavailable": "Nedostupné",
     "unknown": "Neznámý",
-    "offline": "Vypnuto",
+    "offline": "Offline",
     "error": "Chyba"
   },
   "source": {

@@ -17,8 +17,9 @@
     "returning": "חוזר",
     "park": "חוזר",
     "docked": "בתחנה",
+    "unavailable": "לא זמין",
     "unknown": "לא ידוע",
-    "offline": "מנותק",
+    "offline": "לא מקוון",
     "error": "שגיאה"
   },
   "source": {

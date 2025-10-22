@@ -16,6 +16,7 @@
     "park": "ホームに戻っています",
     "returning_home": "ホームに戻る",
     "docked": "ドックに接続中",
+    "unavailable": "利用不可",
     "unknown": "不明",
     "offline": "オフライン",
     "error": "エラー",
