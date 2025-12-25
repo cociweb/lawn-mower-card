@@ -552,6 +552,9 @@ export class LawnMowerCard extends LitElement {
   }
 
   protected render(): Template {
+    if (!this.config) {
+      return nothing;
+    }
     if (!this.entity) {
       return this.renderUnavailable();
     }
