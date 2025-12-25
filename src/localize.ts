@@ -114,3 +114,46 @@ export default function localize(
 
   return translated;
 }
+
+function findValue(obj: any, key: string): string | undefined {
+  if (typeof obj === 'object' && obj !== null) {
+    for (const k in obj) {
+      if (k === key) {
+        return obj[k];
+      }
+      const found = findValue(obj[k], key);
+      if (found !== undefined) {
+        return found;
+      }
+    }
+  }
+  return undefined;
+}
+
+export function localizeValue(value: string): string {
+  if (typeof value !== 'string') {
+    return value;
+  }
+
+  let langStored: string | null = null;
+
+  try {
+    langStored = JSON.parse(localStorage.getItem('selectedLanguage') ?? '');
+  } catch {
+    langStored = localStorage.getItem('selectedLanguage');
+  }
+
+  const lang = (langStored || navigator.language.split('-')[0] || DEFAULT_LANG)
+    .replace(/['"]+/g, '')
+    .replace('-', '_')
+    .toLowerCase();
+
+  let translations = languages[lang];
+
+  if (!translations) {
+    translations = languages[DEFAULT_LANG];
+  }
+
+  const found = findValue(translations, value);
+  return found || value;
+}

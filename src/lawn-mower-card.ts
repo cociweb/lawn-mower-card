@@ -8,7 +8,7 @@ import {
 } from 'custom-card-helpers';
 import registerTemplates from 'ha-template';
 import get from 'lodash/get';
-import localize from './localize';
+import localize, { localizeValue } from './localize';
 import styles from './styles.css';
 import buildConfig from './config';
 import {
@@ -318,12 +318,14 @@ export class LawnMowerCard extends LitElement {
           return nothing;
         }
 
+        const localizedState = localizeValue(state);
+
         const value = html`
           <ha-template
             hass=${this.hass}
             template=${value_template}
-            value=${state}
-            variables=${{ value: state }}
+            value=${localizedState}
+            variables=${{ value: localizedState }}
           ></ha-template>
         `;
 
