@@ -4,6 +4,9 @@
   "type": "module",
   "description": "Lawn Mower cleaner card for Home Assistant Lovelace UI",
   "main": "dist/lawn-mower-card.js",
+  "repository": {
+    "url": "https://github.com/cociweb/lawn-mower-card"
+  },
   "scripts": {
     "start": "rollup -c --watch",
     "lint": "eslint src",
