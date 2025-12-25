@@ -75,6 +75,24 @@
   "prettier": {
     "singleQuote": true
   },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "plugins": ["import", "@typescript-eslint"],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "rules": {}
+  },
   "release": {
     "branches": [
       "main"

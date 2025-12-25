@@ -115,13 +115,16 @@ export default function localize(
   return translated;
 }
 
-function findValue(obj: any, key: string): string | undefined {
+function findValue(obj: Record<string, unknown>, key: string): string | undefined {
   if (typeof obj === 'object' && obj !== null) {
     for (const k in obj) {
       if (k === key) {
-        return obj[k];
+        const value = obj[k];
+        if (typeof value === 'string') {
+          return value;
+        }
       }
-      const found = findValue(obj[k], key);
+      const found = findValue(obj[k] as Record<string, unknown>, key);
       if (found !== undefined) {
         return found;
       }
