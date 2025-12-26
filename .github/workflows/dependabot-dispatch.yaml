@@ -19,7 +19,6 @@ jobs:
     permissions:
       contents: write
 
-    steps:
     steps: 
       - name: Trigger Dependabot job 
         run: | 
