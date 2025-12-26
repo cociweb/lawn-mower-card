@@ -84,6 +84,9 @@ export class LawnMowerCard extends LitElement {
   }
 
   public getCardSize(): number {
+    if (!this.config) {
+      return 3;
+    }
     return this.config.compact_view ? 3 : 8;
   }
 
@@ -106,6 +109,9 @@ export class LawnMowerCard extends LitElement {
 
   public connectedCallback() {
     super.connectedCallback();
+    if (!this.config) {
+      return;
+    }
     if (!this.config.compact_view && this.map) {
       this.requestUpdate();
       this.thumbUpdater = setInterval(
