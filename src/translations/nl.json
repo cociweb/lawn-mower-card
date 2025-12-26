@@ -14,7 +14,10 @@
     "locked": "Vergrendeld",
     "charging_with_queued_task": "Opladen (taak in wachtrij)",
     "charging_with_task_suspend": "Opladen (taak onderbroken)",
-    "manually_stopped": "Handmatig gestopt"
+    "manually_stopped": "Handmatig gestopt",
+    "unavailable": "Niet beschikbaar",
+    "unknown": "Onbekend",
+    "offline": "Offline"
   },
   "common": {
     "name": "Stofzuiger kaart",

@@ -15,6 +15,9 @@
     "charging_with_queued_task": "Kraunama (užduotis eilėje)",
     "charging_with_task_suspend": "Kraunama (užduotis sustabdyta)",
     "manually_stopped": "Sustabdyta rankiniu būdu",
+    "unavailable": "Nepasiekiamas",
+    "unknown": "Nežinomas",
+    "offline": "Neprisijungta",
     "error": "Klaida",
     "charging": "Kraunasi"
   },

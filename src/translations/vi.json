@@ -17,7 +17,10 @@
     "locked": "Đã khóa",
     "charging_with_queued_task": "Đang sạc (nhiệm vụ trong hàng đợi)",
     "charging_with_task_suspend": "Đang sạc (nhiệm vụ tạm ngừng)",
-    "manually_stopped": "Dừng thủ công"
+    "manually_stopped": "Dừng thủ công",
+    "unavailable": "Không khả dụng",
+    "unknown": "Không xác định",
+    "offline": "Ngoại tuyến"
   },
   "source": {
     "gentle": "Nhẹ",

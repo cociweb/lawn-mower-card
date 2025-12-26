@@ -17,6 +17,7 @@
     "park": "Returning home",
     "returning_home": "Returning home",
     "docked": "Docked",
+    "unavailable": "Unavailable",
     "unknown": "Unknown",
     "offline": "Offline",
     "error": "Error",

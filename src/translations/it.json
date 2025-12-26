@@ -14,7 +14,10 @@
     "locked": "Bloccato",
     "charging_with_queued_task": "Caricamento (attività in coda)",
     "charging_with_task_suspend": "Caricamento (attività sospesa)",
-    "manually_stopped": "Fermato manualmente"
+    "manually_stopped": "Fermato manualmente",
+    "unavailable": "Non disponibile",
+    "unknown": "Sconosciuto",
+    "offline": "Offline"
   },
   "source": {
     "gentle": "Gentile",

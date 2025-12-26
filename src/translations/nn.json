@@ -15,6 +15,9 @@
     "charging_with_queued_task": "Ladar (oppgåve i kø)",
     "charging_with_task_suspend": "Ladar (oppgåve suspendert)",
     "manually_stopped": "Stoppa manuelt",
+    "unavailable": "Ikkje tilgjengeleg",
+    "unknown": "Ukjend",
+    "offline": "Offline",
     "error": "Feil",
     "returning": "Returnerer"
   },

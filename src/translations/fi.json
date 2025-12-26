@@ -16,6 +16,7 @@
     "park": "Palaamassa",
     "returning_home": "Palaamassa latausasemaan",
     "docked": "Telakoitu",
+    "unavailable": "Ei käytettävissä",
     "unknown": "Tuntematon",
     "offline": "Poissa linjalta",
     "error": "Virhe",

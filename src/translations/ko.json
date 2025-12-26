@@ -16,6 +16,7 @@
     "returning": "충전대로 복귀 중",
     "park": "충전대로 복귀 중",
     "docked": "도킹됨",
+    "unavailable": "사용 불가",
     "unknown": "알수 없음",
     "offline": "오프라인",
     "error": "오류",

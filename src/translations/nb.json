@@ -14,10 +14,13 @@
     "charging_with_queued_task": "Lader (oppgave i kø)",
     "charging_with_task_suspend": "Lader (oppgave suspendert)",
     "manually_stopped": "Stoppet manuelt",
-    "docked": "Dokket",
+    "unavailable": "Utilgjengelig",
+    "unknown": "Ukjent",
+    "offline": "Offline",
     "error": "Feil",
     "returning": "Returnerer",
-    "charging": "Lader"
+    "charging": "Lader",
+    "docked": "Dokket"
   },
   "source": {
     "gentle": "Skånsom",

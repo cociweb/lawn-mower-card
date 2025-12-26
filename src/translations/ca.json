@@ -15,6 +15,9 @@
     "charging_with_queued_task": "Carregant (tasca a la cua)",
     "charging_with_task_suspend": "Carregant (tasca suspesa)",
     "manually_stopped": "Aturat manualment",
+    "unavailable": "No disponible",
+    "unknown": "Desconegut",
+    "offline": "Fora de línia",
     "error": "Error",
     "returning": "Tornant"
   },

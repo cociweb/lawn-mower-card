@@ -15,6 +15,9 @@
     "charging_with_task_suspend": "Laddar (uppgift avbruten)",
     "manually_stopped": "Stoppad manuellt",
     "docked": "Dockad",
+    "unavailable": "Otillgänglig",
+    "unknown": "Okänd",
+    "offline": "Offline",
     "error": "Fel",
     "returning": "Återvänder"
   },

@@ -16,6 +16,7 @@
     "park": "Returnerer til dock",
     "returning_home": "Returnerer til dock",
     "docked": "I dock",
+    "unavailable": "Utilgængelig",
     "unknown": "Ukendt",
     "offline": "Offline",
     "error": "Fejl",

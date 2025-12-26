@@ -18,6 +18,9 @@
     "charging_with_queued_task": "充電中 (佇列中的任務)",
     "charging_with_task_suspend": "充電中 (任務暫停)",
     "manually_stopped": "手動停止",
+    "unavailable": "不可用",
+    "unknown": "未知",
+    "offline": "離線",
     "error": "錯誤",
     "returning": "正在返回"
   },

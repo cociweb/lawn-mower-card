@@ -17,6 +17,9 @@
     "charging_with_queued_task": "Cargando (tarea en cola)",
     "charging_with_task_suspend": "Cargando (tarea suspendida)",
     "manually_stopped": "Detenido manualmente",
+    "unavailable": "No disponible",
+    "unknown": "Desconocido",
+    "offline": "Fuera de línea",
     "error": "Error"
   },
   "source": {

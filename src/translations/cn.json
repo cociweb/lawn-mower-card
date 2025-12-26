@@ -16,6 +16,7 @@
     "returning": "回充",
     "park": "回充",
     "docked": "充电中",
+    "unavailable": "不可用",
     "unknown": "未知",
     "offline": "离线",
     "error": "错误",
