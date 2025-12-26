@@ -26,7 +26,11 @@
     "updating": "Mise à joru",
     "going_to_target": "Déplacement vers la cible",
     "zoned_cleaning": "Nettoyage des zones",
-    "segment_cleaning": "Nettoyage des segments"
+    "segment_cleaning": "Nettoyage des segments",
+    "locked": "Verrouillé",
+    "charging_with_queued_task": "Chargement (tâche en attente)",
+    "charging_with_task_suspend": "Chargement (tâche suspendue)",
+    "manually_stopped": "Arrêté manuellement"
   },
   "source": {
     "gentle": "Doux",
@@ -59,6 +63,37 @@
   "error": {
     "invalid_config": "Configuration invalide",
     "missing_entity": "La spécification de l'entité est requise !"
+  },
+  "problem_state": {
+    "problem": "Problème",
+    "cover": "Couvercle",
+    "ok": "OK",
+    "tilted": "Incliné",
+    "steep": "Escarpé",
+    "raining": "Pluie",
+    "low_battery": "Batterie faible",
+    "weak_signal": "Signal faible",
+    "close_top_cover": "Fermer le couvercle supérieur",
+    "docked": "Amarré",
+    "undocked": "Désamarré",
+    "manually_dock": "Amarrage manuel",
+    "finished_fixed_mowing": "Tonte fixe terminée",
+    "disconnected": "Déconnecté",
+    "paused_charging": "Chargement en pause",
+    "interrupted": "Interrompu",
+    "interrupted_fixed_mowing": "Tonte fixe interrompue",
+    "turn_on_button": "Bouton d'allumage",
+    "press_start": "Appuyer sur démarrer",
+    "set_30_minute_timer": "Régler le minuteur 30 minutes",
+    "invalid_timer": "Minuteur invalide",
+    "charging_current_low": "Courant de charge faible",
+    "caught_in_rain": "Attrapé dans la pluie",
+    "data_upload_failure": "Échec de téléchargement des données",
+    "continue": "Continuer",
+    "stopped": "Arrêté",
+    "ui_locked": "UI verrouillé",
+    "discharge_error": "Erreur de décharge",
+    "battery_overheated": "Batterie surchauffée"
   },
   "warning": {
     "actions_array": "AVERTISSEMENT : « Actions » est réservé à la substitution des actions par défaut des boutons existants. Si vous souhaitez ajouter des actions supplémentaires, utilisez plutôt l'option « Raccourcis »."

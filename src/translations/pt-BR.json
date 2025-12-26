@@ -18,7 +18,11 @@
     "docked": "Na base",
     "unknown": "Desconhecido",
     "offline": "Offline",
-    "error": "Erro"
+    "error": "Erro",
+    "locked": "Bloqueado",
+    "charging_with_queued_task": "Carregando (tarefa na fila)",
+    "charging_with_task_suspend": "Carregando (tarefa suspensa)",
+    "manually_stopped": "Parado manualmente"
   },
   "source": {
     "gentle": "Delicado",
@@ -46,6 +50,37 @@
   },
   "warning": {
     "actions_array": "AVISO: 'actions' são reservadas para substituir as ações padrões para botões existentes. Se sua intenção era adicionar ações adicionais, use a opção 'shortcuts'."
+  },
+  "problem_state": {
+    "problem": "Problema",
+    "cover": "Tampa",
+    "ok": "OK",
+    "tilted": "Inclinado",
+    "steep": "Íngreme",
+    "raining": "Chovendo",
+    "low_battery": "Bateria baixa",
+    "weak_signal": "Sinal fraco",
+    "close_top_cover": "Fechar tampa superior",
+    "docked": "Atracado",
+    "undocked": "Desatracado",
+    "manually_dock": "Atracação manual",
+    "finished_fixed_mowing": "Corte fixo terminado",
+    "disconnected": "Desconectado",
+    "paused_charging": "Carregamento pausado",
+    "interrupted": "Interrompido",
+    "interrupted_fixed_mowing": "Corte fixo interrompido",
+    "turn_on_button": "Botão de ligar",
+    "press_start": "Pressione iniciar",
+    "set_30_minute_timer": "Definir temporizador de 30 minutos",
+    "invalid_timer": "Temporizador inválido",
+    "charging_current_low": "Corrente de carregamento baixa",
+    "caught_in_rain": "Pego na chuva",
+    "data_upload_failure": "Falha no upload de dados",
+    "continue": "Continuar",
+    "stopped": "Parado",
+    "ui_locked": "UI bloqueado",
+    "discharge_error": "Erro de descarga",
+    "battery_overheated": "Bateria superaquecida"
   },
   "editor": {
     "entity": "Entidade (Obrigatória)",

@@ -10,7 +10,13 @@
     "docked": "A la base",
     "spot": "Cèl·la fixa",
     "fixed_mowing": "Cèl·la fixa",
-    "fixed mowing": "Cèl·la fixa"
+    "fixed mowing": "Cèl·la fixa",
+    "locked": "Bloquejat",
+    "charging_with_queued_task": "Carregant (tasca a la cua)",
+    "charging_with_task_suspend": "Carregant (tasca suspesa)",
+    "manually_stopped": "Aturat manualment",
+    "error": "Error",
+    "returning": "Tornant"
   },
   "source": {
     "gentle": "Delicat",
@@ -32,6 +38,37 @@
   },
   "error": {
     "missing_entity": "Cal especificar una entitat."
+  },
+  "problem_state": {
+    "problem": "Problema",
+    "cover": "Tapa",
+    "ok": "D'acord",
+    "tilted": "Inclinat",
+    "steep": "Escarpé",
+    "raining": "Pluja",
+    "low_battery": "Bateria baixa",
+    "weak_signal": "Senyal feble",
+    "close_top_cover": "Tanca la tapa superior",
+    "docked": "Acoblat",
+    "undocked": "Desacoblat",
+    "manually_dock": "Acoblament manual",
+    "finished_fixed_mowing": "Tall fixe acabat",
+    "disconnected": "Desconnectat",
+    "paused_charging": "Càrrega en pausa",
+    "interrupted": "Interromput",
+    "interrupted_fixed_mowing": "Tall fixe interromput",
+    "turn_on_button": "Botó d'encesa",
+    "press_start": "Prem comença",
+    "set_30_minute_timer": "Estableix temporitzador de 30 minuts",
+    "invalid_timer": "Temporitzador no vàlid",
+    "charging_current_low": "Corrent de càrrega baix",
+    "caught_in_rain": "Capturat en la pluja",
+    "data_upload_failure": "Error de càrrega de dades",
+    "continue": "Continua",
+    "stopped": "Aturat",
+    "ui_locked": "IU blocat",
+    "discharge_error": "Error de descàrrega",
+    "battery_overheated": "Bateria sobreescalfada"
   },
   "editor": {
     "entity": "Entitat (Requerit)",

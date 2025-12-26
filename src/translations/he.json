@@ -19,7 +19,11 @@
     "docked": "בתחנה",
     "unknown": "לא ידוע",
     "offline": "מנותק",
-    "error": "שגיאה"
+    "error": "שגיאה",
+    "locked": "נעול",
+    "charging_with_queued_task": "טוען (משימה בתור)",
+    "charging_with_task_suspend": "טוען (משימה מושהית)",
+    "manually_stopped": "נעצר ידנית"
   },
   "source": {
     "gentle": "עדין",
@@ -45,8 +49,36 @@
   "error": {
     "missing_entity": "יש צורך לציין ישות!"
   },
-  "warning": {
-    "actions_array": ""
+  "problem_state": {
+    "problem": "בעיה",
+    "cover": "כיסוי",
+    "ok": "אישור",
+    "tilted": "נטוי",
+    "steep": "תלול",
+    "raining": "יורד גשם",
+    "low_battery": "סוללה נמוכה",
+    "weak_signal": "אות חלש",
+    "close_top_cover": "סגור כיסוי עליון",
+    "docked": "מעוגן",
+    "undocked": "לא מעוגן",
+    "manually_dock": "עגינה ידנית",
+    "finished_fixed_mowing": "גיזום קבוע הושלם",
+    "disconnected": "מנותק",
+    "paused_charging": "טעינה מושהית",
+    "interrupted": "הופסק",
+    "interrupted_fixed_mowing": "גיזום קבוע הופסק",
+    "turn_on_button": "כפתור הפעלה",
+    "press_start": "לחץ התחל",
+    "set_30_minute_timer": "הגדר טיימר 30 דקות",
+    "invalid_timer": "טיימר לא תקין",
+    "charging_current_low": "זרם טעינה נמוך",
+    "caught_in_rain": "נתפס בגשם",
+    "data_upload_failure": "כשל בהעלאת נתונים",
+    "continue": "המשך",
+    "stopped": "נעצר",
+    "ui_locked": "UI נעול",
+    "discharge_error": "שגיאת פריקה",
+    "battery_overheated": "סוללה התחממה יתר על המידה"
   },
   "editor": {
     "entity": "ישות (נדרש)",

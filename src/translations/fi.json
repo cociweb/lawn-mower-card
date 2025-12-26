@@ -26,7 +26,11 @@
     "updating": "Päivitetään",
     "going_to_target": "Menossa kohteeseen",
     "zoned_cleaning": "Aluesiivous",
-    "segment_cleaning": "Lohkosiivous"
+    "segment_cleaning": "Lohkosiivous",
+    "locked": "Lukittu",
+    "charging_with_queued_task": "Lataa (tehtävä jonossa)",
+    "charging_with_task_suspend": "Lataa (tehtävä keskeytetty)",
+    "manually_stopped": "Pysäytetty manuaalisesti"
   },
   "source": {
     "gentle": "Hellävarainen",
@@ -59,6 +63,37 @@
   "error": {
     "invalid_config": "Virheellinen konfiguraatio",
     "missing_entity": "Entiteetti puuttuu!"
+  },
+  "problem_state": {
+    "problem": "Ongelma",
+    "cover": "Kansi",
+    "ok": "OK",
+    "tilted": "Kallistunut",
+    "steep": "Jyrkkä",
+    "raining": "Sataa",
+    "low_battery": "Akku tyhjä",
+    "weak_signal": "Heikko signaali",
+    "close_top_cover": "Sulje yläkansi",
+    "docked": "Telakoitu",
+    "undocked": "Ei telakoitu",
+    "manually_dock": "Manuaalinen telakointi",
+    "finished_fixed_mowing": "Kiinteä leikkaus valmis",
+    "disconnected": "Katkaistu",
+    "paused_charging": "Lataus keskeytetty",
+    "interrupted": "Keskeytetty",
+    "interrupted_fixed_mowing": "Kiinteä leikkaus keskeytetty",
+    "turn_on_button": "Käynnistyspainike",
+    "press_start": "Paina aloitus",
+    "set_30_minute_timer": "Aseta 30 minuutin ajastin",
+    "invalid_timer": "Virheellinen ajastin",
+    "charging_current_low": "Latausvirta alhainen",
+    "caught_in_rain": "Jumiutunut sateeseen",
+    "data_upload_failure": "Tietojen lataus epäonnistui",
+    "continue": "Jatka",
+    "stopped": "Pysäytetty",
+    "ui_locked": "UI lukittu",
+    "discharge_error": "Purkuvirhe",
+    "battery_overheated": "Akku ylikuumeni"
   },
   "warning": {
     "actions_array": "VAROITUS: 'actions' on varattu oletustoimintojen ylikirjoittamiseen olemassaolevissa painikkeissa. Jos tarkoituksesi on lisätä toimintoja, käytä 'shortcuts' -toimintoa."

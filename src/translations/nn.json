@@ -10,7 +10,13 @@
     "docked": "Docked",
     "spot": "Spot",
     "fixed_mowing": "Spot",
-    "fixed mowing": "Spot"
+    "fixed mowing": "Spot",
+    "locked": "Låst",
+    "charging_with_queued_task": "Ladar (oppgåve i kø)",
+    "charging_with_task_suspend": "Ladar (oppgåve suspendert)",
+    "manually_stopped": "Stoppa manuelt",
+    "error": "Feil",
+    "returning": "Returnerer"
   },
   "source": {
     "gentle": "Skånsam",
@@ -32,6 +38,37 @@
   },
   "error": {
     "missing_entity": "Spesifiserande oppføring kravd!"
+  },
+  "problem_state": {
+    "problem": "Problem",
+    "cover": "Lok",
+    "ok": "OK",
+    "tilted": "Skå",
+    "steep": "Bratt",
+    "raining": "Regnar",
+    "low_battery": "Lågt batteri",
+    "weak_signal": "Svakt signal",
+    "close_top_cover": "Lukk toppdekselet",
+    "docked": "Dokket",
+    "undocked": "Ikkje dokket",
+    "manually_dock": "Manuell dokking",
+    "finished_fixed_mowing": "Ferdig fast klipping",
+    "disconnected": "Fråkopla",
+    "paused_charging": "Lading pausa",
+    "interrupted": "Avbrote",
+    "interrupted_fixed_mowing": "Fast klipping avbrote",
+    "turn_on_button": "Slå på knapp",
+    "press_start": "Trykk start",
+    "set_30_minute_timer": "Set 30 minutt timer",
+    "invalid_timer": "Ugyldig timer",
+    "charging_current_low": "Låg ladespenning",
+    "caught_in_rain": "Fanget i regn",
+    "data_upload_failure": "Dataopplasting feila",
+    "continue": "Hald fram",
+    "stopped": "Stoppa",
+    "ui_locked": "UI låst",
+    "discharge_error": "Utladningsfeil",
+    "battery_overheated": "Batteri overoppheta"
   },
   "editor": {
     "entity": "Oppføring (påkravd)",

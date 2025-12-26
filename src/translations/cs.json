@@ -18,7 +18,12 @@
     "docked": "Ve stanici",
     "unknown": "Neznámý",
     "offline": "Vypnuto",
-    "error": "Chyba"
+    "error": "Chyba",
+    "locked": "Zamčeno",
+    "charging_with_queued_task": "Nabíjení (úkol ve frontě)",
+    "charging_with_task_suspend": "Nabíjení (úkol pozastaven)",
+    "manually_stopped": "Ručně zastaveno",
+    "charging": "Nabíjení"
   },
   "source": {
     "gentle": "Mírný",
@@ -45,7 +50,39 @@
     "not_available": "Sekačka není dostupná"
   },
   "error": {
-    "missing_entity": "Je vyžadováno specifikování entity!"
+    "missing_entity": "Je vyžadováno specifikování entity!",
+    "invalid_config": "Neplatná konfigurace"
+  },
+  "problem_state": {
+    "problem": "Problém",
+    "cover": "Víko",
+    "ok": "OK",
+    "tilted": "Nakloněno",
+    "steep": "Strmé",
+    "raining": "Prší",
+    "low_battery": "Nízká baterie",
+    "weak_signal": "Slabý signál",
+    "close_top_cover": "Zavřete horní víko",
+    "docked": "Dokováno",
+    "undocked": "Nedokováno",
+    "manually_dock": "Ruční dokování",
+    "finished_fixed_mowing": "Dokončeno pevné sečení",
+    "disconnected": "Odpojeno",
+    "paused_charging": "Nabíjení pozastaveno",
+    "interrupted": "Přerušeno",
+    "interrupted_fixed_mowing": "Přerušeno pevné sečení",
+    "turn_on_button": "Tlačítko zapnutí",
+    "press_start": "Stiskněte start",
+    "set_30_minute_timer": "Nastavte 30minutový časovač",
+    "invalid_timer": "Neplatný časovač",
+    "charging_current_low": "Nízký proud nabíjení",
+    "caught_in_rain": "Chyceno v dešti",
+    "data_upload_failure": "Selhání nahrání dat",
+    "continue": "Pokračovat",
+    "stopped": "Zastaveno",
+    "ui_locked": "UI zamčeno",
+    "discharge_error": "Chyba vybití",
+    "battery_overheated": "Baterie přehřátá"
   },
   "warning": {
     "actions_array": "VAROVÁNÍ: 'actions' jsou rezervovány pro přepsání původních akcí u existujících tlačítek. Pokud jste chtěli měli v plánu přidat další akce, použijte namísto toho možnost 'shortcuts'."

@@ -10,7 +10,11 @@
     "docked": "Alla Base",
     "spot": "Spot",
     "fixed_mowing": "Spot",
-    "fixed mowing": "Spot"
+    "fixed mowing": "Spot",
+    "locked": "Bloccato",
+    "charging_with_queued_task": "Caricamento (attività in coda)",
+    "charging_with_task_suspend": "Caricamento (attività sospesa)",
+    "manually_stopped": "Fermato manualmente"
   },
   "source": {
     "gentle": "Gentile",
@@ -32,6 +36,37 @@
   },
   "error": {
     "missing_entity": "È necessario specificare l'entità!"
+  },
+  "problem_state": {
+    "problem": "Problema",
+    "cover": "Coperchio",
+    "ok": "OK",
+    "tilted": "Inclinato",
+    "steep": "Ripido",
+    "raining": "Pioggia",
+    "low_battery": "Batteria bassa",
+    "weak_signal": "Segnale debole",
+    "close_top_cover": "Chiudi il coperchio superiore",
+    "docked": "Attraccato",
+    "undocked": "Non attraccato",
+    "manually_dock": "Attracco manuale",
+    "finished_fixed_mowing": "Taglio fisso finito",
+    "disconnected": "Disconnesso",
+    "paused_charging": "Caricamento in pausa",
+    "interrupted": "Interrotto",
+    "interrupted_fixed_mowing": "Taglio fisso interrotto",
+    "turn_on_button": "Pulsante di accensione",
+    "press_start": "Premi avvia",
+    "set_30_minute_timer": "Imposta timer 30 minuti",
+    "invalid_timer": "Timer non valido",
+    "charging_current_low": "Corrente di carica bassa",
+    "caught_in_rain": "Preso nella pioggia",
+    "data_upload_failure": "Errore caricamento dati",
+    "continue": "Continua",
+    "stopped": "Fermato",
+    "ui_locked": "UI bloccata",
+    "discharge_error": "Errore di scarica",
+    "battery_overheated": "Batteria surriscaldata"
   },
   "warning": {
     "actions_array": ""

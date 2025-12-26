@@ -13,7 +13,13 @@
     "charging": "充電中",
     "returning home": "正在返回充電座",
     "docked": "返回充電座",
-    "segment cleaning": "區域清掃"
+    "segment cleaning": "區域清掃",
+    "locked": "已鎖定",
+    "charging_with_queued_task": "充電中 (佇列中的任務)",
+    "charging_with_task_suspend": "充電中 (任務暫停)",
+    "manually_stopped": "手動停止",
+    "error": "錯誤",
+    "returning": "正在返回"
   },
   "source": {
     "Gentle": "拖地",
@@ -35,6 +41,37 @@
   },
   "error": {
     "missing_entity": "必須指定一個實體!"
+  },
+  "problem_state": {
+    "problem": "問題",
+    "cover": "蓋子",
+    "ok": "確定",
+    "tilted": "傾斜",
+    "steep": "陡峭",
+    "raining": "下雨",
+    "low_battery": "電池低",
+    "weak_signal": "訊號弱",
+    "close_top_cover": "關閉頂蓋",
+    "docked": "已對接",
+    "undocked": "未對接",
+    "manually_dock": "手動對接",
+    "finished_fixed_mowing": "固定割草完成",
+    "disconnected": "斷開",
+    "paused_charging": "充電暫停",
+    "interrupted": "中斷",
+    "interrupted_fixed_mowing": "固定割草中斷",
+    "turn_on_button": "開機按鈕",
+    "press_start": "按開始",
+    "set_30_minute_timer": "設定30分鐘定時器",
+    "invalid_timer": "無效定時器",
+    "charging_current_low": "充電電流低",
+    "caught_in_rain": "被雨困住",
+    "data_upload_failure": "資料上傳失敗",
+    "continue": "繼續",
+    "stopped": "停止",
+    "ui_locked": "UI鎖定",
+    "discharge_error": "放電錯誤",
+    "battery_overheated": "電池過熱"
   },
   "editor": {
     "entity": "實體 (必填)",

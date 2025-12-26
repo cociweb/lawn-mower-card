@@ -9,7 +9,14 @@
     "park": "Återvänder hem",
     "fixed_mowing": "Återvänder hem",
     "fixed mowing": "Återvänder hem",
-    "spot": "Spot"
+    "spot": "Spot",
+    "locked": "Låst",
+    "charging_with_queued_task": "Laddar (uppgift i kö)",
+    "charging_with_task_suspend": "Laddar (uppgift avbruten)",
+    "manually_stopped": "Stoppad manuellt",
+    "docked": "Dockad",
+    "error": "Fel",
+    "returning": "Återvänder"
   },
   "source": {
     "gentle": "Extra försiktig",
@@ -31,6 +38,37 @@
   },
   "error": {
     "missing_entity": "Specificera entitet är obligatoriskt!"
+  },
+  "problem_state": {
+    "problem": "Problem",
+    "cover": "Lock",
+    "ok": "OK",
+    "tilted": "Lutad",
+    "steep": "Brant",
+    "raining": "Regnar",
+    "low_battery": "Låg batteri",
+    "weak_signal": "Svagt signal",
+    "close_top_cover": "Stäng det övre locket",
+    "docked": "Dockad",
+    "undocked": "Ej dockad",
+    "manually_dock": "Manuell dockning",
+    "finished_fixed_mowing": "Färdig fast klippning",
+    "disconnected": "Frånkopplad",
+    "paused_charging": "Laddning pausad",
+    "interrupted": "Avbruten",
+    "interrupted_fixed_mowing": "Avbruten fast klippning",
+    "turn_on_button": "Slå på knapp",
+    "press_start": "Tryck på start",
+    "set_30_minute_timer": "Ställ in 30-minuters timer",
+    "invalid_timer": "Ogiltig timer",
+    "charging_current_low": "Låg laddström",
+    "caught_in_rain": "Fast i regn",
+    "data_upload_failure": "Datauppladdningsfel",
+    "continue": "Fortsätt",
+    "stopped": "Stoppad",
+    "ui_locked": "UI låst",
+    "discharge_error": "Urladdningsfel",
+    "battery_overheated": "Batteri överhettad"
   },
   "warning": {
     "actions_array": ""

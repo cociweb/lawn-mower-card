@@ -26,7 +26,11 @@
     "updating": "A atualizar",
     "going_to_target": "A caminho do destino",
     "zoned_cleaning": "Limpeza por zonas",
-    "segment_cleaning": "Limpeza por segmentos"
+    "segment_cleaning": "Limpeza por segmentos",
+    "locked": "Bloqueado",
+    "charging_with_queued_task": "Carregamento (tarefa em fila)",
+    "charging_with_task_suspend": "Carregamento (tarefa suspensa)",
+    "manually_stopped": "Parado manualmente"
   },
   "source": {
     "gentle": "Delicado",
@@ -59,6 +63,37 @@
   "error": {
     "invalid_config": "Configuração inválida",
     "missing_entity": "Entidade especificada obrigatória!"
+  },
+  "problem_state": {
+    "problem": "Problema",
+    "cover": "Tampa",
+    "ok": "OK",
+    "tilted": "Inclinado",
+    "steep": "Íngreme",
+    "raining": "Chovendo",
+    "low_battery": "Bateria baixa",
+    "weak_signal": "Sinal fraco",
+    "close_top_cover": "Fechar tampa superior",
+    "docked": "Atracado",
+    "undocked": "Desatracado",
+    "manually_dock": "Atracação manual",
+    "finished_fixed_mowing": "Corte fixo terminado",
+    "disconnected": "Desconectado",
+    "paused_charging": "Carregamento pausado",
+    "interrupted": "Interrompido",
+    "interrupted_fixed_mowing": "Corte fixo interrompido",
+    "turn_on_button": "Botão de ligar",
+    "press_start": "Pressione iniciar",
+    "set_30_minute_timer": "Definir temporizador de 30 minutos",
+    "invalid_timer": "Temporizador inválido",
+    "charging_current_low": "Corrente de carregamento baixa",
+    "caught_in_rain": "Pego na chuva",
+    "data_upload_failure": "Falha no upload de dados",
+    "continue": "Continuar",
+    "stopped": "Parado",
+    "ui_locked": "UI bloqueada",
+    "discharge_error": "Erro de descarga",
+    "battery_overheated": "Bateria superaquecida"
   },
   "warning": {
     "actions_array": "AVISO: 'actions' está reservado para substituir ações padrão de botões existentes. Se a sua intenção era adicionar ações adicionais, utilize a opção 'shortcuts'."

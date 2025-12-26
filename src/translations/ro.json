@@ -18,7 +18,11 @@
     "docked": "Parcat",
     "unknown": "Necunoscut",
     "offline": "Deconectat",
-    "error": "Eroare"
+    "error": "Eroare",
+    "locked": "Blocat",
+    "charging_with_queued_task": "Se încarcă (sarcină în așteptare)",
+    "charging_with_task_suspend": "Se încarcă (sarcină suspendată)",
+    "manually_stopped": "Oprit manual"
   },
   "source": {
     "gentle": "Blând",
@@ -42,6 +46,37 @@
   },
   "error": {
     "missing_entity": "Este necesară specificarea entității!"
+  },
+  "problem_state": {
+    "problem": "Problemă",
+    "cover": "Capac",
+    "ok": "OK",
+    "tilted": "Înclinat",
+    "steep": "Abrupt",
+    "raining": "Plouă",
+    "low_battery": "Baterie scăzută",
+    "weak_signal": "Semnal slab",
+    "close_top_cover": "Închideți capacul superior",
+    "docked": "Andocat",
+    "undocked": "Neandocat",
+    "manually_dock": "Andocare manuală",
+    "finished_fixed_mowing": "Tuns fix terminat",
+    "disconnected": "Deconectat",
+    "paused_charging": "Încărcare în pauză",
+    "interrupted": "Întrerupt",
+    "interrupted_fixed_mowing": "Tuns fix întrerupt",
+    "turn_on_button": "Buton de pornire",
+    "press_start": "Apăsați start",
+    "set_30_minute_timer": "Setați cronometrul de 30 de minute",
+    "invalid_timer": "Cronometru invalid",
+    "charging_current_low": "Curent de încărcare scăzut",
+    "caught_in_rain": "Prins în ploaie",
+    "data_upload_failure": "Eșec încărcare date",
+    "continue": "Continuați",
+    "stopped": "Oprit",
+    "ui_locked": "UI blocat",
+    "discharge_error": "Eroare descărcare",
+    "battery_overheated": "Baterie supraîncălzită"
   },
   "editor": {
     "entity": "Entitate (Necesar)",
