@@ -1,0 +1,34 @@
+name: Run Dependabot Manually
+
+on:
+  workflow_dispatch:
+    inputs:
+      package-ecosystem:
+        description: "Ecosystem to update (npm, pip, docker, etc.)"
+        required: true
+        default: "npm"
+      directory:
+        description: "Directory to scan"
+        required: true
+        default: "/"
+
+jobs:
+  trigger-dependabot:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      dependabot: write
+
+    steps:
+      - name: Trigger Dependabot update
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/dependabot/updates \
+            -f package-ecosystem='${{ github.event.inputs.package-ecosystem }}' \
+            -f directory='${{ github.event.inputs.directory }}' \
+            -f schedule.interval='daily'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
