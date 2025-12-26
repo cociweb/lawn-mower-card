@@ -92,6 +92,9 @@ export class LawnMowerCard extends LitElement {
   }
 
   protected updated(changedProps: PropertyValues) {
+    if (!this.config) {
+      return;
+    }
     if (
       changedProps.get('hass') &&
       changedProps.get('hass').states[this.config.entity].state !==
