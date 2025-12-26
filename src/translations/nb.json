@@ -9,7 +9,15 @@
     "standby": "Inaktiv",
     "charge": "Lader",
     "returning home": "Returnerer hjem",
-    "park": "Returnerer hjem"
+    "park": "Returnerer hjem",
+    "locked": "Låst",
+    "charging_with_queued_task": "Lader (oppgave i kø)",
+    "charging_with_task_suspend": "Lader (oppgave suspendert)",
+    "manually_stopped": "Stoppet manuelt",
+    "docked": "Dokket",
+    "error": "Feil",
+    "returning": "Returnerer",
+    "charging": "Lader"
   },
   "source": {
     "gentle": "Skånsom",
@@ -31,6 +39,37 @@
   },
   "error": {
     "missing_entity": "Spesifiserende enhet kreves!"
+  },
+  "problem_state": {
+    "problem": "Problem",
+    "cover": "Deksel",
+    "ok": "OK",
+    "tilted": "Skrått",
+    "steep": "Bratt",
+    "raining": "Regner",
+    "low_battery": "Lavt batteri",
+    "weak_signal": "Svakt signal",
+    "close_top_cover": "Lukk toppdeksel",
+    "docked": "Dokket",
+    "undocked": "Ikke dokket",
+    "manually_dock": "Manuell dokking",
+    "finished_fixed_mowing": "Ferdig fast klipping",
+    "disconnected": "Frakoblet",
+    "paused_charging": "Lading pauset",
+    "interrupted": "Avbrutt",
+    "interrupted_fixed_mowing": "Fast klipping avbrutt",
+    "turn_on_button": "Slå på knapp",
+    "press_start": "Trykk på start",
+    "set_30_minute_timer": "Sett 30 minutt timer",
+    "invalid_timer": "Ugyldig timer",
+    "charging_current_low": "Lav ladespenning",
+    "caught_in_rain": "Fanget i regn",
+    "data_upload_failure": "Dataopplasting feilet",
+    "continue": "Fortsett",
+    "stopped": "Stoppet",
+    "ui_locked": "UI låst",
+    "discharge_error": "Utladningsfeil",
+    "battery_overheated": "Batteri overophetet"
   },
   "warning": {
     "actions_array": ""

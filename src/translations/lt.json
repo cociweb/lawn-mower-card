@@ -10,7 +10,13 @@
     "docked": "Doke",
     "spot": "Kohdeleikkaus",
     "fixed_mowing": "Kohdeleikkaus",
-    "fixed mowing": "Kohdeleikkaus"
+    "fixed mowing": "Kohdeleikkaus",
+    "locked": "Užrakinta",
+    "charging_with_queued_task": "Kraunama (užduotis eilėje)",
+    "charging_with_task_suspend": "Kraunama (užduotis sustabdyta)",
+    "manually_stopped": "Sustabdyta rankiniu būdu",
+    "error": "Klaida",
+    "charging": "Kraunasi"
   },
   "source": {
     "gentle": "Švelnus",
@@ -32,6 +38,37 @@
   },
   "error": {
     "missing_entity": "Būtina nurodyti entity!"
+  },
+  "problem_state": {
+    "problem": "Problema",
+    "cover": "Dangtis",
+    "ok": "Gerai",
+    "tilted": "Pakreipta",
+    "steep": "Status",
+    "raining": "Lygus",
+    "low_battery": "Žemas akumuliatoriaus lygis",
+    "weak_signal": "Silpnas signalas",
+    "close_top_cover": "Uždarykite viršutinį dangtį",
+    "docked": "Pristan",
+    "undocked": "Nepristan",
+    "manually_dock": "Rankinis pristajimas",
+    "finished_fixed_mowing": "Baigta fiksuota pjovimas",
+    "disconnected": "Atsijungta",
+    "paused_charging": "Krovimas sustabdytas",
+    "interrupted": "Pertraukta",
+    "interrupted_fixed_mowing": "Pertraukta fiksuota pjovimas",
+    "turn_on_button": "Įjungimo mygtukas",
+    "press_start": "Paspauskite pradėti",
+    "set_30_minute_timer": "Nustatykite 30 minučių laikmatį",
+    "invalid_timer": "Neteisingas laikmatis",
+    "charging_current_low": "Žemas įkrovos srovė",
+    "caught_in_rain": "Sugauta lietuje",
+    "data_upload_failure": "Duomenų įkėlimo nesėkmė",
+    "continue": "Tęsti",
+    "stopped": "Sustabdyta",
+    "ui_locked": "UI užrakinta",
+    "discharge_error": "Iškrovos klaida",
+    "battery_overheated": "Akumuliatorius perkaistas"
   },
   "editor": {
     "entity": "Entity (Būtina)",

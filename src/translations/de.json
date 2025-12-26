@@ -26,7 +26,11 @@
     "updating": "Aktualisierung",
     "going_to_target": "Fahrt zum Zielpunkt",
     "zoned_cleaning": "Zonenreinigung",
-    "segment_cleaning": "Zimmerreinigung"
+    "segment_cleaning": "Zimmerreinigung",
+    "locked": "Gesperrt",
+    "charging_with_queued_task": "Laden (ausstehende Aufgabe)",
+    "charging_with_task_suspend": "Laden (Aufgabe unterbrochen)",
+    "manually_stopped": "Manuell gestoppt"
   },
   "source": {
     "gentle": "Schonend",
@@ -59,6 +63,37 @@
   "error": {
     "invalid_config": "Ungeültige Konfiguration",
     "missing_entity": "Angabe der Entität ist erforderlich!"
+  },
+  "problem_state": {
+    "problem": "Problem",
+    "cover": "Abdeckung",
+    "ok": "OK",
+    "tilted": "Gekippt",
+    "steep": "Steil",
+    "raining": "Regen",
+    "low_battery": "Niedriger Batteriestand",
+    "weak_signal": "Schwaches Signal",
+    "close_top_cover": "Obere Abdeckung schließen",
+    "docked": "Angedockt",
+    "undocked": "Nicht angedockt",
+    "manually_dock": "Manuell andocken",
+    "finished_fixed_mowing": "Festpunktmähen beendet",
+    "disconnected": "Getrennt",
+    "paused_charging": "Ladevorgang pausiert",
+    "interrupted": "Unterbrochen",
+    "interrupted_fixed_mowing": "Festpunktmähen unterbrochen",
+    "turn_on_button": "Einschalttaste",
+    "press_start": "Starttaste drücken",
+    "set_30_minute_timer": "30-Minuten-Timer einstellen",
+    "invalid_timer": "Ungültiger Timer",
+    "charging_current_low": "Ladestrom niedrig",
+    "caught_in_rain": "Im Regen gefangen",
+    "data_upload_failure": "Daten-Upload-Fehler",
+    "continue": "Fortfahren",
+    "stopped": "Gestoppt",
+    "ui_locked": "UI gesperrt",
+    "discharge_error": "Entlade-Fehler",
+    "battery_overheated": "Batterie überhitzt"
   },
   "warning": {
     "actions_array": "WARNUNG: 'actions' ist dafür vorgesehen, die Standardaktionen für vorhandene Schaltflächen zu überschreiben. Wenn Sie zusätzliche Aktionen hinzufügen möchten, verwenden Sie stattdessen die Option 'shortcuts'."

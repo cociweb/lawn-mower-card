@@ -13,7 +13,11 @@
     "charging": "Đang sạc",
     "returning home": "Đang về Dock",
     "park": "Đang về Dock",
-    "docked": "Đang ở Dock"
+    "docked": "Đang ở Dock",
+    "locked": "Đã khóa",
+    "charging_with_queued_task": "Đang sạc (nhiệm vụ trong hàng đợi)",
+    "charging_with_task_suspend": "Đang sạc (nhiệm vụ tạm ngừng)",
+    "manually_stopped": "Dừng thủ công"
   },
   "source": {
     "gentle": "Nhẹ",
@@ -35,6 +39,37 @@
   },
   "error": {
     "missing_entity": "Khai báo thiếu Entity"
+  },
+  "problem_state": {
+    "problem": "Vấn đề",
+    "cover": "Nắp",
+    "ok": "OK",
+    "tilted": "Nghiêng",
+    "steep": "Dốc",
+    "raining": "Đang mưa",
+    "low_battery": "Pin thấp",
+    "weak_signal": "Tín hiệu yếu",
+    "close_top_cover": "Đóng nắp trên",
+    "docked": "Đã cập bến",
+    "undocked": "Chưa cập bến",
+    "manually_dock": "Cập bến thủ công",
+    "finished_fixed_mowing": "Hoàn thành cắt cố định",
+    "disconnected": "Ngắt kết nối",
+    "paused_charging": "Tạm ngừng sạc",
+    "interrupted": "Bị gián đoạn",
+    "interrupted_fixed_mowing": "Cắt cố định bị gián đoạn",
+    "turn_on_button": "Nút bật",
+    "press_start": "Nhấn bắt đầu",
+    "set_30_minute_timer": "Đặt bộ hẹn giờ 30 phút",
+    "invalid_timer": "Bộ hẹn giờ không hợp lệ",
+    "charging_current_low": "Dòng sạc thấp",
+    "caught_in_rain": "Bị mắc trong mưa",
+    "data_upload_failure": "Lỗi tải dữ liệu",
+    "continue": "Tiếp tục",
+    "stopped": "Đã dừng",
+    "ui_locked": "UI đã khóa",
+    "discharge_error": "Lỗi xả",
+    "battery_overheated": "Pin quá nhiệt"
   },
   "editor": {
     "entity": "Entity (Yêu cầu)",

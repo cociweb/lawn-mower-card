@@ -12,7 +12,12 @@
     "park": "Volviendo a la base",
     "spot": "Spot",
     "fixed_mowing": "Spot",
-    "fixed mowing": "Spot"
+    "fixed mowing": "Spot",
+    "locked": "Bloqueado",
+    "charging_with_queued_task": "Cargando (tarea en cola)",
+    "charging_with_task_suspend": "Cargando (tarea suspendida)",
+    "manually_stopped": "Detenido manualmente",
+    "error": "Error"
   },
   "source": {
     "gentle": "Delicado",
@@ -35,6 +40,37 @@
   },
   "error": {
     "missing_entity": "¡Se requiere especificar una entidad!"
+  },
+  "problem_state": {
+    "problem": "Problema",
+    "cover": "Tapa",
+    "ok": "OK",
+    "tilted": "Inclinado",
+    "steep": "Empinado",
+    "raining": "Lloviendo",
+    "low_battery": "Batería baja",
+    "weak_signal": "Señal débil",
+    "close_top_cover": "Cerrar la tapa superior",
+    "docked": "Acoplado",
+    "undocked": "Desacoplado",
+    "manually_dock": "Acoplamiento manual",
+    "finished_fixed_mowing": "Corte fijo terminado",
+    "disconnected": "Desconectado",
+    "paused_charging": "Carga pausada",
+    "interrupted": "Interrumpido",
+    "interrupted_fixed_mowing": "Corte fijo interrumpido",
+    "turn_on_button": "Botón de encendido",
+    "press_start": "Presionar iniciar",
+    "set_30_minute_timer": "Establecer temporizador de 30 minutos",
+    "invalid_timer": "Temporizador inválido",
+    "charging_current_low": "Corriente de carga baja",
+    "caught_in_rain": "Atrapado en la lluvia",
+    "data_upload_failure": "Fallo en la carga de datos",
+    "continue": "Continuar",
+    "stopped": "Detenido",
+    "ui_locked": "UI bloqueada",
+    "discharge_error": "Error de descarga",
+    "battery_overheated": "Batería sobrecalentada"
   },
   "warning": {
     "actions_array": "ATENCIÓN: La opcion 'actions' está reservada para sobreescribir el comportamiento por defecto de los botones existentes. Si su intención es añadir acciones adicionales, debe utilizar la opcion 'shortcuts' en su lugar."

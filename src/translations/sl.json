@@ -25,7 +25,11 @@
     "updating": "Posodabljanje",
     "going_to_target": "Na poti k cilju",
     "zoned_cleaning": "Košnja po conah",
-    "segment_cleaning": "Košnja segmentov"
+    "segment_cleaning": "Košnja segmentov",
+    "locked": "Zaklenjeno",
+    "charging_with_queued_task": "Polnjenje (naloga v čakalni vrsti)",
+    "charging_with_task_suspend": "Polnjenje (naloga prekinjena)",
+    "manually_stopped": "Ročno ustavljeno"
   },
   "source": {
     "gentle": "Nežno",
@@ -58,6 +62,37 @@
   "error": {
     "invalid_config": "Neveljavna konfiguracija",
     "missing_entity": "entiteta kosilnice ni definirana!"
+  },
+  "problem_state": {
+    "problem": "Težava",
+    "cover": "Pokrov",
+    "ok": "V redu",
+    "tilted": "Nagnjeno",
+    "steep": "Strmo",
+    "raining": "Dežuje",
+    "low_battery": "Nizka baterija",
+    "weak_signal": "Šibek signal",
+    "close_top_cover": "Zaprite zgornji pokrov",
+    "docked": "Pristan",
+    "undocked": "Nepristan",
+    "manually_dock": "Ročni pristajanje",
+    "finished_fixed_mowing": "Končano fiksno košnja",
+    "disconnected": "Odklopljeno",
+    "paused_charging": "Polnjenje v premoru",
+    "interrupted": "Prekinjeno",
+    "interrupted_fixed_mowing": "Prekinjeno fiksno košnja",
+    "turn_on_button": "Gumb za vklop",
+    "press_start": "Pritisnite začetek",
+    "set_30_minute_timer": "Nastavite 30-minutni časovnik",
+    "invalid_timer": "Neveljaven časovnik",
+    "charging_current_low": "Nizka polnilna moč",
+    "caught_in_rain": "Ujet v dežju",
+    "data_upload_failure": "Napaka pri prenosu podatkov",
+    "continue": "Nadaljujte",
+    "stopped": "Ustavljeno",
+    "ui_locked": "UI zaklenjeno",
+    "discharge_error": "Napaka pri praznjenju",
+    "battery_overheated": "Baterija pregrevala"
   },
   "warning": {
     "actions_array": "OPOZORILO: 'actions' je rezervirano za preglasitev privzetih dejanj za obstoječe gumbe. Če želite dodati dodatna dejanja, uporabite možnost 'shortcuts'."

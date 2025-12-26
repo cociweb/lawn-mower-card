@@ -27,7 +27,11 @@
     "going_to_target": "前往目标",
     "zoned_cleaning": "区域清洁",
     "segment_cleaning": "分区清洁",
-    "sleeping": "休眠中"
+    "sleeping": "休眠中",
+    "locked": "已锁定",
+    "charging_with_queued_task": "充电中 (队列中的任务)",
+    "charging_with_task_suspend": "充电中 (任务暂停)",
+    "manually_stopped": "手动停止"
   },
   "source": {
     "gentle": "轻柔",
@@ -60,6 +64,37 @@
   "error": {
     "invalid_config": "错误的设置",
     "missing_entity": "必须指定一个实体!"
+  },
+  "problem_state": {
+    "problem": "问题",
+    "cover": "盖子",
+    "ok": "确定",
+    "tilted": "倾斜",
+    "steep": "陡峭",
+    "raining": "下雨",
+    "low_battery": "电池低",
+    "weak_signal": "信号弱",
+    "close_top_cover": "关闭顶部盖子",
+    "docked": "对接",
+    "undocked": "未对接",
+    "manually_dock": "手动对接",
+    "finished_fixed_mowing": "固定割草完成",
+    "disconnected": "断开",
+    "paused_charging": "充电暂停",
+    "interrupted": "中断",
+    "interrupted_fixed_mowing": "固定割草中断",
+    "turn_on_button": "开机按钮",
+    "press_start": "按开始",
+    "set_30_minute_timer": "设置30分钟定时器",
+    "invalid_timer": "无效定时器",
+    "charging_current_low": "充电电流低",
+    "caught_in_rain": "被雨困住",
+    "data_upload_failure": "数据上传失败",
+    "continue": "继续",
+    "stopped": "停止",
+    "ui_locked": "UI锁定",
+    "discharge_error": "放电错误",
+    "battery_overheated": "电池过热"
   },
   "warning": {
     "actions_array": "警告: \"动作\" 是为了覆盖现有按钮的默认动作而保留的。如果你的目的是增加额外的动作，请使用\"快捷键\"选项来代替。"

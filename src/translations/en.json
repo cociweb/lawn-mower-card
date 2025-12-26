@@ -27,7 +27,11 @@
     "updating": "Updating",
     "going_to_target": "Going to target",
     "zoned_cleaning": "Zoned cleaning",
-    "segment_cleaning": "Segment cleaning"
+    "segment_cleaning": "Segment cleaning",
+    "locked": "Locked",
+    "charging_with_queued_task": "Charging (Queued Task)",
+    "charging_with_task_suspend": "Charging (Task Suspended)",
+    "manually_stopped": "Manually Stopped"
   },
   "source": {
     "gentle": "Gentle",
@@ -60,6 +64,37 @@
   "error": {
     "invalid_config": "Invalid configuration",
     "missing_entity": "Specifying entity is required!"
+  },
+  "problem_state": {
+    "problem": "Problem",
+    "cover": "Cover",
+    "ok": "OK",
+    "tilted": "Tilted",
+    "steep": "Steep",
+    "raining": "Raining",
+    "low_battery": "Low Battery",
+    "weak_signal": "Weak Signal",
+    "close_top_cover": "Close Top Cover",
+    "docked": "Docked",
+    "undocked": "Undocked",
+    "manually_dock": "Manually Dock",
+    "finished_fixed_mowing": "Finished Fixed Mowing",
+    "disconnected": "Disconnected",
+    "paused_charging": "Paused Charging",
+    "interrupted": "Interrupted",
+    "interrupted_fixed_mowing": "Interrupted Fixed Mowing",
+    "turn_on_button": "Turn On Button",
+    "press_start": "Press Start",
+    "set_30_minute_timer": "Set 30 Minute Timer",
+    "invalid_timer": "Invalid Timer",
+    "charging_current_low": "Charging Current Low",
+    "caught_in_rain": "Caught in Rain",
+    "data_upload_failure": "Data Upload Failure",
+    "continue": "Continue",
+    "stopped": "Stopped",
+    "ui_locked": "UI Locked",
+    "discharge_error": "Discharge Error",
+    "battery_overheated": "Battery Overheated"
   },
   "warning": {
     "actions_array": "WARNING: 'actions' is reserved to override default actions for existing buttons. If your intention was to add additional actions, use the 'shortcuts' option instead."

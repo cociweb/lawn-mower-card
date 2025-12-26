@@ -10,7 +10,11 @@
     "docked": "Docked",
     "spot": "Spot",
     "fixed_mowing": "Spot",
-    "fixed mowing": "Spot"
+    "fixed mowing": "Spot",
+    "locked": "Vergrendeld",
+    "charging_with_queued_task": "Opladen (taak in wachtrij)",
+    "charging_with_task_suspend": "Opladen (taak onderbroken)",
+    "manually_stopped": "Handmatig gestopt"
   },
   "common": {
     "name": "Stofzuiger kaart",
@@ -24,6 +28,37 @@
   },
   "error": {
     "missing_entity": "Het specificeren van een entiteit is verplicht!"
+  },
+  "problem_state": {
+    "problem": "Probleem",
+    "cover": "Deksel",
+    "ok": "OK",
+    "tilted": "Gekanteld",
+    "steep": "Steil",
+    "raining": "Regent",
+    "low_battery": "Lage batterij",
+    "weak_signal": "Zwak signaal",
+    "close_top_cover": "Sluit bovenste deksel",
+    "docked": "Aangedokt",
+    "undocked": "Niet aangedokt",
+    "manually_dock": "Handmatig dokken",
+    "finished_fixed_mowing": "Vaste maaiing voltooid",
+    "disconnected": "Verbinding verbroken",
+    "paused_charging": "Opladen gepauzeerd",
+    "interrupted": "Onderbroken",
+    "interrupted_fixed_mowing": "Vaste maaiing onderbroken",
+    "turn_on_button": "Aanzetten knop",
+    "press_start": "Druk op start",
+    "set_30_minute_timer": "Stel 30 minuten timer in",
+    "invalid_timer": "Ongeldige timer",
+    "charging_current_low": "Lage laadstroom",
+    "caught_in_rain": "Gevangen in regen",
+    "data_upload_failure": "Gegevens upload fout",
+    "continue": "Doorgaan",
+    "stopped": "Gestopt",
+    "ui_locked": "UI vergrendeld",
+    "discharge_error": "Ontlaad fout",
+    "battery_overheated": "Batterij oververhit"
   },
   "warning": {
     "actions_array": ""

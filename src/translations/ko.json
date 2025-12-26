@@ -18,7 +18,12 @@
     "docked": "도킹됨",
     "unknown": "알수 없음",
     "offline": "오프라인",
-    "error": "오류"
+    "error": "오류",
+    "locked": "잠김",
+    "charging_with_queued_task": "충전 중 (대기 중인 작업)",
+    "charging_with_task_suspend": "충전 중 (작업 중단)",
+    "manually_stopped": "수동 정지",
+    "charging": "충전 중"
   },
   "source": {
     "gentle": "저속",
@@ -45,7 +50,39 @@
     "not_available": "잔디깎이 사용 불가"
   },
   "error": {
+    "invalid_config": "올바르지 않은 설정",
     "missing_entity": "구성요소 지정이 필요합니다!"
+  },
+  "problem_state": {
+    "problem": "문제",
+    "cover": "커버",
+    "ok": "확인",
+    "tilted": "기울어짐",
+    "steep": "가파름",
+    "raining": "비",
+    "low_battery": "배터리 부족",
+    "weak_signal": "약한 신호",
+    "close_top_cover": "상단 커버 닫기",
+    "docked": "도킹됨",
+    "undocked": "도킹 해제됨",
+    "manually_dock": "수동 도킹",
+    "finished_fixed_mowing": "고정 잔디깎기 완료",
+    "disconnected": "연결 끊김",
+    "paused_charging": "충전 일시 정지",
+    "interrupted": "중단됨",
+    "interrupted_fixed_mowing": "고정 잔디깎기 중단",
+    "turn_on_button": "켜기 버튼",
+    "press_start": "시작 누르기",
+    "set_30_minute_timer": "30분 타이머 설정",
+    "invalid_timer": "유효하지 않은 타이머",
+    "charging_current_low": "충전 전류 낮음",
+    "caught_in_rain": "비에 갇힘",
+    "data_upload_failure": "데이터 업로드 실패",
+    "continue": "계속",
+    "stopped": "정지됨",
+    "ui_locked": "UI 잠김",
+    "discharge_error": "방전 오류",
+    "battery_overheated": "배터리 과열"
   },
   "warning": {
     "actions_array": "경고: '동작'은 기존 버튼에 대한 기본 동작을 재정의하도록 예약되어 있습니다. 다른 동작을 추가하려는 경우 '바로가기' 옵션을 대신 사용하십시오."

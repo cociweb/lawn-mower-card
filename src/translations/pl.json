@@ -27,7 +27,11 @@
     "going_to_target": "Podróż do celu",
     "zoned_cleaning": "Sprzątanie obszaru",
     "segment_cleaning": "Sprzątanie segmentu",
-    "returning home": "Powrót do bazy"
+    "returning home": "Powrót do bazy",
+    "locked": "Zablokowany",
+    "charging_with_queued_task": "Ładowanie (zadanie w kolejce)",
+    "charging_with_task_suspend": "Ładowanie (zadanie zawieszone)",
+    "manually_stopped": "Zatrzymany ręcznie"
   },
   "source": {
     "gentle": "Delikatne",
@@ -61,6 +65,37 @@
   "error": {
     "invalid_config": "Nieprawidłowa konfiguracja",
     "missing_entity": "Ustawienie encji jest wymagane!"
+  },
+  "problem_state": {
+    "problem": "Problem",
+    "cover": "Pokrywa",
+    "ok": "OK",
+    "tilted": "Przechylony",
+    "steep": "Stromy",
+    "raining": "Pada deszcz",
+    "low_battery": "Niski poziom baterii",
+    "weak_signal": "Słaby sygnał",
+    "close_top_cover": "Zamknij górną pokrywę",
+    "docked": "Zadokowany",
+    "undocked": "Nie zadokowany",
+    "manually_dock": "Ręczne dokowanie",
+    "finished_fixed_mowing": "Zakończono stałe koszenie",
+    "disconnected": "Rozłączony",
+    "paused_charging": "Ładowanie wstrzymane",
+    "interrupted": "Przerwany",
+    "interrupted_fixed_mowing": "Przerwane stałe koszenie",
+    "turn_on_button": "Przycisk włączenia",
+    "press_start": "Naciśnij start",
+    "set_30_minute_timer": "Ustaw 30-minutowy timer",
+    "invalid_timer": "Nieprawidłowy timer",
+    "charging_current_low": "Niski prąd ładowania",
+    "caught_in_rain": "Złapany w deszcz",
+    "data_upload_failure": "Błąd przesyłania danych",
+    "continue": "Kontynuuj",
+    "stopped": "Zatrzymany",
+    "ui_locked": "UI zablokowany",
+    "discharge_error": "Błąd rozładowania",
+    "battery_overheated": "Bateria przegrzana"
   },
   "warning": {
     "actions_array": "OSTRZEŻENIE: 'actions' jest zarezerwowane dla zmiany zachowania domyślnych akcji przycisków. Jeśli chcesz dodać dodatkowe akcje, użyj w zamian opcji 'shortcuts'."

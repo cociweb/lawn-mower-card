@@ -26,7 +26,11 @@
     "updating": "更新中",
     "going_to_target": "目的地へ移動中",
     "zoned_cleaning": "ゾーン清掃",
-    "segment_cleaning": "セグメント清掃"
+    "segment_cleaning": "セグメント清掃",
+    "locked": "ロック済み",
+    "charging_with_queued_task": "充電中 (キュー内のタスク)",
+    "charging_with_task_suspend": "充電中 (タスク中断)",
+    "manually_stopped": "手動停止"
   },
   "source": {
     "gentle": "やさしく",
@@ -56,6 +60,37 @@
   "error": {
     "invalid_config": "設定が無効です",
     "missing_entity": "エンティティを選択してください。"
+  },
+  "problem_state": {
+    "problem": "問題",
+    "cover": "カバー",
+    "ok": "OK",
+    "tilted": "傾斜",
+    "steep": "急勾配",
+    "raining": "雨",
+    "low_battery": "バッテリー低",
+    "weak_signal": "信号弱",
+    "close_top_cover": "上部カバーを閉じる",
+    "docked": "ドッキング済み",
+    "undocked": "ドッキング解除",
+    "manually_dock": "手動ドッキング",
+    "finished_fixed_mowing": "固定刈り取り完了",
+    "disconnected": "切断",
+    "paused_charging": "充電一時停止",
+    "interrupted": "中断",
+    "interrupted_fixed_mowing": "固定刈り取り中断",
+    "turn_on_button": "電源ボタン",
+    "press_start": "スタートを押す",
+    "set_30_minute_timer": "30分タイマーを設定",
+    "invalid_timer": "無効なタイマー",
+    "charging_current_low": "充電電流低",
+    "caught_in_rain": "雨に捕捉",
+    "data_upload_failure": "データアップロード失敗",
+    "continue": "続行",
+    "stopped": "停止",
+    "ui_locked": "UIロック",
+    "discharge_error": "放電エラー",
+    "battery_overheated": "バッテリー過熱"
   },
   "warning": {
     "actions_array": "警告：'actions'は既存のボタンのデフォルトアクションを上書きするために使用されています。アクションを追加したい場合は、'shortcuts' オプションを使用してください。"

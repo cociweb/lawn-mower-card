@@ -31,7 +31,9 @@
     "unavailable": "Недоступно",
     "emergency": "Аварія",
     "charging_with_task_suspend": "Заряджається із призупиненим завданням",
-    "locked": "Заблокований"
+    "locked": "Заблокований",
+    "charging_with_queued_task": "Заряджається (завдання в черзі)",
+    "manually_stopped": "Зупинено вручну"
   },
   "source": {
     "low": "Низький",
@@ -64,6 +66,37 @@
   },
   "error": {
     "missing_entity": "Необхідно вказати сутність!"
+  },
+  "problem_state": {
+    "problem": "Проблема",
+    "cover": "Кришка",
+    "ok": "OK",
+    "tilted": "Нахилено",
+    "steep": "Круто",
+    "raining": "Дощить",
+    "low_battery": "Низький заряд батареї",
+    "weak_signal": "Слабкий сигнал",
+    "close_top_cover": "Закрити верхню кришку",
+    "docked": "Причалено",
+    "undocked": "Не причалено",
+    "manually_dock": "Ручне причалювання",
+    "finished_fixed_mowing": "Завершено фіксований косіння",
+    "disconnected": "Відключено",
+    "paused_charging": "Зарядку призупинено",
+    "interrupted": "Перервано",
+    "interrupted_fixed_mowing": "Перервано фіксований косіння",
+    "turn_on_button": "Кнопка увімкнення",
+    "press_start": "Натисніть старт",
+    "set_30_minute_timer": "Встановіть 30-хвилинний таймер",
+    "invalid_timer": "Недійсний таймер",
+    "charging_current_low": "Низький струм зарядки",
+    "caught_in_rain": "Спіймано в дощ",
+    "data_upload_failure": "Помилка завантаження даних",
+    "continue": "Продовжити",
+    "stopped": "Зупинено",
+    "ui_locked": "UI заблоковано",
+    "discharge_error": "Помилка розрядки",
+    "battery_overheated": "Батарея перегріта"
   },
   "warning": {
     "actions_array": "УВАГА: 'actions' зарезервовані для зміни поведінки вбудованих кнопок. Якщо ви хотіли додати додаткові кнопки, скористайтесь об’єктом 'shortcuts'."

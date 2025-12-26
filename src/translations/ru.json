@@ -27,7 +27,11 @@
     "shutting_down": "Выключается",
     "updating": "Обновляется",
     "going_to_target": "Едет к точке назначения",
-    "zoned_cleaning": "Очищает зону"
+    "zoned_cleaning": "Очищает зону",
+    "locked": "Заблокировано",
+    "charging_with_queued_task": "Зарядка (задача в очереди)",
+    "charging_with_task_suspend": "Зарядка (задача приостановлена)",
+    "manually_stopped": "Остановлено вручную"
   },
   "source": {
     "gentle": "Деликатный",
@@ -60,6 +64,37 @@
   "error": {
     "invalid_config": "Неверная конфигурация",
     "missing_entity": "Объект является обязательным полем!"
+  },
+  "problem_state": {
+    "problem": "Проблема",
+    "cover": "Крышка",
+    "ok": "OK",
+    "tilted": "Наклонено",
+    "steep": "Круто",
+    "raining": "Дождь",
+    "low_battery": "Низкий заряд батареи",
+    "weak_signal": "Слабый сигнал",
+    "close_top_cover": "Закройте верхнюю крышку",
+    "docked": "Причалено",
+    "undocked": "Не причалено",
+    "manually_dock": "Ручное причаливание",
+    "finished_fixed_mowing": "Фиксированная стрижка завершена",
+    "disconnected": "Отключено",
+    "paused_charging": "Зарядка приостановлена",
+    "interrupted": "Прервано",
+    "interrupted_fixed_mowing": "Фиксированная стрижка прервана",
+    "turn_on_button": "Кнопка включения",
+    "press_start": "Нажмите начать",
+    "set_30_minute_timer": "Установить 30-минутный таймер",
+    "invalid_timer": "Недействительный таймер",
+    "charging_current_low": "Ток зарядки низкий",
+    "caught_in_rain": "Попал под дождь",
+    "data_upload_failure": "Ошибка загрузки данных",
+    "continue": "Продолжить",
+    "stopped": "Остановлено",
+    "ui_locked": "UI заблокирован",
+    "discharge_error": "Ошибка разряда",
+    "battery_overheated": "Батарея перегрелась"
   },
   "warning": {
     "actions_array": "WARNING: 'actions' зарезервированы для переопределения действий встроенных кнопок. Если вы хотите добавить дополнительные действия, используйте опцию 'shortcuts'."
