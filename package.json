@@ -28,7 +28,7 @@
   "author": "cociweb",
   "license": "MIT",
   "dependencies": {
-    "custom-card-helpers": "^1.6.4",
+    "custom-card-helpers": "^2.0.0",
     "ha-template": "^1.4.0",
     "home-assistant-js-websocket": "^9.2.1",
     "lit": "^3.2.0",
