@@ -190,15 +190,17 @@ export class LawnMowerCard extends LitElement {
   }
 
   private getAttributes(entity: LawnMowerEntity) {
-    const { status, state } = entity.attributes;
+    const { status, state, activity } = entity.attributes;
 
     return {
       ...entity.attributes,
-      status: status ?? state ?? entity.state,
+      // Use activity attribute (Gardena) or raw_activity (other brands) for detailed status
+      raw_activity: entity.attributes.raw_activity ?? activity,
+      // Prefer entity.state (HA mapped state like "docked", "mowing") over
+      // attributes.status/state which may be device-level (e.g. Gardena "OK")
+      status: status ?? entity.state ?? state,
     };
   }
-
-
 
   private renderBattery(): Template {
     let battery_level;
@@ -223,6 +225,20 @@ export class LawnMowerCard extends LitElement {
       }
     } else {
       ({ battery_level, battery_icon } = this.getAttributes(this.entity));
+
+      // Calculate icon from battery_level if no battery_icon attribute (e.g. Gardena)
+      if (!battery_icon && battery_level != null) {
+        const level = Number(battery_level);
+        if (isNaN(level)) {
+          return nothing;
+        } else if (level > 90) {
+          battery_icon = 'mdi:battery';
+        } else if (level < 10) {
+          battery_icon = 'mdi:battery-outline';
+        } else {
+          battery_icon = `mdi:battery-${Math.floor(level / 10) * 10}`;
+        }
+      }
     }
 
     return html`
@@ -365,7 +381,6 @@ export class LawnMowerCard extends LitElement {
     return html` <div class="lawn-mower-name">${friendly_name}</div> `;
   }
 
-
   private renderStatus(): Template {
     if (!this.config.show_status) {
       return nothing;
@@ -409,12 +424,19 @@ export class LawnMowerCard extends LitElement {
     const buttons = this.config.shortcuts.map(
       ({ name, service, icon, service_data, link }) => {
         if (link) {
-          return html`
-            <ha-icon-button label="${name}">
-              <a rel="noreferrer" href="${link}" target="_blank" style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);">
-                <ha-icon icon="${icon}" style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"></ha-icon>
-              </a>
-            </ha-icon-button>`;
+          return html` <ha-icon-button label="${name}">
+            <a
+              rel="noreferrer"
+              href="${link}"
+              target="_blank"
+              style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"
+            >
+              <ha-icon
+                icon="${icon}"
+                style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"
+              ></ha-icon>
+            </a>
+          </ha-icon-button>`;
         } else {
           const execute = () => {
             if (service) {
@@ -429,7 +451,6 @@ export class LawnMowerCard extends LitElement {
         }
       },
     );
-
 
     return html` <div class="shortcuts">${buttons}</div> `;
   }
@@ -527,6 +548,15 @@ export class LawnMowerCard extends LitElement {
           </paper-button>
         `;
 
+        const rawLower = raw_activity?.toLowerCase();
+        const isCharging =
+          rawLower === 'charging_with_task_suspend' ||
+          rawLower === 'ok_charging';
+        const isIdle =
+          state === 'idle' ||
+          rawLower === 'standby' ||
+          rawLower === 'stopped_in_garden';
+
         return html`
           <div class="toolbar">
             <paper-button @click="${this.handleLawnMowerAction('start')}">
@@ -534,12 +564,7 @@ export class LawnMowerCard extends LitElement {
               ${localize('common.start')}
             </paper-button>
             ${this.config.actions['locate'] ? locateButton : ''}
-            ${raw_activity?.toLowerCase() === 'charging_with_task_suspend'
-              ? stopButton
-              : ''}
-            ${state === 'idle' || raw_activity?.toLowerCase() === 'standby'
-              ? dockButton
-              : ''}
+            ${isCharging ? stopButton : ''} ${isIdle ? dockButton : ''}
           </div>
         `;
       }
