@@ -202,27 +202,30 @@ export class LawnMowerCard extends LitElement {
     };
   }
 
+  private getBatteryIcon(level: number, isCharging: boolean): string {
+    const prefix = isCharging ? 'mdi:battery-charging' : 'mdi:battery';
+    if (level > 90)
+      return isCharging ? 'mdi:battery-charging-100' : 'mdi:battery';
+    if (level < 10)
+      return isCharging
+        ? 'mdi:battery-charging-outline'
+        : 'mdi:battery-outline';
+    const iconLevel = Math.floor(level / 10) * 10;
+    return `${prefix}-${iconLevel}`;
+  }
+
   private renderBattery(): Template {
     let battery_level;
     let battery_icon;
     const entityId = this.config.battery;
+    const isCharging = this.entity?.attributes?.battery_state === 'CHARGING';
 
     if (entityId) {
       battery_level = Number(this.hass.states[entityId].state);
       if (isNaN(battery_level)) {
         return nothing;
       }
-
-      const level = Number(battery_level);
-
-      if (level > 90) {
-        battery_icon = 'mdi:battery';
-      } else if (level < 10) {
-        battery_icon = 'mdi:battery-outline';
-      } else {
-        const iconLevel = Math.floor(level / 10) * 10;
-        battery_icon = `mdi:battery-${iconLevel}`;
-      }
+      battery_icon = this.getBatteryIcon(battery_level, isCharging);
     } else {
       ({ battery_level, battery_icon } = this.getAttributes(this.entity));
 
@@ -231,13 +234,8 @@ export class LawnMowerCard extends LitElement {
         const level = Number(battery_level);
         if (isNaN(level)) {
           return nothing;
-        } else if (level > 90) {
-          battery_icon = 'mdi:battery';
-        } else if (level < 10) {
-          battery_icon = 'mdi:battery-outline';
-        } else {
-          battery_icon = `mdi:battery-${Math.floor(level / 10) * 10}`;
         }
+        battery_icon = this.getBatteryIcon(level, isCharging);
       }
     }
 
