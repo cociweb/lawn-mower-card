@@ -38,6 +38,7 @@
     "@babel/core": "^7.23.7",
     "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
+    "@eslint/eslintrc": "^3.3.1",
     "@rollup/plugin-babel": "^7.0.0",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-image": "^3.0.3",
@@ -50,9 +51,8 @@
     "@typescript-eslint/eslint-plugin": "^8.50.1",
     "@typescript-eslint/parser": "^8.50.1",
     "eslint": "^10.0.3",
-    "@eslint/eslintrc": "^3.3.1",
     "eslint-config-prettier": "^10.0.2",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-x": "^4.16.2",
     "husky": "^9.0.11",
     "lint-staged": "^16.2.3",
     "postcss": "^8.4.33",
@@ -89,7 +89,10 @@
       "ecmaVersion": 2020,
       "sourceType": "module"
     },
-    "plugins": ["import", "@typescript-eslint"],
+    "plugins": [
+      "import-x",
+      "@typescript-eslint"
+    ],
     "env": {
       "browser": true,
       "es6": true
