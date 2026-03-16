@@ -60,7 +60,7 @@ export class LawnMowerCard extends LitElement {
 
   static getStubConfig(_: unknown, entities: string[]) {
     const [lawnMowerEntity] = entities.filter((eid) =>
-      eid.startsWith('lawn-mower'),
+      eid.startsWith('lawn_mower'),
     );
 
     return {
