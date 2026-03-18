@@ -36,6 +36,13 @@ export interface LawnMowerEntityAttributes extends HassEntityAttributeBase {
   battery_level?: number;
   battery_icon?: string;
   raw_activity?: LawnMowerEntityActivity;
+  // Gardena Smart System attributes
+  activity?: string;
+  operating_hours?: number;
+  last_error_code?: string;
+  rf_link_level?: number;
+  rf_link_state?: string;
+  battery_state?: string;
 }
 
 export interface LawnMowerEntity extends HassEntityBase {
