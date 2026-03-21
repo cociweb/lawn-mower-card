@@ -37,8 +37,8 @@ export class LawnMowerCardEditor
 
     // Set default entity if not provided
     if (!this.config.entity) {
-      this.config.entity = this.getEntitiesByType('lawn-mower')[0] || '';
-        fireEvent(this, 'config-changed', { config: this.config });
+      this.config.entity = this.getEntitiesByType('lawn_mower')[0] || '';
+      fireEvent(this, 'config-changed', { config: this.config });
     }
   }
 
@@ -180,7 +180,9 @@ export class LawnMowerCardEditor
                 ? 'editor.show_shortcuts_aria_label_off'
                 : 'editor.show_shortcuts_aria_label_on',
             )}
-            .checked=${Boolean(this.config.show_shortcuts ?? this.show_shortcuts)}
+            .checked=${Boolean(
+              this.config.show_shortcuts ?? this.show_shortcuts,
+            )}
             .configValue=${'show_shortcuts'}
             @change=${this.valueChanged}
           >
@@ -215,7 +217,8 @@ export class LawnMowerCardEditor
     const target = event.target as ConfigElement;
     if (
       !target.configValue ||
-      (this.config[target.configValue] && this.config[target.configValue] === target?.value)
+      (this.config[target.configValue] &&
+        this.config[target.configValue] === target?.value)
     ) {
       return;
     }
