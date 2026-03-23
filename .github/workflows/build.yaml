@@ -7,7 +7,6 @@ on:
         description: 'Type of version bump (major, minor, patch, build)'
         required: false
         default: 'build'
-      
 
 permissions:
   contents: write
@@ -15,7 +14,6 @@ permissions:
   packages: write
   id-token: write
 
-  
 jobs:
   build:
     name: build
@@ -30,19 +28,19 @@ jobs:
 
       - name: 🗑️ Remove package-lock.json
         run: rm -f package-lock.json
- 
+
       - name: 📦 Install Packages
-        run: npm install
- 
-      - name: 📦 Install Packages
-        run: npm ci
-        
+        run: npm ci --ignore-scripts
+
+      - name: � Setup Husky
+        run: npm run prepare
+
       - name: 🧪 Test
         run: npm test
-        
+
       - name: 🏗️ Production Build
         run: npm run build
-        
+
       - name: Commit and push new package-lock.json
         run: |
           git config --global user.name "github-actions[bot]"
@@ -50,5 +48,3 @@ jobs:
           git add package-lock.json
           git commit -m "ci: update package-lock.json [skip ci]" || echo "No changes to commit"
           git push || echo "No changes to push"
-
-          
