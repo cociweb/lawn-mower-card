@@ -16,7 +16,8 @@ import serve from 'rollup-plugin-serve';
 const require = createRequire(import.meta.url);
 const pkg = require('./package.json');
 
-const IS_DEV = process.env.NODE_ENV === 'development' || !!process.env.ROLLUP_WATCH;
+const IS_DEV =
+  process.env.NODE_ENV === 'development' || !!process.env.ROLLUP_WATCH;
 
 const serverOptions = {
   contentBase: ['./dist'],
@@ -48,7 +49,7 @@ const plugins = [
       }),
     ],
     extract: false,
-    minimize: false, // Disable cssnano to avoid deprecated svgo
+    minimize: true, // Enable CSS minification
   }),
   postcssLit(),
   image(),
@@ -58,17 +59,22 @@ const plugins = [
     exclude: 'node_modules/**',
   }),
   IS_DEV && serve(serverOptions),
-  !IS_DEV && terser({
-    format: {
-      comments: false,
-    },
-    compress: {
-      drop_console: true,
-      drop_debugger: true,
-      pure_funcs: ['console.log'],
-    },
-    mangle: true,
-  }),
+  !IS_DEV &&
+    terser({
+      format: {
+        comments: false,
+      },
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log'],
+        dead_code: true,
+        unused: true,
+        passes: 2,
+      },
+      mangle: true,
+      module: true,
+    }),
 ].filter(Boolean);
 
 export default {

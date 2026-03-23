@@ -16,7 +16,8 @@
     "build:dev": "node node_modules/rollup/dist/bin/rollup -c",
     "test": "npm run lint && npm run build",
     "test:dev": "npm run lint && npm run build:dev",
-    "prepare": "node node_modules/husky/bin.mjs"
+    "lint-staged": "lint-staged",
+    "prepare": "node node_modules/husky/bin.js"
   },
   "keywords": [
     "home-assistant",
@@ -25,7 +26,9 @@
     "automation",
     "lovelace",
     "custom-cards",
-    "lawn-mower"
+    "lawn-mower",
+    "hacs",
+    "hass"
   ],
   "author": "cociweb",
   "license": "MIT",
@@ -40,6 +43,7 @@
     "@babel/core": "^7.23.7",
     "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
+    "@eslint/eslintrc": "^3.3.1",
     "@rollup/plugin-babel": "^7.0.0",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-image": "^3.0.3",
@@ -52,11 +56,10 @@
     "@typescript-eslint/eslint-plugin": "^8.50.1",
     "@typescript-eslint/parser": "^8.50.1",
     "eslint": "^10.1.0",
-    "@eslint/eslintrc": "^3.3.1",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-import-x": "^4.16.2",
     "husky": "^9.0.11",
-    "lint-staged": "^16.2.3",
+    "lint-staged": "^16.4.0",
     "napi-postinstall": "^0.3.4",
     "postcss": "^8.4.33",
     "postcss-preset-env": "^11.2.0",
@@ -79,8 +82,8 @@
     "not dead"
   ],
   "lint-staged": {
-    "*.js": "eslint --fix",
-    "**/*": "prettier --write --ignore-unknown"
+    "*.js": "node node_modules/eslint/bin/eslint.js --fix",
+    "**/*": "node node_modules/prettier/bin/prettier.cjs --write --ignore-unknown"
   },
   "prettier": {
     "singleQuote": true
