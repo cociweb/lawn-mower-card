@@ -36,6 +36,7 @@ export interface LawnMowerEntityAttributes extends HassEntityAttributeBase {
   battery_level?: number;
   battery_icon?: string;
   raw_activity?: LawnMowerEntityActivity;
+  friendly_name?: string;
 }
 
 export interface LawnMowerEntity extends HassEntityBase {

@@ -100,8 +100,8 @@ export class LawnMowerCard extends LitElement {
     }
     if (
       changedProps.get('hass') &&
-      changedProps.get('hass').states[this.config.entity].state !==
-        this.hass.states[this.config.entity].state
+      (changedProps.get('hass') as HomeAssistant).states[this.config.entity]
+        .state !== this.hass.states[this.config.entity].state
     ) {
       this.requestInProgress = false;
     }
@@ -197,8 +197,6 @@ export class LawnMowerCard extends LitElement {
       status: status ?? state ?? entity.state,
     };
   }
-
-
 
   private renderBattery(): Template {
     let battery_level;
@@ -365,7 +363,6 @@ export class LawnMowerCard extends LitElement {
     return html` <div class="lawn-mower-name">${friendly_name}</div> `;
   }
 
-
   private renderStatus(): Template {
     if (!this.config.show_status) {
       return nothing;
@@ -409,12 +406,19 @@ export class LawnMowerCard extends LitElement {
     const buttons = this.config.shortcuts.map(
       ({ name, service, icon, service_data, link }) => {
         if (link) {
-          return html`
-            <ha-icon-button label="${name}">
-              <a rel="noreferrer" href="${link}" target="_blank" style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);">
-                <ha-icon icon="${icon}" style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"></ha-icon>
-              </a>
-            </ha-icon-button>`;
+          return html` <ha-icon-button label="${name}">
+            <a
+              rel="noreferrer"
+              href="${link}"
+              target="_blank"
+              style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"
+            >
+              <ha-icon
+                icon="${icon}"
+                style="--icon-primary-color: var(--vc-toolbar-icon-color); color: var(--vc-toolbar-icon-color);"
+              ></ha-icon>
+            </a>
+          </ha-icon-button>`;
         } else {
           const execute = () => {
             if (service) {
@@ -429,7 +433,6 @@ export class LawnMowerCard extends LitElement {
         }
       },
     );
-
 
     return html` <div class="shortcuts">${buttons}</div> `;
   }

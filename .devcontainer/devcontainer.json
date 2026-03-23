@@ -1,23 +1,23 @@
 {
-    "name": "Lawn Mower Card Dev Container",
-    "dockerFile": "Dockerfile",
-    "context": "..",
-    "postCreateCommand": "npm install --bin-links && npm test && npm run build",
-    "runArgs": ["--privileged"],
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash"
-            },
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "ms-vscode.vscode-typescript-next",
-                "ms-vscode.vscode-json",
-                "ms-azuretools.vscode-containers",
-                "GitHub.vscode-github-actions",
-                "GitHub.vscode-pull-request-github"
-            ]
-        }
+  "name": "Lawn Mower Card Dev Container",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "postCreateCommand": "npm test && npm run build",
+  "runArgs": ["--privileged"],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "ms-vscode.vscode-json",
+        "ms-azuretools.vscode-containers",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github"
+      ]
     }
+  }
 }

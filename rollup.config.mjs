@@ -1,5 +1,6 @@
 /*  eslint-env node */
 import { createRequire } from 'node:module';
+import * as ts from 'typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
@@ -53,7 +54,10 @@ const plugins = [
   }),
   postcssLit(),
   image(),
-  typescript(),
+  typescript({
+    check: false,
+    clean: true,
+  }),
   babel({
     babelHelpers: 'runtime',
     exclude: 'node_modules/**',
