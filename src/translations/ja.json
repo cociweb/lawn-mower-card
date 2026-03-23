@@ -31,7 +31,21 @@
     "locked": "ロック済み",
     "charging_with_queued_task": "充電中 (キュー内のタスク)",
     "charging_with_task_suspend": "充電中 (タスク中断)",
-    "manually_stopped": "手動停止"
+    "manually_stopped": "手動停止",
+    "ok_cutting": "芝刈り中",
+    "ok_cutting_timer_overridden": "芝刈り中 (手動)",
+    "ok_searching": "基地局を検索中",
+    "ok_leaving": "基地局から離脱中",
+    "ok_charging": "充電中",
+    "parked_timer": "駐車中 (スケジュール)",
+    "parked_park_selected": "駐車中 (手動)",
+    "parked_autotimer": "駐車中 (自動)",
+    "parked_frost": "駐車中 (霜)",
+    "stopped_in_garden": "庭で停止",
+    "initiate_next_action": "次のアクションを開始",
+    "searching_for_satellites": "衛星を検索中",
+    "paused_in_cs": "一時停止中 (基地局)",
+    "none": "アクティビティなし"
   },
   "source": {
     "gentle": "やさしく",

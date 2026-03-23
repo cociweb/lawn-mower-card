@@ -8,4 +8,7 @@ RUN npm --version
 # Set the working directory inside the container
 WORKDIR /workspaces/lawn-mower-card
 
+RUN npm install --no-bin-links --ignore-scripts 
+RUN npm run prepare
+
 

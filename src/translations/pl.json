@@ -32,7 +32,21 @@
     "locked": "Zablokowany",
     "charging_with_queued_task": "Ładowanie (zadanie w kolejce)",
     "charging_with_task_suspend": "Ładowanie (zadanie zawieszone)",
-    "manually_stopped": "Zatrzymany ręcznie"
+    "manually_stopped": "Zatrzymany ręcznie",
+    "ok_cutting": "Kosi",
+    "ok_cutting_timer_overridden": "Kosi (Ręcznie)",
+    "ok_searching": "Wyszukiwanie stacji bazowej",
+    "ok_leaving": "Opuszcza stację bazową",
+    "ok_charging": "Ładowanie",
+    "parked_timer": "Zaparkowany (Harmonogram)",
+    "parked_park_selected": "Zaparkowany (Ręcznie)",
+    "parked_autotimer": "Zaparkowany (Auto)",
+    "parked_frost": "Zaparkowany (Mróz)",
+    "stopped_in_garden": "Zatrzymany w ogrodzie",
+    "initiate_next_action": "Rozpocznij następną akcję",
+    "searching_for_satellites": "Wyszukiwanie satelitów",
+    "paused_in_cs": "Wstrzymany (na stacji)",
+    "none": "Brak aktywności"
   },
   "source": {
     "gentle": "Delikatne",

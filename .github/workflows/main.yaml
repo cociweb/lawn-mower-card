@@ -106,6 +106,7 @@ jobs:
           OUTPUT=$(npm run build) 
           VERSION=$(echo $OUTPUT | grep -oP 'lawn-mower-card@\K[^ ]+') 
           echo "PACKAGE_VERSION=$VERSION" >> $GITHUB_ENV 
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "$VERSION"
 
       - name: 🚀 Release
@@ -117,17 +118,17 @@ jobs:
 
       - name: Create Release
         run: |
-          gh release create v${{ env.PACKAGE_VERSION }} \
+          gh release create v${{ steps.build.outputs.version }} \
             --repo="${GITHUB_REPOSITORY}" \
-            --title="${{ env.PACKAGE_VERSION }}" \
-            --notes="Release notes for v${{ env.PACKAGE_VERSION }}" \
+            --title="${{ steps.build.outputs.version }}" \
+            --notes="Release notes for v${{ steps.build.outputs.version }}" \
             --draft
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
         run: |
-          gh release upload v${{ env.PACKAGE_VERSION }} ./dist/lawn-mower-card.js
+          gh release upload v${{ steps.build.outputs.version }} ./dist/lawn-mower-card.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

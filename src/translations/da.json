@@ -31,7 +31,21 @@
     "locked": "Låst",
     "charging_with_queued_task": "Oplader (opgave i kø)",
     "charging_with_task_suspend": "Oplader (opgave suspenderet)",
-    "manually_stopped": "Stoppet manuelt"
+    "manually_stopped": "Stoppet manuelt",
+    "ok_cutting": "Slår græs",
+    "ok_cutting_timer_overridden": "Slår græs (Manuel)",
+    "ok_searching": "Søger efter basisstation",
+    "ok_leaving": "Forlader basisstation",
+    "ok_charging": "Lader",
+    "parked_timer": "Parkeret (Tidsplan)",
+    "parked_park_selected": "Parkeret (Manuel)",
+    "parked_autotimer": "Parkeret (Auto)",
+    "parked_frost": "Parkeret (Frost)",
+    "stopped_in_garden": "Stoppet i haven",
+    "initiate_next_action": "Starter næste handling",
+    "searching_for_satellites": "Søger efter satellitter",
+    "paused_in_cs": "Pauset (i station)",
+    "none": "Ingen aktivitet"
   },
   "source": {
     "gentle": "Mild",

@@ -31,7 +31,21 @@
     "locked": "Lukittu",
     "charging_with_queued_task": "Lataa (tehtävä jonossa)",
     "charging_with_task_suspend": "Lataa (tehtävä keskeytetty)",
-    "manually_stopped": "Pysäytetty manuaalisesti"
+    "manually_stopped": "Pysäytetty manuaalisesti",
+    "ok_cutting": "Leikkaa nurmikkoa",
+    "ok_cutting_timer_overridden": "Leikkaa nurmikkoa (Manuaalinen)",
+    "ok_searching": "Etsii latausasemaa",
+    "ok_leaving": "Poistuu latausasemalta",
+    "ok_charging": "Lataa",
+    "parked_timer": "Pysäköity (Aikataulu)",
+    "parked_park_selected": "Pysäköity (Manuaalinen)",
+    "parked_autotimer": "Pysäköity (Auto)",
+    "parked_frost": "Pysäköity (Hallaa)",
+    "stopped_in_garden": "Pysäytetty puutarhassa",
+    "initiate_next_action": "Aloittaa seuraavan toimenpiteen",
+    "searching_for_satellites": "Etsii satelliitteja",
+    "paused_in_cs": "Tauotettu (asemassa)",
+    "none": "Ei toimintaa"
   },
   "source": {
     "gentle": "Hellävarainen",

@@ -1,5 +1,6 @@
 /*  eslint-env node */
 import { createRequire } from 'node:module';
+import * as ts from 'typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
@@ -33,12 +34,6 @@ const plugins = [
   nodeResolve(),
   commonjs(),
   json(),
-  replace({
-    values: {
-      PKG_VERSION_VALUE: IS_DEV ? 'DEVELOPMENT' : pkg.version,
-    },
-    preventAssignment: true,
-  }),
   postcss({
     plugins: [
       postcssPresetEnv({
@@ -53,10 +48,19 @@ const plugins = [
   }),
   postcssLit(),
   image(),
-  typescript(),
+  typescript({
+    check: false,
+    clean: true,
+  }),
   babel({
     babelHelpers: 'runtime',
     exclude: 'node_modules/**',
+  }),
+  replace({
+    values: {
+      PKG_VERSION_VALUE: IS_DEV ? 'DEVELOPMENT' : pkg.version,
+    },
+    preventAssignment: true,
   }),
   IS_DEV && serve(serverOptions),
   !IS_DEV &&
@@ -65,9 +69,9 @@ const plugins = [
         comments: false,
       },
       compress: {
-        drop_console: true,
+        drop_console: false, // Don't remove console.info for version display
         drop_debugger: true,
-        pure_funcs: ['console.log'],
+        pure_funcs: ['console.log'], // Only remove console.log, not console.info
         dead_code: true,
         unused: true,
         passes: 2,

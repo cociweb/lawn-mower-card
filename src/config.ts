@@ -8,17 +8,13 @@ export default function buildConfig(
     throw new Error(localize('error.invalid_config'));
   }
 
-  if (!config.entity) {
-    throw new Error(localize('error.missing_entity'));
-  }
-
   const actions = config.actions;
   if (actions && Array.isArray(actions)) {
     console.warn(localize('warning.actions_array'));
   }
 
   return {
-    entity: config.entity,
+    entity: config.entity ?? '',
     map: config.map ?? '',
     map_refresh: config.map_refresh ?? 5,
     image: config.image ?? 'default',

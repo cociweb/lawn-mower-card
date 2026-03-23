@@ -39,7 +39,7 @@ jobs:
         run: npm test
 
       - name: 🏗️ Production Build
-        run: npm run build
+        run: npm run build:dev
 
       - name: Commit and push new package-lock.json
         run: |

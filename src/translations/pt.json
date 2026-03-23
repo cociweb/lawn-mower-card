@@ -31,7 +31,21 @@
     "locked": "Bloqueado",
     "charging_with_queued_task": "Carregamento (tarefa em fila)",
     "charging_with_task_suspend": "Carregamento (tarefa suspensa)",
-    "manually_stopped": "Parado manualmente"
+    "manually_stopped": "Parado manualmente",
+    "ok_cutting": "A cortar",
+    "ok_cutting_timer_overridden": "A cortar (Manual)",
+    "ok_searching": "Procurando estação base",
+    "ok_leaving": "Saindo da estação base",
+    "ok_charging": "A carregar",
+    "parked_timer": "Estacionado (Agendado)",
+    "parked_park_selected": "Estacionado (Manual)",
+    "parked_autotimer": "Estacionado (Auto)",
+    "parked_frost": "Estacionado (Geada)",
+    "stopped_in_garden": "Parado no jardim",
+    "initiate_next_action": "Iniciando próxima ação",
+    "searching_for_satellites": "Procurando satélites",
+    "paused_in_cs": "Pausado (na estação)",
+    "none": "Sem atividade"
   },
   "source": {
     "gentle": "Delicado",

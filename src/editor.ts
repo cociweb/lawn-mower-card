@@ -1,27 +1,20 @@
 import { LitElement, html, nothing } from 'lit';
-import {
-  HomeAssistant,
-  LovelaceCardConfig,
-  LovelaceCardEditor,
-  fireEvent,
-} from 'custom-card-helpers';
+import { HomeAssistant, fireEvent } from 'custom-card-helpers';
+import { LovelaceCardConfig, LovelaceCardEditor } from './declarations';
 import localize from './localize';
 import { customElement, property, state } from 'lit/decorators.js';
-import { Template, LawnMowerCardConfig } from './types';
+import { Template } from './types';
+import { LawnMowerCardConfig } from './types';
 import styles from './editor.css';
-
-type ConfigElement = HTMLInputElement & {
-  configValue?: keyof LawnMowerCardConfig;
-};
 
 @customElement('lawn-mower-card-editor')
 export class LawnMowerCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass!: HomeAssistant;
 
-  @state() private config!: Partial<LawnMowerCardConfig>;
+  @state() private config!: LawnMowerCardConfig;
 
   @state() private image? = undefined;
   @state() private compact_view = false;
@@ -32,14 +25,7 @@ export class LawnMowerCardEditor
   @state() private animated = true;
 
   setConfig(config: LovelaceCardConfig & LawnMowerCardConfig): void {
-    // Initialize config with default values
     this.config = config;
-
-    // Set default entity if not provided
-    if (!this.config.entity) {
-      this.config.entity = this.getEntitiesByType('lawn-mower')[0] || '';
-        fireEvent(this, 'config-changed', { config: this.config });
-    }
   }
 
   private getEntitiesByType(type: string): string[] {
@@ -50,56 +36,41 @@ export class LawnMowerCardEditor
   }
 
   protected render(): Template {
-    if (!this.hass) {
+    if (!this.hass || !this.config) {
       return nothing;
     }
-
-    const lawnMowerEntities = this.getEntitiesByType('lawn_mower');
-    const cameraEntities = [
-      ...this.getEntitiesByType('camera'),
-      ...this.getEntitiesByType('image'),
-    ];
 
     return html`
       <div class="card-config">
         <div class="option">
-          <ha-select
+          <ha-selector
+            .hass=${this.hass}
+            .selector=${{
+              entity: {
+                domain: 'lawn_mower',
+              },
+            }}
             .label=${localize('editor.entity')}
-            @selected=${this.valueChanged}
-            .configValue=${'entity'}
             .value=${this.config.entity}
-            @closed=${(e: Event) => e.stopPropagation()}
-            fixedMenuPosition
-            naturalMenuWidth
-            required
-            validationMessage=${localize('error.missing_entity')}
-          >
-            ${lawnMowerEntities.map(
-              (entity) =>
-                html` <mwc-list-item .value=${entity}
-                  >${entity}</mwc-list-item
-                >`,
-            )}
-          </ha-select>
+            .required=${true}
+            @value-changed=${this.valueChanged}
+            .configValue=${'entity'}
+          ></ha-selector>
         </div>
 
         <div class="option">
-          <ha-select
+          <ha-selector
+            .hass=${this.hass}
+            .selector=${{
+              entity: {
+                domain: ['camera', 'image'],
+              },
+            }}
             .label=${localize('editor.map')}
-            @selected=${this.valueChanged}
-            .configValue=${'map'}
             .value=${this.config.map}
-            @closed=${(e: Event) => e.stopPropagation()}
-            fixedMenuPosition
-            naturalMenuWidth
-          >
-            ${cameraEntities.map(
-              (entity) =>
-                html` <mwc-list-item .value=${entity}
-                  >${entity}</mwc-list-item
-                >`,
-            )}
-          </ha-select>
+            @value-changed=${this.valueChanged}
+            .configValue=${'map'}
+          ></ha-selector>
         </div>
 
         <div class="option">
@@ -180,7 +151,9 @@ export class LawnMowerCardEditor
                 ? 'editor.show_shortcuts_aria_label_off'
                 : 'editor.show_shortcuts_aria_label_on',
             )}
-            .checked=${Boolean(this.config.show_shortcuts ?? this.show_shortcuts)}
+            .checked=${Boolean(
+              this.config.show_shortcuts ?? this.show_shortcuts,
+            )}
             .configValue=${'show_shortcuts'}
             @change=${this.valueChanged}
           >
@@ -212,24 +185,50 @@ export class LawnMowerCardEditor
     if (!this.config || !this.hass || !event.target) {
       return;
     }
-    const target = event.target as ConfigElement;
+    const target = event.target as HTMLElement & {
+      configValue?: string;
+      dataset?: { configValue?: string };
+      checked?: boolean;
+      value?: string;
+    };
+    const configValue = target.configValue || target.dataset?.configValue;
+
+    // For ha-selector with @value-changed event, get value from detail.value
+    let value: string | boolean | undefined;
     if (
-      !target.configValue ||
-      (this.config[target.configValue] && this.config[target.configValue] === target?.value)
+      event.type === 'value-changed' &&
+      (event as CustomEvent<{ value?: string }>)?.detail?.value !== undefined
+    ) {
+      value = (event as CustomEvent<{ value?: string }>).detail.value;
+    } else if (
+      event.type === 'selected' &&
+      (event as CustomEvent<{ index: number }>)?.detail?.index !== undefined
+    ) {
+      // ha-select @selected event - get value from the selected item
+      const selectedIndex = (event as CustomEvent<{ index: number }>).detail
+        .index;
+      const items = target.querySelectorAll('mwc-list-item');
+      if (items[selectedIndex]) {
+        value =
+          (items[selectedIndex] as HTMLElement).getAttribute('value') || '';
+      }
+    } else {
+      value = target.checked !== undefined ? target.checked : target.value;
+    }
+
+    if (
+      !configValue ||
+      (this.config[configValue as keyof LawnMowerCardConfig] &&
+        this.config[configValue as keyof LawnMowerCardConfig] === value)
     ) {
       return;
     }
-    if (target.configValue) {
-      if (target.value === '') {
-        delete this.config[target.configValue];
-      } else {
-        this.config = {
-          ...this.config,
-          [target.configValue]:
-            target.checked !== undefined ? target.checked : target.value,
-        };
-      }
-    }
+
+    // Deep copy to avoid read-only property issues
+    const newConfig = JSON.parse(JSON.stringify(this.config));
+    newConfig[configValue as keyof LawnMowerCardConfig] = value;
+    this.config = newConfig;
+
     fireEvent(this, 'config-changed', { config: this.config });
   }
 

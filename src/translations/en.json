@@ -32,7 +32,22 @@
     "locked": "Locked",
     "charging_with_queued_task": "Charging (Queued Task)",
     "charging_with_task_suspend": "Charging (Task Suspended)",
-    "manually_stopped": "Manually Stopped"
+    "manually_stopped": "Manually Stopped",
+
+    "ok_cutting": "Mowing",
+    "ok_cutting_timer_overridden": "Mowing (Manual)",
+    "ok_searching": "Searching base station",
+    "ok_leaving": "Leaving base station",
+    "ok_charging": "Charging",
+    "parked_timer": "Parked (Schedule)",
+    "parked_park_selected": "Parked (Manual)",
+    "parked_autotimer": "Parked (Auto)",
+    "parked_frost": "Parked (Frost)",
+    "stopped_in_garden": "Stopped in garden",
+    "initiate_next_action": "Starting next action",
+    "searching_for_satellites": "Searching for satellites",
+    "paused_in_cs": "Paused (in station)",
+    "none": "No activity"
   },
   "source": {
     "gentle": "Gentle",

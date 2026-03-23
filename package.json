@@ -1,6 +1,6 @@
 {
   "name": "lawn-mower-card",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "type": "module",
   "description": "Lawn Mower cleaner card for Home Assistant Lovelace UI",
   "main": "dist/lawn-mower-card.js",
@@ -13,7 +13,7 @@
     "lint:fix": "node node_modules/eslint/bin/eslint.js src --fix",
     "format": "node node_modules/prettier/bin/prettier.cjs --write .",
     "build": "NODE_ENV=production node node_modules/rollup/dist/bin/rollup -c",
-    "build:dev": "node node_modules/rollup/dist/bin/rollup -c",
+    "build:dev": "NODE_ENV=development node node_modules/rollup/dist/bin/rollup -c",
     "test": "npm run lint && npm run build",
     "test:dev": "npm run lint && npm run build:dev",
     "lint-staged": "lint-staged",

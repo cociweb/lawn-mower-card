@@ -27,6 +27,5 @@ jobs:
         uses: release-drafter/release-drafter@v7
         with:
           config-name: release.yml
-          disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
