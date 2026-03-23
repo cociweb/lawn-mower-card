@@ -24,7 +24,21 @@
     "locked": "נעול",
     "charging_with_queued_task": "טוען (משימה בתור)",
     "charging_with_task_suspend": "טוען (משימה מושהית)",
-    "manually_stopped": "נעצר ידנית"
+    "manually_stopped": "נעצר ידנית",
+    "ok_cutting": "מכסח",
+    "ok_cutting_timer_overridden": "מכסח (ידני)",
+    "ok_searching": "מחפש תחנת בסיס",
+    "ok_leaving": "עוזב תחנת בסיס",
+    "ok_charging": "בטעינה",
+    "parked_timer": "חנוי (תזמון)",
+    "parked_park_selected": "חנוי (ידני)",
+    "parked_autotimer": "חנוי (אוטומטי)",
+    "parked_frost": "חנוי (כפור)",
+    "stopped_in_garden": "נעצר בגינה",
+    "initiate_next_action": "מתחיל פעולה הבאה",
+    "searching_for_satellites": "מחפש לוויינים",
+    "paused_in_cs": "מושהה (בתחנה)",
+    "none": "אין פעילות"
   },
   "source": {
     "gentle": "עדין",

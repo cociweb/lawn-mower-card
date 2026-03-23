@@ -32,7 +32,21 @@
     "locked": "Заблокировано",
     "charging_with_queued_task": "Зарядка (задача в очереди)",
     "charging_with_task_suspend": "Зарядка (задача приостановлена)",
-    "manually_stopped": "Остановлено вручную"
+    "manually_stopped": "Остановлено вручную",
+    "ok_cutting": "Косит",
+    "ok_cutting_timer_overridden": "Косит (Вручную)",
+    "ok_searching": "Поиск базовой станции",
+    "ok_leaving": "Покидает базовую станцию",
+    "ok_charging": "Заряжается",
+    "parked_timer": "Паркован (По расписанию)",
+    "parked_park_selected": "Паркован (Вручную)",
+    "parked_autotimer": "Паркован (Авто)",
+    "parked_frost": "Паркован (Мороз)",
+    "stopped_in_garden": "Остановлен в саду",
+    "initiate_next_action": "Начинает следующее действие",
+    "searching_for_satellites": "Поиск спутников",
+    "paused_in_cs": "Пауза (на станции)",
+    "none": "Нет активности"
   },
   "source": {
     "gentle": "Деликатный",

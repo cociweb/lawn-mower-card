@@ -33,7 +33,21 @@
     "charging_with_task_suspend": "Заряджається із призупиненим завданням",
     "locked": "Заблокований",
     "charging_with_queued_task": "Заряджається (завдання в черзі)",
-    "manually_stopped": "Зупинено вручну"
+    "manually_stopped": "Зупинено вручну",
+    "ok_cutting": "Косіння",
+    "ok_cutting_timer_overridden": "Косіння (Вручну)",
+    "ok_searching": "Пошук базової станції",
+    "ok_leaving": "Покидання базової станції",
+    "ok_charging": "Заряджається",
+    "parked_timer": "Припарковано (Розклад)",
+    "parked_park_selected": "Припарковано (Вручну)",
+    "parked_autotimer": "Припарковано (Авто)",
+    "parked_frost": "Припарковано (Мороз)",
+    "stopped_in_garden": "Зупинено в саду",
+    "initiate_next_action": "Початок наступної дії",
+    "searching_for_satellites": "Пошук супутників",
+    "paused_in_cs": "Пауза (на станції)",
+    "none": "Немає активності"
   },
   "source": {
     "low": "Низький",

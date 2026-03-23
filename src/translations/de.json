@@ -31,7 +31,21 @@
     "locked": "Gesperrt",
     "charging_with_queued_task": "Laden (ausstehende Aufgabe)",
     "charging_with_task_suspend": "Laden (Aufgabe unterbrochen)",
-    "manually_stopped": "Manuell gestoppt"
+    "manually_stopped": "Manuell gestoppt",
+    "ok_cutting": "Mäht",
+    "ok_cutting_timer_overridden": "Mäht (Manuell)",
+    "ok_searching": "Sucht Ladestation",
+    "ok_leaving": "Verlässt Ladestation",
+    "ok_charging": "Lädt",
+    "parked_timer": "Geparkt (Zeitplan)",
+    "parked_park_selected": "Geparkt (Manuell)",
+    "parked_autotimer": "Geparkt (Auto)",
+    "parked_frost": "Geparkt (Frost)",
+    "stopped_in_garden": "Im Garten gestoppt",
+    "initiate_next_action": "Nächste Aktion",
+    "searching_for_satellites": "Sucht Satelliten",
+    "paused_in_cs": "Pausiert (in Station)",
+    "none": "Keine Aktivität"
   },
   "source": {
     "gentle": "Schonend",

@@ -23,7 +23,21 @@
     "locked": "Blocat",
     "charging_with_queued_task": "Se încarcă (sarcină în așteptare)",
     "charging_with_task_suspend": "Se încarcă (sarcină suspendată)",
-    "manually_stopped": "Oprit manual"
+    "manually_stopped": "Oprit manual",
+    "ok_cutting": "Tăiere",
+    "ok_cutting_timer_overridden": "Tăiere (Manual)",
+    "ok_searching": "Căutare stație de bază",
+    "ok_leaving": "Părăsire stație de bază",
+    "ok_charging": "Încărcare",
+    "parked_timer": "Parcat (Programat)",
+    "parked_park_selected": "Parcat (Manual)",
+    "parked_autotimer": "Parcat (Auto)",
+    "parked_frost": "Parcat (Îngheț)",
+    "stopped_in_garden": "Oprit în grădină",
+    "initiate_next_action": "Inițiază următoarea acțiune",
+    "searching_for_satellites": "Căutare sateliți",
+    "paused_in_cs": "Repauz (în stație)",
+    "none": "Fără activitate"
   },
   "source": {
     "gentle": "Blând",

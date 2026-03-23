@@ -34,12 +34,6 @@ const plugins = [
   nodeResolve(),
   commonjs(),
   json(),
-  replace({
-    values: {
-      PKG_VERSION_VALUE: IS_DEV ? 'DEVELOPMENT' : pkg.version,
-    },
-    preventAssignment: true,
-  }),
   postcss({
     plugins: [
       postcssPresetEnv({
@@ -62,6 +56,12 @@ const plugins = [
     babelHelpers: 'runtime',
     exclude: 'node_modules/**',
   }),
+  replace({
+    values: {
+      PKG_VERSION_VALUE: IS_DEV ? 'DEVELOPMENT' : pkg.version,
+    },
+    preventAssignment: true,
+  }),
   IS_DEV && serve(serverOptions),
   !IS_DEV &&
     terser({
@@ -69,9 +69,9 @@ const plugins = [
         comments: false,
       },
       compress: {
-        drop_console: true,
+        drop_console: false, // Don't remove console.info for version display
         drop_debugger: true,
-        pure_funcs: ['console.log'],
+        pure_funcs: ['console.log'], // Only remove console.log, not console.info
         dead_code: true,
         unused: true,
         passes: 2,

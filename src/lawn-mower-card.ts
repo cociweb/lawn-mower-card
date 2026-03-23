@@ -60,7 +60,7 @@ export class LawnMowerCard extends LitElement {
 
   static getStubConfig(_: unknown, entities: string[]) {
     const [lawnMowerEntity] = entities.filter((eid) =>
-      eid.startsWith('lawn-mower'),
+      eid.startsWith('lawn_mower'),
     );
 
     return {
@@ -68,7 +68,10 @@ export class LawnMowerCard extends LitElement {
     };
   }
 
-  get entity(): LawnMowerEntity {
+  get entity(): LawnMowerEntity | undefined {
+    if (!this.hass || !this.config?.entity) {
+      return undefined;
+    }
     return this.hass.states[this.config.entity] as LawnMowerEntity;
   }
 
@@ -91,6 +94,9 @@ export class LawnMowerCard extends LitElement {
   }
 
   public shouldUpdate(changedProps: PropertyValues): boolean {
+    if (!this.config) {
+      return false;
+    }
     return hasConfigOrEntityChanged(this, changedProps, false);
   }
 
@@ -100,6 +106,7 @@ export class LawnMowerCard extends LitElement {
     }
     if (
       changedProps.get('hass') &&
+      this.config.entity &&
       (changedProps.get('hass') as HomeAssistant).states[this.config.entity]
         .state !== this.hass.states[this.config.entity].state
     ) {
@@ -128,7 +135,7 @@ export class LawnMowerCard extends LitElement {
     }
   }
 
-  private handleMore(entityId: string = this.entity.entity_id): void {
+  private handleMore(entityId: string = this.entity?.entity_id || ''): void {
     fireEvent(
       this,
       'hass-more-info',
@@ -153,6 +160,9 @@ export class LawnMowerCard extends LitElement {
     params: LawnMowerServiceCallParams = { request: true },
     options: ServiceCallRequest['serviceData'] = {},
   ) {
+    if (!this.config?.entity) {
+      return;
+    }
     this.hass.callService('lawn-mower', service, {
       entity_id: this.config.entity,
       ...options,
@@ -190,18 +200,35 @@ export class LawnMowerCard extends LitElement {
   }
 
   private getAttributes(entity: LawnMowerEntity) {
-    const { status, state } = entity.attributes;
+    const { status, state, activity } = entity.attributes;
 
     return {
       ...entity.attributes,
+      // Use activity attribute (Gardena) or raw_activity (other brands) for detailed status
+      raw_activity: entity.attributes.raw_activity ?? activity,
+      // Prefer entity.state (HA mapped state like "docked", "mowing") over
+      // attributes.status/state which may be device-level (e.g. Gardena "OK")
       status: status ?? state ?? entity.state,
     };
+  }
+
+  private getBatteryIcon(level: number, isCharging: boolean): string {
+    const prefix = isCharging ? 'mdi:battery-charging' : 'mdi:battery';
+    if (level > 90)
+      return isCharging ? 'mdi:battery-charging-100' : 'mdi:battery';
+    if (level < 10)
+      return isCharging
+        ? 'mdi:battery-charging-outline'
+        : 'mdi:battery-outline';
+    const iconLevel = Math.floor(level / 10) * 10;
+    return `${prefix}-${iconLevel}`;
   }
 
   private renderBattery(): Template {
     let battery_level;
     let battery_icon;
     const entityId = this.config.battery;
+    const isCharging = this.entity?.attributes?.battery_state === 'CHARGING';
 
     if (entityId) {
       battery_level = Number(this.hass.states[entityId].state);
@@ -209,18 +236,18 @@ export class LawnMowerCard extends LitElement {
         return nothing;
       }
 
-      const level = Number(battery_level);
-
-      if (level > 90) {
-        battery_icon = 'mdi:battery';
-      } else if (level < 10) {
-        battery_icon = 'mdi:battery-outline';
-      } else {
-        const iconLevel = Math.floor(level / 10) * 10;
-        battery_icon = `mdi:battery-${iconLevel}`;
-      }
+      battery_icon = this.getBatteryIcon(battery_level, isCharging);
     } else {
-      ({ battery_level, battery_icon } = this.getAttributes(this.entity));
+      ({ battery_level, battery_icon } = this.getAttributes(this.entity!));
+
+      // Calculate icon from battery_level if no battery_icon attribute (e.g. Gardena)
+      if (!battery_icon && battery_level != null) {
+        const level = Number(battery_level);
+        if (isNaN(level)) {
+          return nothing;
+        }
+        battery_icon = this.getBatteryIcon(level, isCharging);
+      }
     }
 
     return html`
@@ -279,7 +306,7 @@ export class LawnMowerCard extends LitElement {
 
   private renderMapOrImage(state: LawnMowerEntityState): Template {
     if (!this.config.compact_view && this.map) {
-      return this.map && this.map.attributes.entity_picture
+      return this.map?.attributes?.entity_picture
         ? html`
             <img
               class="map"
@@ -318,7 +345,7 @@ export class LawnMowerCard extends LitElement {
         if (entity_id && attribute) {
           state = get(this.hass.states[entity_id].attributes, attribute);
         } else if (attribute) {
-          state = get(this.entity.attributes, attribute);
+          state = get(this.entity?.attributes, attribute);
         } else if (entity_id) {
           state = this.hass.states[entity_id].state;
         } else {
@@ -327,14 +354,16 @@ export class LawnMowerCard extends LitElement {
 
         const localizedState = localizeValue(state);
 
-        const value = html`
-          <ha-template
-            hass=${this.hass}
-            template=${value_template}
-            value=${localizedState}
-            variables=${{ value: localizedState }}
-          ></ha-template>
-        `;
+        const value = value_template
+          ? html`
+              <ha-template
+                hass=${this.hass}
+                template=${value_template}
+                value=${localizedState}
+                variables=${{ value: localizedState }}
+              ></ha-template>
+            `
+          : html`${localizedState}`;
 
         return html`
           <div class="stats-block" @click="${() => this.handleMore(entity_id)}">
@@ -354,7 +383,7 @@ export class LawnMowerCard extends LitElement {
   }
 
   private renderName(): Template {
-    const { friendly_name } = this.getAttributes(this.entity);
+    const { friendly_name } = this.getAttributes(this.entity!);
 
     if (!this.config.show_name) {
       return nothing;
@@ -367,7 +396,7 @@ export class LawnMowerCard extends LitElement {
     if (!this.config.show_status) {
       return nothing;
     }
-    const { status, raw_activity } = this.getAttributes(this.entity);
+    const { status, raw_activity } = this.getAttributes(this.entity!);
 
     let actualStatus = status;
     if (raw_activity) {
@@ -438,7 +467,7 @@ export class LawnMowerCard extends LitElement {
   }
 
   private renderToolbar(state: LawnMowerEntityState): Template {
-    const { raw_activity } = this.getAttributes(this.entity);
+    const { raw_activity } = this.getAttributes(this.entity!);
 
     if (!this.config.show_toolbar) {
       return nothing;
@@ -530,6 +559,17 @@ export class LawnMowerCard extends LitElement {
           </paper-button>
         `;
 
+        const rawLower = raw_activity?.toLowerCase();
+        const isCharging =
+          rawLower === 'charging_with_task_suspend' ||
+          rawLower === 'charging_with_queued_task' ||
+          rawLower === 'charging' ||
+          rawLower === 'ok_charging';
+        const isIdle =
+          state === 'idle' ||
+          rawLower === 'standby' ||
+          rawLower === 'stopped_in_garden';
+
         return html`
           <div class="toolbar">
             <paper-button @click="${this.handleLawnMowerAction('start')}">
@@ -537,12 +577,7 @@ export class LawnMowerCard extends LitElement {
               ${localize('common.start')}
             </paper-button>
             ${this.config.actions['locate'] ? locateButton : ''}
-            ${raw_activity?.toLowerCase() === 'charging_with_task_suspend'
-              ? stopButton
-              : ''}
-            ${state === 'idle' || raw_activity?.toLowerCase() === 'standby'
-              ? dockButton
-              : ''}
+            ${isCharging ? stopButton : ''} ${isIdle ? dockButton : ''}
           </div>
         `;
       }
@@ -564,8 +599,11 @@ export class LawnMowerCard extends LitElement {
   }
 
   protected render(): Template {
-    if (!this.config) {
+    if (!this.config || !this.hass) {
       return nothing;
+    }
+    if (!this.config.entity) {
+      return this.renderUnavailable();
     }
     if (!this.entity) {
       return this.renderUnavailable();
@@ -577,7 +615,7 @@ export class LawnMowerCard extends LitElement {
           <div class="preview">
             <div class="header">
               <div class="tips">
-                ${this.renderMapOrImage(this.entity.state)}
+                ${this.renderMapOrImage(this.entity?.state || '')}
                 ${this.renderStatus()} ${this.renderTemperature()}
                 ${this.renderHumidity()} ${this.renderBattery()}
               </div>
@@ -590,7 +628,8 @@ export class LawnMowerCard extends LitElement {
               ></ha-icon-button>
             </div>
           </div>
-          ${this.renderToolbar(this.entity.state)} ${this.renderShortcuts()}
+          ${this.renderToolbar(this.entity?.state || '')}
+          ${this.renderShortcuts()}
         </ha-card>
       `;
     }
@@ -612,16 +651,17 @@ export class LawnMowerCard extends LitElement {
             ></ha-icon-button>
           </div>
 
-          ${this.renderMapOrImage(this.entity.state)}
+          ${this.renderMapOrImage(this.entity?.state || '')}
 
           <div class="metadata">
             ${this.renderName()} ${this.renderStatus()}
           </div>
 
-          ${this.renderStats(this.entity.state)}
+          ${this.renderStats(this.entity?.state || '')}
         </div>
 
-        ${this.renderToolbar(this.entity.state)} ${this.renderShortcuts()}
+        ${this.renderToolbar(this.entity?.state || '')}
+        ${this.renderShortcuts()}
       </ha-card>
     `;
   }

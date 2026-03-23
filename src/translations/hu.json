@@ -31,7 +31,21 @@
     "updating": "Frissítés",
     "going_to_target": "Cél felé halad",
     "zoned_cleaning": "Zóna nyírás",
-    "segment_cleaning": "Szegmens nyírás"
+    "segment_cleaning": "Szegmens nyírás",
+    "ok_cutting": "Nyírás",
+    "ok_cutting_timer_overridden": "Nyírás (Kézi)",
+    "ok_searching": "Bázisállomás keresése",
+    "ok_leaving": "Bázisállomás elhagyása",
+    "ok_charging": "Töltés",
+    "parked_timer": "Parkolva (Ütemezés)",
+    "parked_park_selected": "Parkolva (Kézi)",
+    "parked_autotimer": "Parkolva (Auto)",
+    "parked_frost": "Parkolva (Fagy)",
+    "stopped_in_garden": "Megállítva a kertben",
+    "initiate_next_action": "Következő művelet indítása",
+    "searching_for_satellites": "Műholdak keresése",
+    "paused_in_cs": "Szüneteltetve (állomásban)",
+    "none": "Nincs tevékenység"
   },
   "source": {
     "gentle": "Gyengéd",

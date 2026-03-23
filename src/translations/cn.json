@@ -32,7 +32,21 @@
     "locked": "已锁定",
     "charging_with_queued_task": "充电中 (队列中的任务)",
     "charging_with_task_suspend": "充电中 (任务暂停)",
-    "manually_stopped": "手动停止"
+    "manually_stopped": "手动停止",
+    "ok_cutting": "割草中",
+    "ok_cutting_timer_overridden": "割草中 (手动)",
+    "ok_searching": "搜索基站",
+    "ok_leaving": "离开基站",
+    "ok_charging": "充电中",
+    "parked_timer": "停放 (计划)",
+    "parked_park_selected": "停放 (手动)",
+    "parked_autotimer": "停放 (自动)",
+    "parked_frost": "停放 (防冻)",
+    "stopped_in_garden": "在花园停止",
+    "initiate_next_action": "开始下一个动作",
+    "searching_for_satellites": "搜索卫星",
+    "paused_in_cs": "暂停 (在基站)",
+    "none": "无活动"
   },
   "source": {
     "gentle": "轻柔",

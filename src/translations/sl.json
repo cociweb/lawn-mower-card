@@ -30,7 +30,21 @@
     "locked": "Zaklenjeno",
     "charging_with_queued_task": "Polnjenje (naloga v čakalni vrsti)",
     "charging_with_task_suspend": "Polnjenje (naloga prekinjena)",
-    "manually_stopped": "Ročno ustavljeno"
+    "manually_stopped": "Ročno ustavljeno",
+    "ok_cutting": "Košnja",
+    "ok_cutting_timer_overridden": "Košnja (Ročno)",
+    "ok_searching": "Iskanje bazne postaje",
+    "ok_leaving": "Zapuščanje bazne postaje",
+    "ok_charging": "Polnjenje",
+    "parked_timer": "Parkirano (Urnik)",
+    "parked_park_selected": "Parkirano (Ročno)",
+    "parked_autotimer": "Parkirano (Auto)",
+    "parked_frost": "Parkirano (Mrzlo)",
+    "stopped_in_garden": "Ustavljeno v vrtu",
+    "initiate_next_action": "Začetek naslednjega dejanja",
+    "searching_for_satellites": "Iskanje satelitov",
+    "paused_in_cs": "Premor (na postaji)",
+    "none": "Brez aktivnosti"
   },
   "source": {
     "gentle": "Nežno",

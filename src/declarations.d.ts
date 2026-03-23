@@ -60,8 +60,8 @@ declare module 'lit' {
 
   export function html(
     strings: TemplateStringsArray,
-    ...values: any[]
-  ): TemplateResult; // eslint-disable-line @typescript-eslint/no-explicit-any
+    ...values: any[] // eslint-disable-line @typescript-eslint/no-explicit-any
+  ): TemplateResult;
 
   export const nothing: symbol;
 
@@ -88,8 +88,8 @@ declare module 'custom-card-helpers' {
     callService(
       domain: string,
       service: string,
-      serviceData?: Record<string, any>,
-    ): Promise<void>; // eslint-disable-line @typescript-eslint/no-explicit-any
+      serviceData?: Record<string, any>, // eslint-disable-line @typescript-eslint/no-explicit-any
+    ): Promise<void>;
   }
 
   export function hasConfigOrEntityChanged(
