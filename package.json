@@ -8,13 +8,16 @@
     "url": "https://github.com/cociweb/lawn-mower-card"
   },
   "scripts": {
-    "start": "rollup -c --watch",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier --write .",
-    "build": "rollup -c",
+    "start": "node node_modules/rollup/dist/bin/rollup -c --watch",
+    "lint": "node node_modules/eslint/bin/eslint.js src",
+    "lint:fix": "node node_modules/eslint/bin/eslint.js src --fix",
+    "format": "node node_modules/prettier/bin/prettier.cjs --write .",
+    "build": "NODE_ENV=production node node_modules/rollup/dist/bin/rollup -c",
+    "build:dev": "node node_modules/rollup/dist/bin/rollup -c",
     "test": "npm run lint && npm run build",
-    "prepare": "husky"
+    "test:dev": "npm run lint && npm run build:dev",
+    "lint-staged": "lint-staged",
+    "prepare": "node node_modules/husky/bin.js"
   },
   "keywords": [
     "home-assistant",
@@ -23,21 +26,24 @@
     "automation",
     "lovelace",
     "custom-cards",
-    "lawn-mower"
+    "lawn-mower",
+    "hacs",
+    "hass"
   ],
   "author": "cociweb",
   "license": "MIT",
   "dependencies": {
     "custom-card-helpers": "^2.0.0",
-    "ha-template": "^1.4.0",
-    "home-assistant-js-websocket": "^9.2.1",
-    "lit": "^3.2.0",
-    "lodash": "^4.17.21"
+    "ha-template": "^1.4.1",
+    "home-assistant-js-websocket": "^9.6.0",
+    "lit": "^3.3.2",
+    "lodash": "^4.17.23"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
+    "@eslint/eslintrc": "^3.3.1",
     "@rollup/plugin-babel": "^7.0.0",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-image": "^3.0.3",
@@ -49,31 +55,35 @@
     "@types/lodash": "^4.14.202",
     "@typescript-eslint/eslint-plugin": "^8.50.1",
     "@typescript-eslint/parser": "^8.50.1",
-    "eslint": "^10.0.3",
-    "@eslint/eslintrc": "^3.3.1",
+    "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.0.2",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-x": "^4.16.2",
     "husky": "^9.0.11",
-    "lint-staged": "^16.2.3",
+    "lint-staged": "^16.4.0",
+    "napi-postinstall": "^0.3.4",
     "postcss": "^8.4.33",
     "postcss-preset-env": "^11.2.0",
     "prettier": "^3.1.1",
     "rollup": "^4.9.4",
-    "rollup-plugin-minify-html-literals-v3": "^1.2.6",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-postcss-lit": "^2.0.0",
     "rollup-plugin-serve": "^3.0.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "semantic-release": "^25.0.1",
+    "svgo": "^3.3.3",
     "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "svgo": "^3.3.3",
+    "sourcemap-codec": "npm:@jridgewell/sourcemap-codec@^1.5.5"
   },
   "browserslist": [
     "last 2 versions",
     "not dead"
   ],
   "lint-staged": {
-    "*.js": "eslint --fix",
-    "**/*": "prettier --write --ignore-unknown"
+    "*.js": "node node_modules/eslint/bin/eslint.js --fix",
+    "**/*": "node node_modules/prettier/bin/prettier.cjs --write --ignore-unknown"
   },
   "prettier": {
     "singleQuote": true
@@ -89,7 +99,10 @@
       "ecmaVersion": 2020,
       "sourceType": "module"
     },
-    "plugins": ["import", "@typescript-eslint"],
+    "plugins": [
+      "import-x",
+      "@typescript-eslint"
+    ],
     "env": {
       "browser": true,
       "es6": true
