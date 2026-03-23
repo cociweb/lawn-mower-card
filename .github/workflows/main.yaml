@@ -105,7 +105,6 @@ jobs:
         run: |
           OUTPUT=$(npm run build) 
           VERSION=$(echo $OUTPUT | grep -oP 'lawn-mower-card@\K[^ ]+') 
-          echo "PACKAGE_VERSION=$VERSION" >> $GITHUB_ENV 
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "$VERSION"
 
