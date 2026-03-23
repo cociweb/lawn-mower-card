@@ -1,6 +1,6 @@
 // eslint.config.mjs
 import { FlatCompat } from "@eslint/eslintrc";
-import importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import-x";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import { fileURLToPath } from "url";

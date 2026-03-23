@@ -10,14 +10,13 @@ import postcss from 'rollup-plugin-postcss';
 import postcssPresetEnv from 'postcss-preset-env';
 import postcssLit from 'rollup-plugin-postcss-lit';
 import terser from '@rollup/plugin-terser';
-import minifyLiterals from 'rollup-plugin-minify-html-literals-v3';
 import replace from '@rollup/plugin-replace';
 import serve from 'rollup-plugin-serve';
 
 const require = createRequire(import.meta.url);
 const pkg = require('./package.json');
 
-const IS_DEV = process.env.ROLLUP_WATCH;
+const IS_DEV = process.env.NODE_ENV === 'development' || !!process.env.ROLLUP_WATCH;
 
 const serverOptions = {
   contentBase: ['./dist'],
@@ -49,6 +48,7 @@ const plugins = [
       }),
     ],
     extract: false,
+    minimize: false, // Disable cssnano to avoid deprecated svgo
   }),
   postcssLit(),
   image(),
@@ -58,13 +58,17 @@ const plugins = [
     exclude: 'node_modules/**',
   }),
   IS_DEV && serve(serverOptions),
-  !IS_DEV && minifyLiterals(),
-  !IS_DEV &&
-    terser({
-      format: {
-        comments: false,
-      },
-    }),
+  !IS_DEV && terser({
+    format: {
+      comments: false,
+    },
+    compress: {
+      drop_console: true,
+      drop_debugger: true,
+      pure_funcs: ['console.log'],
+    },
+    mangle: true,
+  }),
 ].filter(Boolean);
 
 export default {

@@ -40,6 +40,9 @@ jobs:
       - name: 🧪 Test
         run: npm test
         
+      - name: 🏗️ Production Build
+        run: npm run build
+        
       - name: Commit and push new package-lock.json
         run: |
           git config --global user.name "github-actions[bot]"

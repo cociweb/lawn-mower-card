@@ -73,6 +73,9 @@ jobs:
 
       - name: 🧪 Test
         run: npm test
+        
+      - name: 🏗️ Production Build
+        run: npm run build
 
   release:
     name: Release
@@ -92,7 +95,7 @@ jobs:
       - name: 📦 Install Packages
         run: npm ci
 
-      - name: Run build and get version
+      - name: 🏗️ Production Build
         id: build
         run: |
           OUTPUT=$(npm run build) 
