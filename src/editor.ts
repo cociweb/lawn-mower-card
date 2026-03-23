@@ -3,21 +3,18 @@ import { HomeAssistant, fireEvent } from 'custom-card-helpers';
 import { LovelaceCardConfig, LovelaceCardEditor } from './declarations';
 import localize from './localize';
 import { customElement, property, state } from 'lit/decorators.js';
-import { Template, LawnMowerCardConfig } from './types';
+import { Template } from './types';
+import { LawnMowerCardConfig } from './types';
 import styles from './editor.css';
-
-type ConfigElement = HTMLInputElement & {
-  configValue?: keyof LawnMowerCardConfig;
-};
 
 @customElement('lawn-mower-card-editor')
 export class LawnMowerCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass!: HomeAssistant;
 
-  @state() private config!: Partial<LawnMowerCardConfig>;
+  @state() private config!: LawnMowerCardConfig;
 
   @state() private image? = undefined;
   @state() private compact_view = false;
@@ -42,12 +39,6 @@ export class LawnMowerCardEditor
     if (!this.hass || !this.config) {
       return nothing;
     }
-
-    const lawnMowerEntities = this.getEntitiesByType('lawn_mower');
-    const cameraEntities = [
-      ...this.getEntitiesByType('camera'),
-      ...this.getEntitiesByType('image'),
-    ];
 
     return html`
       <div class="card-config">
@@ -194,25 +185,32 @@ export class LawnMowerCardEditor
     if (!this.config || !this.hass || !event.target) {
       return;
     }
-    const target = event.target as any;
+    const target = event.target as HTMLElement & {
+      configValue?: string;
+      dataset?: { configValue?: string };
+      checked?: boolean;
+      value?: string;
+    };
     const configValue = target.configValue || target.dataset?.configValue;
 
     // For ha-selector with @value-changed event, get value from detail.value
-    let value;
+    let value: string | boolean | undefined;
     if (
       event.type === 'value-changed' &&
-      (event as any).detail?.value !== undefined
+      (event as CustomEvent<{ value?: string }>)?.detail?.value !== undefined
     ) {
-      value = (event as any).detail.value;
+      value = (event as CustomEvent<{ value?: string }>).detail.value;
     } else if (
       event.type === 'selected' &&
-      (event as any).detail?.index !== undefined
+      (event as CustomEvent<{ index: number }>)?.detail?.index !== undefined
     ) {
       // ha-select @selected event - get value from the selected item
-      const selectedIndex = (event as any).detail.index;
+      const selectedIndex = (event as CustomEvent<{ index: number }>).detail
+        .index;
       const items = target.querySelectorAll('mwc-list-item');
       if (items[selectedIndex]) {
-        value = items[selectedIndex].value;
+        value =
+          (items[selectedIndex] as HTMLElement).getAttribute('value') || '';
       }
     } else {
       value = target.checked !== undefined ? target.checked : target.value;
@@ -228,7 +226,7 @@ export class LawnMowerCardEditor
 
     // Deep copy to avoid read-only property issues
     const newConfig = JSON.parse(JSON.stringify(this.config));
-    newConfig[configValue] = value;
+    newConfig[configValue as keyof LawnMowerCardConfig] = value;
     this.config = newConfig;
 
     fireEvent(this, 'config-changed', { config: this.config });
