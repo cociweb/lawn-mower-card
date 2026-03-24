@@ -115,6 +115,7 @@
   },
   "editor": {
     "entity": "Entitás (kötelező)",
+    "battery": "Akkumulátor szenzor (opcionális)",
     "map": "Térkép kamera (opcionális)",
     "image": "Kép (opcionális)",
     "compact_view": "Kompakt nézet",

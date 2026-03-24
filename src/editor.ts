@@ -35,6 +35,27 @@ export class LawnMowerCardEditor
     return Object.keys(this.hass.states).filter((id) => id.startsWith(type));
   }
 
+  private findBatterySensor(): string | undefined {
+    const mainEntity = this.config?.entity;
+    if (!mainEntity || !this.hass) return undefined;
+    const entities = (this.hass as Record<string, unknown>).entities as
+      | Record<string, Record<string, unknown>>
+      | undefined;
+    if (!entities) return undefined;
+    const deviceId = entities[mainEntity]?.device_id;
+    if (!deviceId) return undefined;
+    for (const [id, e] of Object.entries(entities)) {
+      if (
+        (e as Record<string, unknown>).device_id === deviceId &&
+        id.startsWith('sensor.') &&
+        this.hass.states[id]?.attributes?.device_class === 'battery'
+      ) {
+        return id;
+      }
+    }
+    return undefined;
+  }
+
   protected render(): Template {
     if (!this.hass || !this.config) {
       return nothing;
@@ -55,6 +76,22 @@ export class LawnMowerCardEditor
             .required=${true}
             @value-changed=${this.valueChanged}
             .configValue=${'entity'}
+          ></ha-selector>
+        </div>
+
+        <div class="option">
+          <ha-selector
+            .hass=${this.hass}
+            .selector=${{
+              entity: {
+                domain: 'sensor',
+                device_class: 'battery',
+              },
+            }}
+            .label=${localize('editor.battery')}
+            .value=${this.config.battery || this.findBatterySensor()}
+            @value-changed=${this.valueChanged}
+            .configValue=${'battery'}
           ></ha-selector>
         </div>
 

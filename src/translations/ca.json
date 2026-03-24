@@ -89,6 +89,7 @@
   },
   "editor": {
     "entity": "Entitat (Requerit)",
+    "battery": "Sensor de bateria (Opcional)",
     "map": "Càmera de mapa (Opcional)",
     "image": "Imatge (Opcional)",
     "compact_view": "Visualització compacta",

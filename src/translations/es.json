@@ -94,6 +94,7 @@
   },
   "editor": {
     "entity": "Entidad (Requerido)",
+    "battery": "Sensor de batería (Opcional)",
     "map": "Map Camera (Opcional)",
     "image": "Imagen (Opcional)",
     "compact_view": "Vista compacta",

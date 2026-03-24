@@ -116,6 +116,7 @@
   },
   "editor": {
     "entity": "实体 (必填)",
+    "battery": "电池传感器 (选填)",
     "map": "地图 (选填)",
     "image": "图片 (选填)",
     "compact_view": "紧凑视图",
