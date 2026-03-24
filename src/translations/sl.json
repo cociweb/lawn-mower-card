@@ -114,6 +114,7 @@
   },
   "editor": {
     "entity": "Entiteta (Obvezno)",
+    "battery": "Senzor baterije (Neobvezno)",
     "map": "Kamera zemljevida (Neobvezno)",
     "image": "Slika (Neobvezno)",
     "compact_view": "Kompakten pogled",

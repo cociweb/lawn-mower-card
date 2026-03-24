@@ -92,6 +92,7 @@
   },
   "editor": {
     "entity": "實體 (必填)",
+    "battery": "電池傳感器 (選填)",
     "map": "地圖 (選填)",
     "image": "圖片 (選填)",
     "compact_view": "精簡檢視",

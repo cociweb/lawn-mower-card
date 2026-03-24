@@ -117,6 +117,7 @@
   },
   "editor": {
     "entity": "Encja (wymagane)",
+    "battery": "Czujnik baterii (opcjonalny)",
     "map": "Kamera z mapą (opcjonalna)",
     "image": "Obraz (opcjonalny)",
     "compact_view": "Widok kompaktowy",

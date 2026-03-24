@@ -115,6 +115,7 @@
   },
   "editor": {
     "entity": "Enhed (Påkrævet)",
+    "battery": "Batterisensor (Valgfrit)",
     "map": "Entitet med kamera til kortvisning (Valgfrit)",
     "image": "Billede (Valgfrit)",
     "compact_view": "Kompakt visning",

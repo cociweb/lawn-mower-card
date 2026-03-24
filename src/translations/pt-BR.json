@@ -99,6 +99,7 @@
   },
   "editor": {
     "entity": "Entidade (Obrigatória)",
+    "battery": "Sensor de bateria (Opcional)",
     "map": "Mapa (Opcional)",
     "image": "Imagem (Opcional)",
     "compact_view": "Vista Compacta",
