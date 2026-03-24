@@ -226,12 +226,15 @@ export class LawnMowerCard extends LitElement {
 
   private findBatterySensor(): string | undefined {
     const mainEntity = this.config.entity;
-    const deviceId = (this.hass as any).entities?.[mainEntity]?.device_id;
+    const entities = (this.hass as Record<string, unknown>).entities as
+      | Record<string, Record<string, unknown>>
+      | undefined;
+    const deviceId = entities?.[mainEntity]?.device_id;
     if (!deviceId) return undefined;
-    const entries = Object.entries((this.hass as any).entities || {});
+    const entries = Object.entries(entities || {});
     for (const [id, e] of entries) {
       if (
-        (e as any).device_id === deviceId &&
+        (e as Record<string, unknown>).device_id === deviceId &&
         id.startsWith('sensor.') &&
         this.hass.states[id]?.attributes?.device_class === 'battery'
       ) {

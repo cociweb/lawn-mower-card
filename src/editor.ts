@@ -38,13 +38,15 @@ export class LawnMowerCardEditor
   private findBatterySensor(): string | undefined {
     const mainEntity = this.config?.entity;
     if (!mainEntity || !this.hass) return undefined;
-    const entities = (this.hass as any).entities;
+    const entities = (this.hass as Record<string, unknown>).entities as
+      | Record<string, Record<string, unknown>>
+      | undefined;
     if (!entities) return undefined;
     const deviceId = entities[mainEntity]?.device_id;
     if (!deviceId) return undefined;
     for (const [id, e] of Object.entries(entities)) {
       if (
-        (e as any).device_id === deviceId &&
+        (e as Record<string, unknown>).device_id === deviceId &&
         id.startsWith('sensor.') &&
         this.hass.states[id]?.attributes?.device_class === 'battery'
       ) {
