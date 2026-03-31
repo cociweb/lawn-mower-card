@@ -163,7 +163,7 @@ export class LawnMowerCard extends LitElement {
     if (!this.config?.entity) {
       return;
     }
-    this.hass.callService('lawn-mower', service, {
+    this.hass.callService('lawn_mower', service, {
       entity_id: this.config.entity,
       ...options,
     });
@@ -492,7 +492,7 @@ export class LawnMowerCard extends LitElement {
               ${localize('common.stop')}
             </paper-button>
             <paper-button
-              @click="${this.handleLawnMowerAction('return_to_base')}"
+              @click="${this.handleLawnMowerAction('dock')}"
             >
               <ha-icon icon="hass:home-map-marker"></ha-icon>
               ${localize('common.return_to_base')}
@@ -514,7 +514,7 @@ export class LawnMowerCard extends LitElement {
               ${localize('common.continue')}
             </paper-button>
             <paper-button
-              @click="${this.handleLawnMowerAction('return_to_base')}"
+              @click="${this.handleLawnMowerAction('dock')}"
             >
               <ha-icon icon="hass:home-map-marker"></ha-icon>
               ${localize('common.return_to_base')}
@@ -538,7 +538,7 @@ export class LawnMowerCard extends LitElement {
       default: {
         const dockButton = html`
           <paper-button
-            @click="${this.handleLawnMowerAction('return_to_base')}"
+            @click="${this.handleLawnMowerAction('dock')}"
           >
             <ha-icon icon="hass:home-map-marker"></ha-icon>
             ${localize('common.return_to_base')}
