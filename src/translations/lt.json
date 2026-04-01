@@ -89,6 +89,7 @@
   },
   "editor": {
     "entity": "Entity (Būtina)",
+    "battery": "Baterijos jutiklis (Neprivaloma)",
     "map": "Žemėlapio kamera (Neprivaloma)",
     "image": "Paveikslėlis (Neprivaloma)",
     "compact_view": "Glaustas vaizdas",

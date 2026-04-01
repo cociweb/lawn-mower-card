@@ -224,10 +224,30 @@ export class LawnMowerCard extends LitElement {
     return `${prefix}-${iconLevel}`;
   }
 
+  private findBatterySensor(): string | undefined {
+    const mainEntity = this.config.entity;
+    const entities = (this.hass as Record<string, unknown>).entities as
+      | Record<string, Record<string, unknown>>
+      | undefined;
+    const deviceId = entities?.[mainEntity]?.device_id;
+    if (!deviceId) return undefined;
+    const entries = Object.entries(entities || {});
+    for (const [id, e] of entries) {
+      if (
+        (e as Record<string, unknown>).device_id === deviceId &&
+        id.startsWith('sensor.') &&
+        this.hass.states[id]?.attributes?.device_class === 'battery'
+      ) {
+        return id;
+      }
+    }
+    return undefined;
+  }
+
   private renderBattery(): Template {
     let battery_level;
     let battery_icon;
-    const entityId = this.config.battery;
+    let entityId = this.config.battery;
     const isCharging = this.entity?.attributes?.battery_state === 'CHARGING';
 
     if (entityId) {
@@ -247,6 +267,17 @@ export class LawnMowerCard extends LitElement {
           return nothing;
         }
         battery_icon = this.getBatteryIcon(level, isCharging);
+      }
+
+      // Auto-detect battery sensor on same device if no level found
+      if (battery_level == null) {
+        entityId = this.findBatterySensor();
+        if (entityId && this.hass.states[entityId]) {
+          battery_level = Number(this.hass.states[entityId].state);
+          if (!isNaN(battery_level)) {
+            battery_icon = this.getBatteryIcon(battery_level, isCharging);
+          }
+        }
       }
     }
 

@@ -115,6 +115,7 @@
   },
   "editor": {
     "entity": "Entiteetti (vaaditaan)",
+    "battery": "Akkusensori (valinnainen)",
     "map": "Karttakamera (valinnainen)",
     "image": "Kuva (valinnainen)",
     "compact_view": "Kompakti näkymä",
