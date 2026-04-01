@@ -236,7 +236,7 @@ If this card works with your lawn mower, please open a PR and your model to the 
 - **OpenMower:** https://github.com/ClemensElflein/OpenMower
 - **Dreame** A1
 - **Robonect** Hx
-- **Mammotion** Yuka 500 mini
+- **Mammotion** Yuka 500 mini, Luba 2X 5000 (via [Mammotion-HA integration](https://github.com/mikey0000/Mammotion-HA))
 - **Gardena Smart System** Sileno City (requires [hass-gardena-smart-system](https://github.com/py-smart-gardena/hass-gardena-smart-system))
 
 - [_Your lawn mower?_][edit-readme]
