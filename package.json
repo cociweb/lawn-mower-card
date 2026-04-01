@@ -72,10 +72,10 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-postcss-lit": "^2.0.0",
     "rollup-plugin-serve": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-typescript2": "^0.37.0",
     "semantic-release": "^25.0.1",
     "svgo": "^3.3.3",
-    "typescript": "^5.3.3"
+    "typescript": "^6.0.2"
   },
   "overrides": {
     "svgo": "^3.3.3",
