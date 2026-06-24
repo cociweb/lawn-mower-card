@@ -1,9 +1,9 @@
 {
   "status": {
-    "mowing": "Städar",
+    "mowing": "Klipper",
     "paused": "Pausad",
     "idle": "Inaktiv",
-    "standby": "Inaktiv",
+    "standby": "Väntar",
     "charging": "Laddar",
     "returning home": "Återvänder hem",
     "park": "Återvänder hem",
@@ -43,15 +43,15 @@
     "turbo": "Turbo"
   },
   "common": {
-    "name": "Dammsugarkort",
-    "description": "Dammsugarkort låter dig att kontrollera din robotdammsugare.",
-    "start": "Städa",
+    "name": "Gräsklipparkort",
+    "description": "Gräsklipparkort låter dig att kontrollera din robotgräsklippare.",
+    "start": "Klipp",
     "continue": "Fortsätt",
     "pause": "Paus",
     "stop": "Stopp",
     "return_to_base": "Docka",
     "locate": "Lokalisera dammsugare",
-    "not_available": "Dammsugare är inte tillgänglig"
+    "not_available": "Gräsklipparen är inte tillgänglig"
   },
   "error": {
     "missing_entity": "Specificera entitet är obligatoriskt!"
