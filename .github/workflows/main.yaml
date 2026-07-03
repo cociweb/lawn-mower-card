@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: ⬢ Setup Node.js
         uses: actions/setup-node@v6
@@ -68,7 +68,7 @@ jobs:
           cache: npm
 
       - name: 📦 Install Packages
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --legacy-peer-deps
 
       - name: 🔧 Setup Husky
         run: npm run prepare
@@ -86,7 +86,7 @@ jobs:
     if: needs.decision.outputs.push_image == 'true'
     steps:
       - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: ⬢ Setup Node.js
         uses: actions/setup-node@v6
@@ -95,7 +95,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: 📦 Install Packages
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --legacy-peer-deps
 
       - name: 🔧 Setup Husky
         run: npm run prepare
