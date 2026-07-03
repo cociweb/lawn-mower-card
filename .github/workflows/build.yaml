@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 🗑️ Remove package-lock.json
         run: rm -f package-lock.json
