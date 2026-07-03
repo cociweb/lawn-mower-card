@@ -68,7 +68,7 @@ jobs:
           cache: npm
 
       - name: 📦 Install Packages
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --legacy-peer-deps
 
       - name: 🔧 Setup Husky
         run: npm run prepare
@@ -95,7 +95,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: 📦 Install Packages
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --legacy-peer-deps
 
       - name: 🔧 Setup Husky
         run: npm run prepare
