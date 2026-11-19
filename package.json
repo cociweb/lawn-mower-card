@@ -73,7 +73,7 @@
     "rollup-plugin-postcss-lit": "^2.0.0",
     "rollup-plugin-serve": "^3.0.0",
     "rollup-plugin-typescript2": "^0.37.0",
-    "semantic-release": "^25.0.1",
+    "semantic-release": "^26.0.1",
     "svgo": "^3.3.3",
     "typescript": "^6.0.2"
   },
